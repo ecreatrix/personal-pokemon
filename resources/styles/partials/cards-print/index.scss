@@ -1,0 +1,157 @@
+.download-all {
+	margin-bottom: 2em;
+}
+//0.455
+
+.tcg {
+	.official, .custom {
+		width: 100%;
+	}
+
+	.custom {
+		background: $white;
+		border: .65em solid #000;
+		border-radius: .65em;
+		color: $black;
+		display: flex;
+		height: 36.05em;
+		justify-content: space-between;
+		flex-direction: column;
+		font-family: Lato;
+		margin-left: 2px;
+		//min-height: 1024px;
+		overflow: hidden;
+		padding: .5em;
+
+		.header {
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+
+			> div {
+				width: 100%;
+			}
+
+			.namebox {
+				align-items: center;
+				display: flex;
+				font-size: 1em;
+				font-weight: 700;
+			}
+		}
+
+		.top-bar {
+			align-items: center;
+			display: flex;
+			flex-wrap: wrap;
+			line-height: 1;
+
+			> .row {
+				flex: 1 1 auto;
+				width: 100%;
+			}
+
+			.type {
+				img:not(:first-child) {
+					display: none;
+				}
+			}
+
+			.namebox {
+				.name {
+					font-size: 1.5em;
+					white-space: normal;
+				}
+			}
+
+			.right {
+	   			align-items: center;
+				display: flex;
+				justify-content: flex-end;
+				width: 24%;
+
+				.health {
+					font-size: 1.59em;
+					text-align: right;
+
+					.subscript {
+						font-size: .5em;
+						text-transform: uppercase;
+					}
+				}
+			}
+
+			.row-1 {
+				align-items: center;
+				position: relative;
+			
+				svg {
+					bottom: -25%;
+					height: 133%;
+					fill: #fff;
+					left: -31%;
+					position: absolute;
+
+					path {
+						stroke-width: 20px;
+					}
+				}
+
+				.type {
+					font-size: 2em;
+					font-weight: 600;
+					margin-left: $grid-gutter-width/2;
+					padding-left: 0;
+					z-index: 0;
+				}
+
+				.subtype {
+					font-size: 1.7em;
+					font-style: italic;
+					text-align: right;
+				}
+			}
+
+			.row-2 {
+				margin-top: .75em;
+				margin-bottom: .5em;
+			}
+		}
+
+		.main-image {
+			border: 2px solid #000;
+			border-radius: 2px;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			display: flex;
+			flex-direction: column;
+			//height: 17em;
+			overflow: hidden;
+			position: relative;
+			text-align: center;
+		}
+
+		.middle {
+			padding: 1em 0;
+		}
+
+		.footer {
+			line-height: 1;
+			margin-bottom: 1em;
+			position: relative;
+
+			.card-number {
+				bottom: -1em;
+				font-size: 0.6825em;
+				margin-left: auto;
+				position: absolute;
+				right: 0;
+
+				&:before {
+					content: '- '
+				}
+			}
+		}
+	}
+}

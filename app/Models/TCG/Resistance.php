@@ -1,0 +1,48 @@
+<?php
+
+namespace App\Models\TCG;
+
+/**
+ * Class Resistance
+ *
+ * @package Pokemon\Models
+ */
+class Resistance extends Model {
+    /**
+     * @var string
+     */
+    private $type;
+
+    /**
+     * @var string
+     */
+    private $value;
+
+    /**
+     * @return string
+     */
+    public function getType(): string {
+        return $this->type;
+    }
+
+    /**
+     * @return string
+     */
+    public function getValue(): string {
+        return $this->value;
+    }
+
+    /**
+     * @param string $type
+     */
+    public function setType( string $type ) {
+        $this->type = $type;
+    }
+
+    /**
+     * @param string $value
+     */
+    public function setValue( string $value ) {
+        $this->value = $value;
+    }
+}

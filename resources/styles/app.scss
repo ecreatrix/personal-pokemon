@@ -1,0 +1,30 @@
+@import "modules/variables-all";
+@import "modules/mixins";
+
+@import "wa-sass.1/basic/mixins";
+
+//@import "bootstrap/scss/bootstrap";
+@import "partials/bootstrap";
+//@import "partials/tailwind";
+
+//@import "partials/default";
+
+@import "partials/layout";
+@import "partials/misc";
+
+@import "partials/cards-api";
+@import "partials/pokedex";
+
+@import "partials/cards-print/index";
+@import "partials/cards-print/pokemon";
+@import "partials/cards-print/trainer";
+@import "partials/cards-print/energy";
+
+@import "partials/decks-api";
+
+.background-image {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 100%;
+}

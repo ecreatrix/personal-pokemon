@@ -1,0 +1,23 @@
+.tcg.energy {
+	.header {
+		.namebox {
+			justify-content: center;
+
+			.name {
+				text-align: center;
+				width: 100%;
+			}
+		}
+	}
+
+	.main-image {
+		border: none;
+		flex: 1 1 auto;
+		margin-bottom: auto;
+	}
+
+	.card-number {
+    	text-align: right;
+		width: 100%;
+	}
+}

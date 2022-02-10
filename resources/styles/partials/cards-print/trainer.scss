@@ -1,0 +1,33 @@
+.tcg.trainer {
+	&.no-hp .top-bar {
+		.namebox {
+			@include make-col(12);
+			justify-content: center;
+		}
+
+		.hp {
+			display: none;
+		}
+	}
+	&.has-hp .top-bar .namebox {
+		@include make-col(8);
+		justify-content: flex-start;
+	}
+
+	.main-image {
+		flex: 1 1 auto;
+		margin-bottom: auto;
+	}
+
+	.middle {
+		align-items: center;
+		display: flex;
+		font-size: 1.25em;
+		line-height: 1.15;
+	}
+	
+	.card-number {
+    	text-align: right;
+		width: 100%;
+	}
+}

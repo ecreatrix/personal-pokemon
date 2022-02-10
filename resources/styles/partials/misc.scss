@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "PokemonHollow";
+    src: url('fonts/Pokemon Hollow.ttf');
+}
+@font-face {
+    font-family: "PokemonSolid";
+    src: url('fonts/Pokemon Solid.ttf');
+}
+
+img {
+	height: auto;
+	width: auto;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.o-50-hover:hover {
+	transition: opacity .15s ease-in-out;
+	&:hover {
+		opacity: 50%;
+	}
+}
+
+a {
+	object {
+		pointer-events: none;
+	}
+}

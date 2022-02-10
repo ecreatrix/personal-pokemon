@@ -1,0 +1,69 @@
+.jumbotron.pokedex {
+	color: $black;
+
+	h1 {
+		color: $white;
+	}
+
+	.colour {
+		h1 {
+			font-family: 'PokemonSolid';
+		}
+	}
+	.bw {
+		h1 {
+			font-family: 'PokemonHollow';
+		}
+	}
+
+	margin-bottom: 1rem;
+	overflow: hidden;
+
+	h1 {
+		text-align: center;
+	}
+
+	.filter-sidebar {
+		label {
+			display: block;
+		}
+	}
+
+	.pokemon {
+		@include make-col-ready();
+		//border-bottom: 3px solid;
+		//background: white;
+		margin-bottom: 1rem;
+		padding-bottom: 1rem;
+		text-align: center;
+
+		.background-image {
+			height: 5rem;
+		}	
+
+		.card {
+			margin: 0 0.5rem;
+		}
+
+		@include media-breakpoint-up(sm) {
+			@include make-col(2);
+		}
+		@include media-breakpoint-up(md) {
+			@include make-col(4);
+		}
+
+		img {
+			height: 200px;
+			margin: 0 auto;
+			width: max-content;
+		}
+	}
+
+	&.types {
+		display: flex;
+
+		.type {
+			padding: 4px;
+		}
+	}
+}
