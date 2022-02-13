@@ -24,9 +24,31 @@
 	}
 
 	.filter-sidebar {
+		align-items: center;
+		background: $white;
+		display: flex;
+		height: 100%;
+		padding: 1.5rem 1rem;
+
 		label {
 			display: block;
 		}
+
+		form {
+			width: 100%;
+		}
+
+		.category {
+			display: block;
+			text-align: center;
+			text-decoration: underline;
+		}
+	}
+
+	.filter-content {
+		align-items: center;
+		display: flex;
+		justify-content: center;
 	}
 
 	.pokemon {

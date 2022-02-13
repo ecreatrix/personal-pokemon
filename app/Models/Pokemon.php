@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+use App\Models\Ability;
+use App\Models\Card;
+use App\Models\Move;
 use App\Models\Region;
 use App\Models\Type;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -14,21 +17,23 @@ class Pokemon extends Model {
 
 	protected $fillable = ['slug', 'pokedex_no'];
 
-	/**
-	 * The cards that belong to the pokemon
-	 */
+	public function abilities() {
+		return $this->belongsToMany( Ability::class, 'pokemons_abilities' );
+	}
+
 	public function cards() {
 		return $this->belongsToMany( Card::class, 'pokemons_cards', 'pokemon_id', 'card_id' );
 	}
 
-	/**
-	 * Get the first region it was found in
-	 */
-	public function region() {
-		return $this->belongsTo( Region::class, 'region_id', 'id' );
+	public function moves() {
+		return $this->belongsToMany( Move::class, 'pokemons_moves' );
+	}
+
+	public function regions() {
+		return $this->belongsToMany( Region::class, 'pokemons_regions' );
 	}
 
 	public function types() {
-		return $this->belongsToMany( Type::class, 'types', 'id', 'id' );
+		return $this->belongsToMany( Type::class, 'pokemons_types' );
 	}
 }

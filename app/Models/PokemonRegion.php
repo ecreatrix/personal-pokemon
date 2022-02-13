@@ -12,10 +12,10 @@ class PokemonRegion extends Pivot {
 	protected $fillable = ['pokemon_id', 'region_id'];
 
 	public function pokemon() {
-		return $this->belongsTo( Pokemon::class, 'pokemon_id', 'id' );
+		return $this->belongsToMany( Pokemon::class, 'pokemon_id', 'id' );
 	}
 
 	public function region() {
-		return $this->belongsTo( Region::class, 'region_id', 'id' );
+		return $this->belongsToMany( Region::class, 'region_id', 'id' );
 	}
 }

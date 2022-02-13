@@ -32,9 +32,7 @@ class Pokedex extends BaseController {
 
     public function update() {
         $api = ( new PokedexService() );
-
         //\Debugbar::startMeasure( 'pokemons' );
-
         $pokemons = [];
         for ( $i = 1; $i <= 898; $i++ ) {
             //\Debugbar::info( $i );

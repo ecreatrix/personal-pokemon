@@ -3823,6 +3823,78 @@ textarea.form-control-lg {
   }
 }
 
+@-webkit-keyframes spinner-border {
+  to {
+    transform: rotate(360deg) /* rtl:ignore */;
+  }
+}
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg) /* rtl:ignore */;
+  }
+}
+.spinner-border {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: -0.125em;
+  border: 0.25em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  -webkit-animation: 0.75s linear infinite spinner-border;
+          animation: 0.75s linear infinite spinner-border;
+}
+
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+  border-width: 0.2em;
+}
+
+@-webkit-keyframes spinner-grow {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes spinner-grow {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.spinner-grow {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: -0.125em;
+  background-color: currentColor;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-animation: 0.75s linear infinite spinner-grow;
+          animation: 0.75s linear infinite spinner-grow;
+}
+
+.spinner-grow-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner-border,
+.spinner-grow {
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+}
 .align-baseline {
   vertical-align: baseline !important;
 }
@@ -8553,6 +8625,23 @@ a object {
   pointer-events: none;
 }
 
+.loading-parent {
+  position: relative;
+}
+
+.loading {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  display: flex !important;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 .card {
   margin-bottom: 1rem;
   overflow: hidden;
@@ -8581,8 +8670,28 @@ a object {
 .jumbotron.pokedex h1, .jumbotron.pokedex .h1 {
   text-align: center;
 }
+.jumbotron.pokedex .filter-sidebar {
+  align-items: center;
+  background: #fff;
+  display: flex;
+  height: 100%;
+  padding: 1.5rem 1rem;
+}
 .jumbotron.pokedex .filter-sidebar label {
   display: block;
+}
+.jumbotron.pokedex .filter-sidebar form {
+  width: 100%;
+}
+.jumbotron.pokedex .filter-sidebar .category {
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+}
+.jumbotron.pokedex .filter-content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 .jumbotron.pokedex .pokemon {
   flex-shrink: 0;

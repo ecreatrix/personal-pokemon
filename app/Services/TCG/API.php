@@ -6,7 +6,7 @@ use App\Helpers\TextHelper;
 use App\Helpers\TypeHelper;
 use App\Models\Card;
 use App\Models\Pokemon;
-use App\Services\Pokemon;
+use App\Services\Pokedex;
 use App\Services\TCGCard;
 use App\Services\TCGDeck;
 use Illuminate\Support\Facades\Cache;

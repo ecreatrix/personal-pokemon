@@ -7,7 +7,7 @@ use App\Helpers\TypeHelper;
 use App\Models\Card;
 use App\Models\Pokemon;
 use App\Models\PokemonCard;
-use App\Services\Pokemon;
+use App\Services\Pokedex;
 use Illuminate\Support\Str;
 
 class Card {
