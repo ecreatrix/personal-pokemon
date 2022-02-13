@@ -4,6 +4,15 @@ namespace App\Services;
 use Illuminate\Support\Str;
 
 class Naming {
+    public static function cacheKey( $model, $key ) {
+        return sprintf(
+            "%s/%s-%s",
+            $model->getTable(),
+            $model->getKey(),
+            $model->updated_at->timestamp
+        ) . ':' . $key;
+    }
+
     public static function english_by_key( $entries, $key = 'name' ) {
         foreach ( $entries as $info ) {
             if ( 'en' === $info->language->name ) {

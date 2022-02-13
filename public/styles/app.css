@@ -8680,7 +8680,7 @@ a object {
 .jumbotron.pokedex .filter-sidebar label {
   display: block;
 }
-.jumbotron.pokedex .filter-sidebar form {
+.jumbotron.pokedex .filter-sidebar > div {
   width: 100%;
 }
 .jumbotron.pokedex .filter-sidebar .category {

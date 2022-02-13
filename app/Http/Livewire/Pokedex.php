@@ -4,56 +4,71 @@ namespace App\Http\Livewire;
 
 use App\Models\Pokemon;
 use App\Models\Region;
+use Illuminate\Support\Facades\Cache;
 use Livewire\Component;
 
 class Pokedex extends Component {
-    public $colour = true;
+    public $current_regions = [];
 
-    public $selected_regions = [];
+    public $filter = [
+        'selected_regions' => [],
+        'colour'           => true,
+    ];
 
-    public $test = true;
+    public $regions;
 
-    protected $pokemons_by_region = [];
+    //public $selected_regions = [];
 
-    public function mount() {
-        $pokemons_by_region = [];
-        $regions            = Region::all();
-        //$regions            = [Region::firstWhere( 'id', 1 )];
+    protected $rules = [
+        'filter.colour.*'         => 'required|boolean',
+        'filter.selected_regions' => 'required|array',
+    ];
 
-        foreach ( $regions as $region ) {
-            $region_id = $region->id;
-            \Debugbar::info( $region_id );
+    public function filter() {
+        $current_regions = [];
+        foreach ( $this->filter['selected_regions'] as $region_id => $value ) {
+            if ( $value ) {
+                $cache_key = 'region_pokemons_' . $region_id;
+                $region    = Region::firstWhere( 'id', $region_id );
 
-            $pokemons_by_region[$region_id] = [
-                'title' => 'Region: ' . $region->name,
-                //'pokemons' => $region->pokemons,
-            ];
+                $cache = Cache::get( $cache_key );
+
+                if ( $cache ) {
+                    $pokemons = $cache;
+                } else {
+                    $pokemons = $region->pokemonsCached();
+
+                    Cache::put( $cache_key, $pokemons, 500000 ); //500000 minutes
+                }
+
+                $current_regions[$region_id] = [
+                    'title'    => 'Region: ' . $region->name,
+                    'pokemons' => $pokemons,
+                ];
+            }
         }
 
-        \Debugbar::info( $pokemons_by_region );
-        $this->pokemons_by_region = arsort( $pokemons_by_region );
+        arsort( $current_regions );
+        $this->current_regions = $current_regions;
+    }
+
+    public function mount() {
+        $this->regions = Region::all();
+        //$regions            = [Region::firstWhere( 'id', 1 )];
+
+        /*foreach ( $regions as $region ) {
+        $region_id = $region->id;
+
+        $this->pokemons_by_region[$region_id] = [
+        'title' => 'Region: ' . $region->name,
+        'pokemons' => $region->pokemons,
+        ];
+        }*/
+
+        //\Debugbar::info( $this->pokemons_by_region );
     }
 
     public function render() {
-        $pokemons_by_region = [];
-        $regions            = Region::all();
-        \Debugbar::info( $this->test );
-
-        foreach ( $this->selected_regions as $region_id ) {
-            //\Debugbar::info( $region_id );
-            $region = Region::firstWhere( 'id', $region_id );
-
-            /*$pokemons = $region->pokemons;
-
-        $pokemons_by_region[$region_id] = [
-        'title'    => 'Region: ' . $region->name,
-        'pokemons' => $pokemons,
-        ];*/
-        }
-
-        arsort( $pokemons_by_region );
-        //\Debugbar::info( $this->pokemons_by_region );
-
-        return view( 'livewire.pokedex', compact( 'pokemons_by_region', 'regions' ) )->layout( 'pages.pokedex', compact( 'pokemons_by_region', 'regions' ) );
+        return view( 'livewire.pokedex' )->extends( 'layouts.app' );
     }
 }
