@@ -30,7 +30,9 @@ Route::group( [], function () {
     Route::match( ['put'], '/cards/download', [DownloadFile::class, 'card_images'] );
     Route::match( ['get'], '/test', function () {
         $data = [
-            'selected' => [
+            'show_title' => true,
+            'per_row'    => 4,
+            'selected'   => [
                 'title'    => "Range 1 to 5",
                 'slug'     => "range-1-to-5",
                 'pokemons' => [
@@ -180,9 +182,13 @@ Route::group( [], function () {
                     ],
                 ],
             ],
-            'colour'   => true,
+            'colour'     => true,
         ];
-        return view( 'printables.pokedexPNG', compact( 'data' ) )->render();
+        return view( 'printables.pokedexPDF', compact( 'data' ) )->render();
+    } );
+
+    Route::match( ['get'], '/export/pokedex', function () {
+        return view( 'pages.exportPokedex' )->render();
     } );
 
     Route::match( ['post', 'get', 'put'], '/pokedex', PokedexLivewire::class )->name( 'Pokedex' );

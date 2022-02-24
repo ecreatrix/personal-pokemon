@@ -21,6 +21,7 @@ mix
 mix.js('resources/scripts/app.js', 'public/scripts')
     .react()
     .sass('resources/styles/app.scss', 'public/styles')
+    .sass('resources/styles/printable.scss', 'public/styles')
     .purgeCss()
     .copy('./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map', 'public/scripts');
 

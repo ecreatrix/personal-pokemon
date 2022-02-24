@@ -9948,62 +9948,6 @@ html.pdf body {
   box-shadow: 0 0 0.25em 0.03em #ee99ac;
   color: #ee99ac;
 }
-.jumbotron.pokedex.printable {
-  font-family: "Nunito";
-  vertical-align: middle;
-  height: 100%;
-}
-.jumbotron.pokedex.printable, .jumbotron.pokedex.printable .heading {
-  color: #000;
-}
-.jumbotron.pokedex.printable .heading {
-  font-family: "Pokemon Solid";
-  margin: auto;
-}
-.jumbotron.pokedex.printable .pokemon {
-  border: 1px solid #adb5bd;
-  border-radius: 10px;
-  padding-top: 0.5rem;
-  height: 220px;
-  width: 200px;
-}
-.jumbotron.pokedex.printable .pokemon .image {
-  height: 150px;
-}
-.jumbotron.pokedex.printable .pokemon .image img {
-  height: 100%;
-  width: auto;
-}
-.jumbotron.pokedex.printable .pokemon .body {
-  border-top: 1px solid #adb5bd;
-  padding-top: 1.5rem;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.jumbotron.pokedex.printable .pokemon .body .types {
-  padding-top: 1rem;
-}
-.jumbotron.pokedex.printable .pokemon .body .types span {
-  border-radius: 20px;
-  display: inline-block;
-  margin: 0.25rem 0.25rem 0;
-  padding: 1rem 1rem 0.5rem;
-}
-.jumbotron.pokedex.printable .pokemon .card {
-  border-width: 2px;
-  display: block;
-}
-.jumbotron.pokedex.printable .table {
-  border-spacing: 15px;
-  display: table;
-  margin: auto;
-}
-.jumbotron.pokedex.printable .table .table-row {
-  display: table-row;
-}
-.jumbotron.pokedex.printable .table .table-row .pokemon {
-  display: table-cell;
-}
 
 .download-all {
   margin-bottom: 2em;

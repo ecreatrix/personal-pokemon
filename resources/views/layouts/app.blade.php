@@ -15,6 +15,7 @@
 
         <!-- Styles -->
         <link href="{{ mix('/styles/app.css') }}" rel="stylesheet" crossorigin="anonymous">
+        <link href="{{ mix('/styles/printable.css') }}" rel="stylesheet" crossorigin="anonymous">
 
         @livewireStyles
     </head>

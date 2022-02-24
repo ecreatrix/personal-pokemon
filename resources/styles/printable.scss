@@ -1,0 +1,97 @@
+@import "modules/variables-all";
+@import "modules/animations";
+@import "modules/mixins";
+
+@page { margin: 1rem; }
+
+body.pdf {
+	display: table;
+    margin: auto !important;
+    height: 100vh;
+    vertical-align: middle;
+}
+
+body.pdf, .printable {
+    > div {
+    	//background: red;
+    	//display: table-cell;
+    }
+
+	.table {
+		border-spacing: 15px;
+		display: table;
+		margin: auto;
+
+		.table-row {
+			display: table-row;
+		}
+	}
+
+    .d-tablecell {
+    	display: table-cell;
+    }
+}
+
+.jumbotron.pokedex.printable {
+	font-family: 'Nunito';
+	height: 100%;
+	overflow: visible;
+	vertical-align: middle;
+
+	&, .heading {
+		color: $black;
+	}
+
+	.heading {
+		display: table-caption;
+		font-family: 'Pokemon Solid';
+		margin: auto;
+		text-align: center;
+	}
+
+	.pokemon {
+		border: 1px solid $gray-500;
+		border-radius: 10px;
+		padding-top: 0.5rem;
+		height: 200px;
+		width: 200px;
+
+		.image {
+			height: 150px;
+
+			img {
+				height: 100%;
+				width: auto;
+			}
+		}
+
+		.body {
+			border-top: 1px solid $gray-500;
+			padding-top: 1.5rem;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			//align-items: center;
+			//display: flex;
+			//flex-direction: column;
+			//justify-content: center;
+			//margin-top: 3rem;
+			//height: 180px;
+
+			.types {
+				padding-top: 1rem;
+
+				span {
+					border-radius: 20px;
+					display: inline-block;
+					margin: 0.25rem 0.25rem 0;
+					padding: 1rem 1rem 0.5rem;
+				}
+			}
+		}
+
+		.card {
+			border-width: 2px;
+			display: block;
+		}
+	}
+}

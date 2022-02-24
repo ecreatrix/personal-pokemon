@@ -15,6 +15,9 @@
 				<li class="nav-item">
 					<a class="nav-link {{ Request::is('/pokedex/update') ? 'active' : '' }}" aria-current="page" href="{{ URL::to('/pokedex/update') }}">Update</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link {{ Request::is('/export/pokedex') ? 'active' : '' }}" aria-current="page" href="{{ URL::to('/export/pokedex') }}">Export</a>
+				</li>
 			</ul>
 		</li>
 		<li class="nav-item dropdown">

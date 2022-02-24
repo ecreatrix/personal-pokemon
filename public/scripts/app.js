@@ -3534,23 +3534,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.addEventListener('blob_create', function (data) {
-  var html = data.detail.render; //html = 'test'
+  var html = data.detail.render;
+  var nodeHtml = document.createElement('div');
+  nodeHtml.innerHTML = html; //console.log(html);
+  //html = 'test'
+  //let nodeOuter = document.createElement('div');
+  //nodeOuter.classList.add('jumbotron','pokedex','printable');
 
-  var filename = "".concat(data.detail.filename, ".png");
-  var node = document.createElement('div'); //node.classList.add('d-none');
+  var nodeInner = document.createElement('div');
+  nodeInner.classList.add('table');
+  nodeInner.setAttribute("id", "print-png"); //nodeInner.innerHTML = html;
 
-  node.setAttribute("id", "print-png");
-  node.innerHTML = html;
-  document.body.appendChild(node);
-  node = document.getElementById('print-png');
-  (0,html_to_image__WEBPACK_IMPORTED_MODULE_1__.toPng)(node).then(function (blob) {
-    console.log(blob);
-    livewire.emit('blob_save', blob);
-    node.remove();
-  })["catch"](function (error) {
-    console.error('oops, something went wrong!', error);
-    node.remove();
+  var rows = nodeHtml.getElementsByClassName('table-row');
+  console.log(rows);
+  Array.from(rows).forEach(function (row, i) {
+    var node = document.createElement('div');
+    node.classList.add('jumbotron', 'pokedex', 'printable'); //node.appendChild(nodeOuter)
+
+    node.appendChild(nodeInner);
+    node.appendChild(row);
+    document.body.appendChild(node); //let node = document.getElementById('print-png');
+
+    console.log(i);
+    console.log(node);
+    var nodeFilename = "".concat(data.detail.path, "-").concat(data.detail.filename, "-").concat(i, ".png");
+    (0,html_to_image__WEBPACK_IMPORTED_MODULE_1__.toPng)(node).then(function (blob) {//console.log(blob);
+      //livewire.emit('blob_save', blob, nodeFilename);
+      //node.remove()
+    })["catch"](function (error) {
+      console.error('oops, something went wrong!', error); //node.remove()
+    });
   });
+  console.log('test');
 });
 
 /***/ }),
@@ -29861,6 +29876,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/styles/printable.scss":
+/*!*****************************************!*\
+  !*** ./resources/styles/printable.scss ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./node_modules/object-assign/index.js":
 /*!*********************************************!*\
   !*** ./node_modules/object-assign/index.js ***!
@@ -32457,6 +32485,7 @@ if (false) {} else {
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/scripts/app": 0,
+/******/ 			"styles/printable": 0,
 /******/ 			"styles/app": 0
 /******/ 		};
 /******/ 		
@@ -32507,8 +32536,9 @@ if (false) {} else {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["styles/app"], () => (__webpack_require__("./resources/scripts/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["styles/app"], () => (__webpack_require__("./resources/styles/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["styles/printable","styles/app"], () => (__webpack_require__("./resources/scripts/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["styles/printable","styles/app"], () => (__webpack_require__("./resources/styles/app.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["styles/printable","styles/app"], () => (__webpack_require__("./resources/styles/printable.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

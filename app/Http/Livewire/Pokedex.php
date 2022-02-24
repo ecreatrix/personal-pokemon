@@ -5,8 +5,10 @@ namespace App\Http\Livewire;
 use App\Models\Pokemon;
 use App\Models\Region;
 use App\Models\Type;
+use App\Services\Download;
 use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Livewire\Component;
 
@@ -37,56 +39,51 @@ class Pokedex extends Component {
     public function blob_create() {
         set_time_limit( 300 ); // Extends to 5 minutes.
 
-        foreach ( $this->selected as $group ) {
-            $timestamp = '-' . \Carbon\Carbon::now()->format( 'YmdHs' );
-            $timestamp = '';
+        $per_row = 4;
 
-            $filename = 'printables/pokedex-' . $group['slug'] . $timestamp;
+        foreach ( $this->selected as $group ) {
+            $timestamp = \Carbon\Carbon::now()->format( 'YmdHs' );
+            //$timestamp = '';
+
+            $path     = 'printables/' . $timestamp;
+            $filename = 'pokedex-' . $group['slug'];
 
             $data = [
                 'selected' => $group,
+                //'selected'   => [],
                 'colour'   => $this->filter['colour'],
+                'per_row'  => $per_row,
+                //'show_title' => true,
             ];
 
+            /*Download::prep( $path, $filename );
+
             $render = view( 'printables.pokedexPNG', compact( 'data' ) )->extends( 'layouts.app' )->render();
-            $this->dispatchBrowserEvent( 'blob_create', ['render' => $render, 'filename' => storage_path( $filename )] );
+            $this->dispatchBrowserEvent( 'blob_create', [
+            'render' => $render, 'path' => storage_path(), 'path' => $path, 'filename' => $filename,
+            ] );*/
 
-            //clock( json_encode( $data ) );
-            //clock( $data );
-            //$view = view( 'partials.printables.pokedex', compact( 'data' ) )->render();
+            $pdf = PDF::loadView( 'printables.pokedexPDF', compact( 'data' ) )->setPaper( 'a4', 'landscape' );
+            $pdf->save( storage_path( 'app/printables/' . $filename . '-' . $timestamp . '.pdf' ) )->stream( 'pokedex.pdf' );
 
-            //$pdf = PDF::loadView( 'livewire.pokedex' )->extends( 'layouts.app' );
-            //$pdf = PDF::loadView( 'printables.pokedexPDF', compact( 'data' ) )->setPaper( 'a4', 'landscape' );
-
-            //$pdfHTML = PDF::loadView( 'partials.printables.pokedex', compact( 'data' ) );
-            //clock( $render );
-            //$pdf->save( storage_path( $filename . '.pdf' ) )->stream( 'pokedex.pdf' );
-            //response()->streamDownload( function () {
-            //    echo 'CSV Contents...';
-            //}, storage_path( 'exports/export.csv' ) );
-            /*array_unshift($this->comments, [
-        'author' => $this->author,
-        'body' => $this->body
-        ]);
-
-        $this->reset(['body']);  // reset back to default value i.e. empty*/
         }
     }
 
-    public function blob_save( $blob ) {
-        clock( $blob );
-        if ( ! is_null( $blob ) ) {
-            //$this->latitud = $value;
-        }
+    public function blob_save( $path ) {
+        $images = ["file1.jpg", "file2.jpg"];
+
+        //$pdf = new Imagick($images);
+        //$pdf->setImageFormat('pdf');
+        // $pdf->writeImages('combined.pdf', true);
     }
 
     public function by_pokedex( $chosen_numbers ) {
         $selected = [];
 
         foreach ( $chosen_numbers as $range ) {
-            $start      = $range['start'];
-            $end        = $range['end'];
-            $end        = 12;
+            $start = $range['start'];
+            $end   = $range['end'];
+            //$end        = 12;
             $clock_name = $start . ' - ';
 
             $pokemons = Pokemon::rangedCached( $start, $end );

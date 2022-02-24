@@ -1,0 +1,20 @@
+@page {
+  margin: 1rem;
+}
+body.pdf {
+  display: table;
+  margin: auto !important;
+  height: 100vh;
+  vertical-align: middle;
+}
+body.pdf .table {
+  border-spacing: 15px;
+  display: table;
+  margin: auto;
+}
+body.pdf .table .table-row {
+  display: table-row;
+}
+body.pdf .d-tablecell {
+  display: table-cell;
+}

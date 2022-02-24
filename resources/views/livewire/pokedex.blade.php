@@ -58,7 +58,7 @@
 
 		<div class="filter-content col-md-9 offset-md-1">
 			@if( count($selected) > 0 ) 
-				<div class="accordion" id="pokedexAccordion">
+				<div class="accordion d-none" id="pokedexAccordion">
 					@foreach( $selected as $group )
 						<div class="accordion-item">
 							<h1 class="accordion-header heading" id="heading-{{ $group['slug'] }}">

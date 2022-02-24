@@ -1,5 +1,6 @@
 {
     "/scripts/app.js": "/scripts/app.js",
+    "/styles/printable.css": "/styles/printable.css",
     "/styles/app.css": "/styles/app.css",
     "/scripts/bootstrap.bundle.min.js.map": "/scripts/bootstrap.bundle.min.js.map"
 }
