@@ -19,6 +19,8 @@ class Pokemon extends Model {
 
 	protected $fillable = ['slug', 'pokedex_no'];
 
+	private static $main_pokemon_columns = ['pokemons.id', 'pokedex_no', 'name', 'slug', 'colour', 'image_slug'];
+
 	public function abilities() {
 		//return $this->belongsToMany( Ability::class, 'pokemons_abilities' );
 	}
@@ -31,8 +33,46 @@ class Pokemon extends Model {
 		//return $this->belongsToMany( Move::class, 'pokemons_moves' );
 	}
 
+	public function next_stage() {
+		$next_stage_no = $this->next_stage;
+
+		if ( $next_stage_no ) {
+			return Pokemon::firstWhere( 'pokedex_no', $next_stage_no );
+		}
+
+		return false;
+	}
+
+	public function previous_stage() {
+		$previous_stage_no = $this->previous_stage;
+
+		if ( $previous_stage_no ) {
+			return Pokemon::firstWhere( 'pokedex_no', $previous_stage_no );
+		}
+
+		return false;
+	}
+
+	public static function ranged( $start, $end ) {
+		return Pokemon::where( 'pokedex_no', '>=', $start )->where( 'pokedex_no', '<=', $end )->select( self::$main_pokemon_columns )->with( 'types' );
+	}
+
+	public static function rangedCached( $start, $end ) {
+		$cache_key = 'numbers_pokemons_' . $start . '_' . $end;
+		$cache     = Cache::get( $cache_key );
+		//Cache::forget( $cache_key );
+
+		if ( false && $cache ) {
+			return $cache;
+		} else {
+			//return Cache::rememberForever( $cache_key, function () use ( $start, $end ) {
+			return self::ranged( $start, $end )->get()->toArray();
+			//} );
+		}
+	}
+
 	public function regions() {
-		//return $this->belongsToMany( Region::class, 'pokemons_regions' );
+		return $this->belongsToMany( Region::class, 'pokemons_regions' );
 	}
 
 	public function types() {
@@ -47,7 +87,7 @@ class Pokemon extends Model {
 		//\Debugbar::info( $value );
 
 		return Cache::rememberForever( Naming::cacheKey( $this, 'types' ), function () {
-			return $this->types()->get();
+			return $this->types()->get()->toArray();
 		} );
 	}
 }

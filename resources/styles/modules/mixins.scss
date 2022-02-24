@@ -1,0 +1,48 @@
+@mixin types-solid {
+	@each $name, $value in $types {
+		&.#{ $name } {
+			background: map-get($value, 'background');
+			border: map-get($value, 'border');
+			box-shadow: 0 0 0.25em 0.03em map-get($value, 'background');
+			color: $white;
+			transition: $transition-base;
+		}
+	}
+}
+
+@mixin types-outline {
+	@each $name, $value in $types {
+		&.#{ $name } {
+			background: none;
+			border: map-get($value, 'border');
+			box-shadow: 0 0 0.25em 0.03em map-get($value, 'background');
+			color: map-get($value, 'background');
+		}
+	}
+}
+
+@mixin rainbow-border($background: $white, $border-radius-current: $border-radius-sm) {
+	position: relative;
+	background: $background;
+	border-radius: $border-radius-current;
+	border: none;
+
+	&:before, &:after {
+		animation: steam 20s linear infinite;
+		background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+		  #0000ff, #00ff00,#ffff00, #ff0000);
+		background-size: 400%;
+		border-radius: $border-radius-current;
+		content: '';
+		height: calc(100% + 4px);
+		left: -2px;
+		position: absolute;
+		top: -2px;
+		width: calc(100% + 4px);
+		z-index: -1;
+	}
+
+	&:after {
+		filter: blur(50px);
+	}
+}

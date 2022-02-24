@@ -7,11 +7,13 @@
     "require": {
         "php": "^7.3|^8.0",
         "barryvdh/laravel-debugbar": "^3.6",
+        "barryvdh/laravel-dompdf": "^1.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "intervention/image": "^2.7",
+        "itsgoingd/clockwork": "^5.1",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
-        "intervention/image": "^2.7",
         "laravel/tinker": "^2.5",
         "laravelcollective/html": "^6.2",
         "livewire/livewire": "^2.10"

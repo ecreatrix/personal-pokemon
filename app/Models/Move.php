@@ -12,6 +12,6 @@ class Move extends Model {
     protected $fillable = ['slug', 'name'];
 
     public function pokemons() {
-        return $this->belongsToMany( Pokemon::class, 'pokemons_pokemons' );
+        return $this->belongsToMany( Pokemon::class, 'pokemons_moves' );
     }
 }

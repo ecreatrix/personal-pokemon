@@ -1,54 +1,21 @@
 $tcg-print-width: 414px;
-$type-normal-bg: #a8a878;
-$type-normal-border: #6d6d4e;
-
-$type-fire-bg: #f08030;
-$type-fire-border: #9c531f;
-
-$type-fighting-bg: #c03028;
-$type-fighting-border: #7d1f1a;
-
-$type-water-bg: #6890f0;
-$type-water-border: #445e9c;
-
-$type-flying-bg: #a890f0;
-$type-flying-border: #6d5e9c;
-
-$type-grass-bg: #78c850;
-$type-grass-border: #4e8234;
-
-$type-poison-bg: #a040a0;
-$type-poison-border: #c183c1;
-
-$type-electric-bg: #f8d030;
-$type-electric-border: #a1871f;
-
-$type-ground-bg: #e0c068;
-$type-ground-border: #927d44;
-
-$type-psychic-bg: #f85888;
-$type-psychic-border: #a13959;
-
-$type-rock-bg: #b8a038;
-$type-rock-border: #786824;
-
-$type-ice-bg: #98d8d8;
-$type-ice-border: #638d8d;
-
-$type-bug-bg: #a8b820;
-$type-bug-border: #6d7815;
-
-$type-dragon-bg: #7038f8;
-$type-dragon-border: #4924a1;
-
-$type-ghost-bg: #705898;
-$type-ghost-border: #493963;
-
-$type-dark-bg: #705848;
-$type-dark-border: #49392f;
-
-$type-steel-bg: #b8b8d0;
-$type-steel-border: #787887;
-
-$type-fairy-bg: #ee99ac;
-$type-fairy-border: #9b6470;
+$types: (
+	'normal': ( 'background': #a8a878, 'border': #6d6d4e ),
+	'fire': ( 'background': #f08030, 'border': #9c531f ),
+	'fighting': ( 'background': #c03028, 'border': #7d1f1a ),
+	'water': ( 'background': #6890f0, 'border': #445e9c ),
+	'flying': ( 'background': #a890f0, 'border': #6d5e9c ),
+	'grass': ( 'background': #78c850, 'border': #4e8234 ),
+	'poison': ( 'background': #a040a0, 'border': #c183c1 ),
+	'electric': ( 'background': #f8d030, 'border': #a1871f ),
+	'ground': ( 'background': #e0c068, 'border': #927d44 ),
+	'psychic': ( 'background': #f85888, 'border': #a13959 ),
+	'rock': ( 'background': #b8a038, 'border': #786824 ),
+	'ice': ( 'background': #98d8d8, 'border': #638d8d ),
+	'bug': ( 'background': #a8b820, 'border': #6d7815 ),
+	'dragon': ( 'background': #7038f8, 'border': #4924a1 ),
+	'ghost': ( 'background': #705898, 'border': #493963 ),
+	'dark': ( 'background': #705848, 'border': #49392f ),
+	'steel': ( 'background': #b8b8d0, 'border': #787887 ),
+	'fairy': ( 'background': #ee99ac, 'border': #9b6470 ),
+);

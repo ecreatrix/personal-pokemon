@@ -6,12 +6,14 @@ use App\Models\Move;
 use App\Models\MoveType;
 use App\Models\Pokemon;
 use App\Models\PokemonAbility;
+use App\Models\PokemonForm;
 use App\Models\PokemonMove;
 use App\Models\PokemonRegion;
 use App\Models\PokemonType;
+use App\Models\PokemonVariety;
 use App\Models\Region;
 use App\Models\Type;
-use App\Services\Naming;
+use App\Models\Variety;
 use Illuminate\Support\Str;
 
 class Pokedex {
@@ -42,6 +44,35 @@ class Pokedex {
         }
 
         return $ability;
+    }
+
+    public function create_form( $pokemon, $key, $info ) {
+        $info_id = Naming::url_id( $info->url, 'form' );
+        $slug    = $info->name;
+
+        $form = PokemonForm::firstOrNew( ['slug' => $slug, 'pokemon_id' => $pokemon->id] );
+        if ( $info_id && ! $form->exists ) {
+            $info = API::poke_request( $info_id, 'pokemon-form' );
+
+            if ( ! $info ) {
+                \Debugbar::info( 'Form not found in API: ' . $slug );
+                return false;
+            }
+
+            $form->source     = 'pokedex';
+            $form->name       = Str::title( $slug );
+            $form->pokemon_id = $pokemon->id;
+            $form->slug       = Str::slug( $slug );
+
+            $form->primary = false;
+            if ( 0 === $key ) {
+                $form->primary = true;
+            }
+
+            $form->save();
+        }
+
+        return $form;
     }
 
     public function create_move( $slug, $url = false ) {
@@ -78,31 +109,43 @@ class Pokedex {
         return $move;
     }
 
-    public function create_pokemon( $pokedex_no_original ) {
-        $pokedex_no = Naming::pad_pokedex_no( $pokedex_no_original );
-        $pokemon    = Pokemon::firstOrNew( ['pokedex_no' => $pokedex_no] );
-        //\Debugbar::info( $pokemon );
+    public function create_pokemon( $species, $variety_info, $pokedex_no_original, $search_id = false ) {
+        $pokedex_no_original = $species->pokedex_numbers[0]->entry_number;
+        $pokedex_no          = Naming::pad_pokedex_no( $pokedex_no_original );
 
-        //if ( true || ! $pokemon->exists ) {
-        if ( ! $pokemon->exists ) {
-            $info = false;
-            //\Debugbar::startMeasure( 'API' );
+        if ( $search_id ) {
+            // Variety
+            $info    = API::poke_request( $search_id );
+            $pokemon = Pokemon::firstOrNew( ['slug' => $info->name] );
+
+            $species_name = $info->species->name;
+            $name         = Str::title( $info->name );
+        } else {
+            // Default Pokemon
             $info    = API::poke_request( $pokedex_no_original );
-            $species = Api::poke_request( $pokedex_no_original, 'pokemon-species' );
-            //$slug = Naming::make_pokemon_slug( $info->name );
-            //\Debugbar::stopMeasure( 'API' );
+            $pokemon = Pokemon::firstOrNew( ['pokedex_no' => $pokedex_no] );
 
+            $species_name = $info->species->name;
+            $name         = Str::title( $species_name );
+        }
+
+        if ( ! $pokemon->exists ) {
             if ( ! $info ) {
-                \Debugbar::info( 'Pokemon not found in API: ' . $pokedex_no );
+                \Debugbar::info( 'Pokemon not found in API: ' . $search_id );
                 return false;
             }
-            //\Debugbar::info( 'get: ' . $pokedex_no );
-            $name = Str::title( $info->name );
+
             $slug = Str::slug( $name );
 
-            //\Debugbar::info( 'get: ' . $slug );
+            $name = str_replace( '-m', ' ♂', $name );
+            $name = str_replace( '-f', ' ♀', $name );
+            $name = str_replace( '-', ' ', $name );
+            $name = str_replace( 'Porygon Z', 'Porygon-Z', $name );
+
             $pokemon->slug = $slug;
             $pokemon->name = $name;
+
+            $pokemon->pokedex_no = $pokedex_no;
 
             $pokemon->source = 'pokedex';
 
@@ -113,7 +156,13 @@ class Pokedex {
             $pokemon->height = $info->height;
             $pokemon->weight = $info->weight;
 
-            $pokemon = $this->evolution( $pokemon, $species );
+            $pokemon->image_slug = $this->get_image_slug( $species, $variety_info, $pokedex_no_original, $search_id );
+
+            $evolution               = $this->evolution( $pokemon, $species );
+            $pokemon->previous_stage = $evolution['previous_stage'];
+            $pokemon->next_stage     = $evolution['next_stage'];
+
+            $pokemon->text = $this->get_pokemon_text( $pokemon, $name, $species );
 
             if ( $species->color ) {
                 $pokemon->colour = $species->color->name;
@@ -129,13 +178,13 @@ class Pokedex {
                 $pokemon->genus = Naming::english_by_key( $species->genera, 'genus' );
             }
 
-            $pokemon->text = Naming::english_by_key( $species->names );
+            $variety = $this->create_variety( $species_name, $variety_info );
 
+            $pokemon->variety_id = $variety->id;
+
+            ///clock( $pokemon->toArray() );
             $pokemon->save();
-
-            $this->pokedexes( $pokemon, $species );
-
-            //\Debugbar::info( $info );
+            //clock( $info );
             foreach ( $info->moves as $move ) {
                 $move = $this->create_move( $move->move->name, $move->move->url );
                 $this->create_pokemon_move( $pokemon, $move );
@@ -150,6 +199,14 @@ class Pokedex {
                 $ability = $this->create_ability( $ability->ability->name, $ability->ability->url );
                 $this->create_pokemon_ability( $pokemon, $ability );
             }
+
+            foreach ( $info->forms as $key => $form ) {
+                $form = $this->create_form( $pokemon, $key, $form );
+            }
+
+            //if ( ! $search_id ) {
+            $this->pokedexes( $pokemon, $species );
+            //}
         }
 
         return $pokemon;
@@ -159,7 +216,6 @@ class Pokedex {
         $pokemonAbility = PokemonAbility::firstOrNew( ['ability_id' => $ability->id, 'pokemon_id' => $pokemon->id] );
 
         if ( ! $pokemonAbility->exists ) {
-            //\Debugbar::info( 'PokemonAbility: ' . $pokemon->id . ' ' . $ability->id );
             $pokemonAbility->ability_id = $ability->id;
             $pokemonAbility->pokemon_id = $pokemon->id;
 
@@ -169,11 +225,44 @@ class Pokedex {
         return $pokemonAbility;
     }
 
+    public function create_pokemon_custom( $species, $variety_info, $pokedex_no_original, $search_id = false ) {
+        $pokedex_no_original = $species->pokedex_numbers[0]->entry_number;
+        $pokedex_no          = Naming::pad_pokedex_no( $pokedex_no_original );
+
+        if ( $search_id ) {
+            // Variety
+            $info    = API::poke_request( $search_id );
+            $pokemon = Pokemon::firstWhere( ['slug' => $info->name] );
+
+            $species_name = $info->species->name;
+            $name         = Str::title( $info->name );
+
+        } else {
+            // Default Pokemon
+            $info    = API::poke_request( $pokedex_no_original );
+            $pokemon = Pokemon::firstWhere( ['pokedex_no' => $pokedex_no] );
+
+            $species_name = $info->species->name;
+            $name         = Str::title( $species_name );
+        }
+
+        foreach ( $info->types as $type ) {
+            $type = $this->create_type( $type->type->name, $type->type->url );
+            $this->create_pokemon_type( $pokemon, $type );
+        }
+
+        //if ( ! $search_id ) {
+        $this->pokedexes( $pokemon, $species );
+        //}
+
+        //clock( $this->get_image_slug( $species, $variety_info, $pokedex_no_original, $search_id ) );
+        return $pokemon;
+    }
+
     public function create_pokemon_move( $pokemon, $move ) {
         $pokemonMove = PokemonMove::firstOrNew( ['move_id' => $move->id, 'pokemon_id' => $pokemon->id] );
 
         if ( ! $pokemonMove->exists ) {
-            //\Debugbar::info( 'PokemonMove: ' . $pokemon->id . ' ' . $move->id );
             $pokemonMove->move_id    = $move->id;
             $pokemonMove->pokemon_id = $pokemon->id;
 
@@ -184,13 +273,11 @@ class Pokedex {
     }
 
     public function create_pokemon_region( $pokemon, $region_slug, $primary = false ) {
-        //\Debugbar::info( 'create_pokemon_region region_slug: ' . $region_slug . ' - ' . $pokemon->name );
         $region = $this->create_region( $region_slug );
 
         $pokemonRegion = PokemonRegion::firstOrNew( ['region_id' => $region->id, 'pokemon_id' => $pokemon->id] );
 
         if ( ! $pokemonRegion->exists ) {
-            //\Debugbar::info( 'PokemonRegion: ' . $pokemon->id . ' ' . $region->id . ' - primary: ' . $primary );
             $pokemonRegion->region_id  = $region->id;
             $pokemonRegion->pokemon_id = $pokemon->id;
             $pokemonRegion->primary    = $primary;
@@ -205,8 +292,6 @@ class Pokedex {
         $pokemonType = PokemonType::firstOrNew( ['type_id' => $type->id, 'pokemon_id' => $pokemon->id] );
 
         if ( ! $pokemonType->exists ) {
-            //\Debugbar::info( 'PokemonType: ' . $pokemon->id . ' ' . $type->id );
-            //\Debugbar::info( $pokemonType );
             $pokemonType->type_id    = $type->id;
             $pokemonType->pokemon_id = $pokemon->id;
 
@@ -227,7 +312,6 @@ class Pokedex {
                 return $region;
             }
 
-            //\Debugbar::info( 'Region: ' . $info->name );
             $region_id = $info->id;
 
             $region->name       = Str::title( $info->name );
@@ -249,10 +333,26 @@ class Pokedex {
             $region->save();
         }
 
-        //\Debugbar::info( $id . ': ' );
-        //\Debugbar::info( $region );
+        return $region;
+    }
 
-        //\Debugbar::stopMeasure( 'regiondb' );
+    public function create_region_custom( $slug = 'unknown', $region_id = 99 ) {
+        $region = Region::firstOrNew( ['slug' => $slug] );
+
+        if ( ! $region->exists ) {
+            $region->name       = Str::title( $slug );
+            $region->slug       = Str::slug( $slug );
+            $region->generation = false;
+            $region->number     = $region_id;
+            $region->source     = 'custom';
+
+            $region->locations = json_encode( [] );
+
+            $region->api = json_encode( [] );
+
+            $region->save();
+        }
+
         return $region;
     }
 
@@ -271,8 +371,6 @@ class Pokedex {
                 \Debugbar::info( 'Type not found in API: ' . $slug );
                 return false;
             }
-
-            //\Debugbar::info( 'get: ' . $info->name );
 
             $type->number     = $info->id;
             $type->name       = Naming::english_by_key( $info->names );
@@ -293,14 +391,37 @@ class Pokedex {
         return $type;
     }
 
+    public function create_variety( $species_name, $variety_info ) {
+        if ( $variety_info->is_default ) {
+            $slug = 'basic';
+        } else {
+            $slug = str_replace( $species_name . '-', '', $variety_info->pokemon->name );
+        }
+
+        $variety = Variety::firstOrNew( ['slug' => $slug] );
+
+        if ( ! $variety->exists ) {
+            $variety->source = 'pokedex';
+
+            $variety->name = Str::title( $slug );
+            $variety->slug = Str::slug( $slug );
+
+            $variety->save();
+        }
+
+        return $variety;
+    }
+
     public function evolution( $pokemon, $species ) {
-        $pokemon_no = ltrim( $pokemon->pokedex_no, '0' );
+        $pokemon_no     = ltrim( $pokemon->pokedex_no, '0' );
+        $previous_stage = false;
+        $next_stage     = false;
 
         if ( property_exists( $species, 'evolves_from_species' ) && null != $species->evolves_from_species ) {
             $evolves_from = Naming::url_id( $species->evolves_from_species->url, '-species' );
             $evolves_from = API::poke_request( $evolves_from );
 
-            $pokemon->previous_stage = Naming::pad_pokedex_no( $evolves_from->id );
+            $previous_stage = Naming::pad_pokedex_no( $evolves_from->id );
         }
 
         $evolution_chain_id = Naming::url_id( $species->evolution_chain->url, 'chain' );
@@ -308,7 +429,6 @@ class Pokedex {
         $evolution = API::poke_request( $evolution_chain_id, 'evolution-chain' );
 
         if ( $evolution && property_exists( $evolution, 'chain' ) && null != $evolution->chain->evolves_to ) {
-            //\Debugbar::info( $evolution->chain );
             // Go through evolution chain to find next one
             $starting    = Naming::url_id( $evolution->chain->species->url, '-species' );
             $evolves_to1 = false;
@@ -337,19 +457,108 @@ class Pokedex {
             } else if ( $evolves_to2 === $pokemon_no ) {
                 $next_stage = $evolves_to3;
             }
-            //\Debugbar::info( $pokemon_no . ' ' . $starting . ' ' . $evolves_to1 . ' ' . $evolves_to2 . ' ' . $evolves_to3 );
 
             if ( $next_stage ) {
-                //\Debugbar::info( ' next stage: ' . $next_stage );
                 $next_stage = API::poke_request( $next_stage );
-                //\Debugbar::info( $next_stage );
+
                 if ( $next_stage && property_exists( $next_stage, 'id' ) ) {
-                    $pokemon->next_stage = Naming::pad_pokedex_no( $next_stage->id );
+                    $next_stage = Naming::pad_pokedex_no( $next_stage->id );
                 }
             }
         }
 
-        return $pokemon;
+        return ['previous_stage' => $previous_stage, 'next_stage' => $next_stage];
+    }
+
+    public function get_image_slug( $species, $variety_info, $pokedex_no_original, $search_id ) {
+        $pokedex_no_original = $species->pokedex_numbers[0]->entry_number;
+        $pokedex_no          = Naming::pad_pokedex_no( $pokedex_no_original );
+
+        if ( $search_id ) {
+            // Variety
+            $info = API::poke_request( $search_id );
+
+            $species_name = $info->species->name;
+            $name         = Str::title( $info->name );
+            $image_slug   = str_replace( $species_name . '-', '', $variety_info->pokemon->name );
+            $image_slug   = ucwords( str_replace( '-', ' ', $image_slug ) );
+            $image_slug   = ucfirst( $species_name ) . '_' . str_replace( ' ', '-', $image_slug );
+        } else {
+            // Default Pokemon
+            $info = API::poke_request( $pokedex_no_original );
+
+            $species_name = $info->species->name;
+            $name         = Str::title( $species_name );
+            $image_slug   = $name;
+        }
+
+        $image_slug = str_replace( '_Totem-Alola', '_Alola', $image_slug );
+
+        $image_slug = str_replace( '_Starter', '', $image_slug );
+        $image_slug = str_replace( '_Battle-bond', '', $image_slug );
+        $image_slug = str_replace( '_Totem-', '_', $image_slug );
+        $image_slug = str_replace( '_Totem', '', $image_slug );
+
+        $image_slug = str_replace( 'Mr.', 'Mr', $image_slug );
+
+        $image_slug = str_replace( '\'ed', 'ed', $image_slug );
+
+        $image_slug = str_replace( '711Gourgeist_Super', '711Gourgeist', $image_slug );
+        $image_slug = str_replace( '711Gourgeist_Large', '711Gourgeist', $image_slug );
+        $image_slug = str_replace( '711Gourgeist_Small', '711Gourgeist', $image_slug );
+
+        $image_slug = str_replace( '711Pumpkaboo_Super', '711Pumpkaboo', $image_slug );
+        $image_slug = str_replace( '711Pumpkaboo_Large', '711Pumpkaboo', $image_slug );
+        $image_slug = str_replace( '711Pumpkaboo_Small', '711Pumpkaboo', $image_slug );
+
+        $image_slug = str_replace( '718Zygarde_10-Power-Construct', '718Zygarde_10', $image_slug );
+        $image_slug = str_replace( '718Zygarde_50-Power-Construct', '718Zygarde_50', $image_slug );
+
+        $image_slug = str_replace( '774Minior_Orange-Meteor', '774Minior_Meteor', $image_slug );
+        $image_slug = str_replace( '774Minior_Yellow-Meteor', '774Minior_Meteor', $image_slug );
+        $image_slug = str_replace( '774Minior_Green-Meteor', '774Minior_Meteor', $image_slug );
+        $image_slug = str_replace( '774Minior_Blue-Meteor', '774Minior_Meteor', $image_slug );
+        $image_slug = str_replace( '774Minior_Indigo-Meteor', '774Minior_Meteor', $image_slug );
+        $image_slug = str_replace( '774Minior_Violet-Meteor', '774Minior_Meteor', $image_slug );
+
+        $image_slug = str_replace( '741Oricorio_Pa\'u', '741Oricorio_Pau', $image_slug );
+
+        $image_slug = str_replace( '744Rockruff_Own-Tempo', '744Rockruff', $image_slug );
+
+        $image_slug = str_replace( '800Necrozma_Dusk', '800Necrozma_Dusk-Mane', $image_slug );
+        $image_slug = str_replace( '800Necrozma_Dawn', '800Necrozma_Dawn-Wings', $image_slug );
+
+        $image_slug = str_replace( '801Magearna_Original', '801Magearna_Original-Color', $image_slug );
+
+        $image_slug = str_replace( '849Toxtricity_Low-Key-Gmax', '849Toxtricity_Gmax', $image_slug );
+        $image_slug = str_replace( '849Toxtricity_Amped-Gmax', '849Toxtricity_Gmax', $image_slug );
+
+        return $pokedex_no . $image_slug;
+    }
+
+    public function get_pokemon_name( $name ) {
+        $name = str_replace( 'Flabebe', 'Flabébé', $name );
+        $name = str_replace( '-m', ' ♂', $name );
+        $name = str_replace( '-f', ' ♀', $name );
+        $name = str_replace( '-', ' ', $name );
+        $name = str_replace( 'Porygon Z', 'Porygon-Z', $name );
+
+        return $name;
+    }
+
+    public function get_pokemon_text( $pokemon, $name, $species_info ) {
+        $text = Naming::english_by_key( $species_info->flavor_text_entries, 'flavor_text' );
+
+        $text = str_replace( str::upper( $name ), str::title( $name ), $text );
+        $text = str_replace( 'MAWHILE', 'Mawile', $text );
+
+        $previous_stage = $pokemon->previous_stage();
+        if ( $previous_stage ) {
+            $name = $previous_stage->name;
+            $text = str_replace( str::upper( $name ), str::title( $name ), $text );
+        }
+
+        return $text;
     }
 
     public function pokedexes( $pokemon, $species ) {

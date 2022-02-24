@@ -1,10 +1,16 @@
 @font-face {
-    font-family: "PokemonHollow";
-    src: url('fonts/Pokemon Hollow.ttf');
+    font-family: "Pokemon Hollow";
+    font-weight: 400; 
+	font-style: normal;
+	letter-spacing: 1px;
+    src: url('/fonts/PokemonHollow.ttf') format('truetype');
 }
 @font-face {
-    font-family: "PokemonSolid";
-    src: url('fonts/Pokemon Solid.ttf');
+    font-family: "Pokemon Solid";
+    font-weight: 400; 
+	font-style: normal;
+	letter-spacing: 1px;
+    src: url('/fonts/PokemonSolid.ttf') format('truetype');
 }
 
 img {
@@ -42,4 +48,13 @@ a {
 	position: absolute;
 	top: 0;
 	width: 100%;
+}
+
+.btn-secondary {
+	color: $white;
+}
+
+html.pdf {
+	@page { margin: 0px; }
+	body { margin: 0px; }
 }

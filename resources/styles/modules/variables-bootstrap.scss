@@ -9,6 +9,7 @@ $body-bg: #1a202c;
 $body-color: $white;
 
 $primary: #6610f2;
+$secondary: #5F9EA0;
 $theme-colors: (
   "primary":    $primary,
   "secondary":  $secondary,
@@ -22,6 +23,13 @@ $theme-colors: (
   "gray-800":   $gray-800
 );
 
+$font-family-base: 'Lato', 'lato', $font-family-sans-serif;
+
+$border-radius-lg: 40px 40px 60px 60px;
+
 $card-bg: $white;
+$accordion-bg: transparent;
+$accordion-border-width: 3px;
+$accordion-border-color: $white;
 
 $jumbotron-padding: 2rem;

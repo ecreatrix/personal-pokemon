@@ -16,8 +16,10 @@ class Naming {
     public static function english_by_key( $entries, $key = 'name' ) {
         foreach ( $entries as $info ) {
             if ( 'en' === $info->language->name ) {
-                $text = $info->$key;
-                return str_replace( 'POKéMON', 'Pokémon', $text );
+                $text = str_replace( 'POKéMON', 'Pokémon', $info->$key );
+                $text = str_replace( "\n", ' ', $text );
+
+                return $text;
             }
         }
 
@@ -41,65 +43,59 @@ class Naming {
         return $text;
     }
 
-    public static function make_pokemon_slug( $name ) {
-        $slug = str_replace( 'dark-', '', $name );
-        $slug = str_replace( '-vmax', '', $name );
-        $slug = str_replace( '-break', '', $name );
-        $slug = str_replace( '-d', '', $name );
-        $slug = str_replace( '-v', '', $name );
-
-        $slug = str_replace( 'alolan-', '', $name );
-
-        $slug = str_replace( '-gx', '', $name );
-        $slug = str_replace( '-ex', '', $name );
-        $slug = str_replace( 'm-', '', $name );
-
-        // Remove everything before 's
-        $exploded = explode( '\'s ', $slug );
-        if ( count( $exploded ) > 1 ) {
-            //\Debugbar::info( Str::afterLast( $slug, '\'s ' ) );
-            //\Debugbar::info( explode( '\'s ', $slug ) );
-            unset( $exploded[0] );
-
-            $slug = implode( ' ', $exploded );
-        }
-
-        return Str::slug( $slug );
-    }
-
     public static function pad_pokedex_no( $pokedex_no ) {
         return str_pad( $pokedex_no, 3, '0', STR_PAD_LEFT );
     }
 
-    public static function pokemon_images( $pokemon, $type = false ) {
-        $pokedex_no = $pokemon->pokedex_no;
+    public static function pokemon_images( $pokemon, $type = false, $colour = true, $asset = true ) {
+        if ( is_object( $pokemon ) ) {
+            $filename = $pokemon->image_slug;
+        } else {
+            //clock( $pokemon );
+            //return;
+            $filename = $pokemon['image_slug'];
+        }
 
         $dir    = '/images/pokemon';
         $images = [
-            'frontColour' => $dir . '/fronts-colour/' . $pokedex_no . '.png',
-            'frontBW'     => $dir . '/fronts-bw/' . $pokedex_no . '.png',
-            'back'        => $dir . '/backs/' . $pokedex_no . '.png',
-            'threeD'      => $dir . '/3ds/' . $pokedex_no . '.png',
-            'gif'         => $dir . '/gifs/' . $pokedex_no . '.gif',
+            'front'  => [
+                'colour' => $dir . '/colour/' . $filename . '.png',
+                'bw'     => $dir . '/bw/' . $filename . '.png',
+            ],
+            'back'   => $dir . '/backs/' . $filename . '.png',
+            'threeD' => $dir . '/3ds/' . $filename . '.png',
+            'gif'    => $dir . '/gifs/' . $filename . '.gif',
         ];
 
-        $images['blob'] = $images['frontColour'];
+        $images['blob'] = $images['front']['colour'];
 
-        if ( 'mysterious-fossil' === $pokedex_no ) {
+        if ( 'mysterious-fossil' === $filename ) {
             $dir    = '/images/trainer';
             $images = [
-                'frontColour' => $dir . '/colour/' . $pokedex_no . '.png',
-                'frontBW'     => $dir . '/bw/' . $pokedex_no . '.png',
-                'back'        => false,
-                'threeD'      => false,
-                'gif'         => false,
+                'front'  => [
+                    'colour' => $dir . '/colour/' . $filename . '.png',
+                    'bw'     => $dir . '/bw/' . $filename . '.png',
+                ],
+                'back'   => false,
+                'threeD' => false,
+                'gif'    => false,
             ];
         }
 
         if ( $type && array_key_exists( $type, $images ) ) {
             $image = $images[$type];
 
-            return $image;
+            if ( $colour && array_key_exists( 'colour', $image ) ) {
+                $image = $image['colour'];
+            } else if ( array_key_exists( 'bw', $image ) ) {
+                $image = $image['bw'];
+            }
+
+            if ( $asset ) {
+                return asset( $image );
+            } else {
+                return $image;
+            }
         }
 
         return $images;

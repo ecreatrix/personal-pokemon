@@ -1,31 +1,34 @@
 .jumbotron.pokedex {
 	color: $black;
 
-	h1 {
-		color: $white;
+	.colour {
+		.heading {
+			font-family: Pokemon Solid, PokemonSolid, pokemonsolid, $font-family-base;
+		}
 	}
 
-	.colour {
-		h1 {
-			font-family: 'PokemonSolid';
+	.bw {
+		.heading {
+			font-family: Pokemon Hollow, PokemonHollow, pokemonhollow, $font-family-base;
 		}
 	}
-	.bw {
-		h1 {
-			font-family: 'PokemonHollow';
-		}
+
+	h1 {
+		text-align: center;
 	}
 
 	margin-bottom: 1rem;
 	overflow: hidden;
 
-	h1 {
+	.heading {
+		color: $white;
 		text-align: center;
 	}
 
 	.filter-sidebar {
 		align-items: center;
 		background: $white;
+		color: $black;
 		display: flex;
 		height: 100%;
 		padding: 1.5rem 1rem;
@@ -38,10 +41,25 @@
 			width: 100%;
 		}
 
+		.update {
+			border-top: $accordion-border-width solid $accordion-border-color;
+		}
+
 		.category {
-			display: block;
+			background: none;
+			padding-bottom: 0.5rem;
 			text-align: center;
 			text-decoration: underline;
+		}
+
+		.block {
+			border-top: 1px solid $gray-500;
+			margin-top: 1rem;
+			padding-top: 1rem;
+		}
+
+		.export {
+			margin: 1rem 0.8rem 0;
 		}
 	}
 
@@ -49,12 +67,33 @@
 		align-items: center;
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
+		padding: 0;
+	}
+
+	.accordion {
+		width: 100%;
+
+		.accordion-header button {
+			border-radius: 0;
+			justify-content: space-between;
+			font-weight: bold;
+			text-align: center;
+
+			.btn {
+				margin-right: 1.5rem;
+			}
+
+			&:after {
+				position: absolute;
+				right: 10px;
+			}
+		}
 	}
 
 	.pokemon {
 		@include make-col-ready();
-		//border-bottom: 3px solid;
-		//background: white;
+		color: $black;
 		margin-bottom: 1rem;
 		padding-bottom: 1rem;
 		text-align: center;
@@ -64,7 +103,42 @@
 		}	
 
 		.card {
+			border: none;
+			border-width: 0px 12px 0px 12px;
+			border-style: double;
+			border-color: $gray-500;
+			border-radius: $border-radius-lg;
 			margin: 0 0.5rem;
+			transition: $transition-base;
+
+			.card-img-top, .card-body {
+				padding: 0.5rem;
+			}
+
+			.card-body {
+				border-top: 1px solid $secondary;
+				padding-bottom: 0;
+				transition: border-color .2s ease-in-out;
+			}
+
+			.card-title {
+				margin-bottom: 0;
+			}
+
+			// Add rainbow on hover
+			&:hover {
+				@include rainbow-border($secondary, $border-radius-lg);
+				color: $white;
+				overflow: visible;
+
+				.card-body {
+					border-color: transparent;
+				}
+
+				.types:hover {
+					//@include types-outline();
+				}
+			}
 		}
 
 		@include media-breakpoint-up(sm) {
@@ -74,18 +148,109 @@
 			@include make-col(4);
 		}
 
-		img {
+		.card-image-block {
+			align-items: center;
+			display: flex;
+			justify-content: center;
 			height: 200px;
-			margin: 0 auto;
-			width: max-content;
+
+			img {
+				height: auto;
+				margin: 0 auto;
+				width: auto;
+			}
 		}
 	}
 
-	&.types {
+	.types {
 		display: flex;
+		justify-content: center;
 
 		.type {
-			padding: 4px;
+			@include types-solid();
+			border-radius: 1rem;
+			padding: 0.5rem 1rem;
+			margin: 0.5rem;
+
+			&:hover {
+				@include types-outline();
+			}
+		}
+
+	}
+
+	&.printable {
+		font-family: 'Nunito';
+		vertical-align: middle;
+		height: 100%;
+
+		&, .heading {
+			color: $black;
+		}
+
+		.heading {
+			font-family: 'Pokemon Solid';
+			margin: auto;
+		}
+
+		.pokemon {
+			border: 1px solid $gray-500;
+			border-radius: 10px;
+			padding-top: 0.5rem;
+			height: 220px;
+			width: 200px;
+
+			.image {
+				height: 150px;
+
+				img {
+					height: 100%;
+					width: auto;
+				}
+			}
+
+			.body {
+				border-top: 1px solid $gray-500;
+				padding-top: 1.5rem;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				//align-items: center;
+				//display: flex;
+				//flex-direction: column;
+				//justify-content: center;
+				//margin-top: 3rem;
+				//height: 180px;
+
+				.types {
+					padding-top: 1rem;
+
+					span {
+						border-radius: 20px;
+						display: inline-block;
+						margin: 0.25rem 0.25rem 0;
+						padding: 1rem 1rem 0.5rem;
+					}
+				}
+			}
+
+			.card {
+				border-width: 2px;
+				display: block;
+			}
+		}
+
+		.table {
+			border-spacing: 15px;
+			display: table;
+			margin: auto;
+
+			.table-row {
+				display: table-row;
+
+				.pokemon {
+					display: table-cell;
+				}
+			}
 		}
 	}
 }
