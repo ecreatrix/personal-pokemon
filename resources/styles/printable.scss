@@ -5,10 +5,10 @@
 @page { margin: 1rem; }
 
 body.pdf {
-	display: table;
+	//display: table;
     margin: auto !important;
-    height: 100vh;
-    vertical-align: middle;
+    //height: 100vh;
+    //vertical-align: middle;
 }
 
 body.pdf, .printable {
@@ -17,19 +17,22 @@ body.pdf, .printable {
     	//display: table-cell;
     }
 
-	.table {
-		border-spacing: 15px;
-		display: table;
+	.d-table, table {
+		//border-spacing: 15px;
 		margin: auto;
-
-		.table-row {
-			display: table-row;
-		}
+		vertical-align: middle;
 	}
 
-    .d-tablecell {
-    	display: table-cell;
-    }
+	.d-table {
+		//border-spacing: 15px;
+		//display: table;
+	}
+
+	.d-caption {
+		display: table-caption;
+		margin: auto;
+		text-align: center;
+	}
 }
 
 .jumbotron.pokedex.printable {
@@ -38,26 +41,39 @@ body.pdf, .printable {
 	overflow: visible;
 	vertical-align: middle;
 
-	&, .heading {
+	&, .heading, .subheading {
 		color: $black;
 	}
 
 	.heading {
-		display: table-caption;
-		font-family: 'Pokemon Solid';
-		margin: auto;
-		text-align: center;
+		font-size: 2rem;
+	}
+
+	.subheading {
+		font-size: 1.5rem;
+	}
+
+	.heading, .subheading {
+		font-family: 'Pokemon Hollow';
+		margin-left: auto; margin-right: auto;
+	}
+
+	table.breakable {
+		tbody tr:nth-child(2), tbody tr:nth-child(3n+5) { 
+			//background: red;
+			page-break-after: always; 
+		}
 	}
 
 	.pokemon {
 		border: 1px solid $gray-500;
 		border-radius: 10px;
 		padding-top: 0.5rem;
-		height: 200px;
+		height: 160px;
 		width: 200px;
 
 		.image {
-			height: 150px;
+			height: 120px;
 
 			img {
 				height: 100%;
@@ -69,7 +85,7 @@ body.pdf, .printable {
 			border-top: 1px solid $gray-500;
 			padding-top: 1.5rem;
 			margin-top: 10px;
-			margin-bottom: 10px;
+			//margin-bottom: 10px;
 			//align-items: center;
 			//display: flex;
 			//flex-direction: column;
@@ -77,21 +93,44 @@ body.pdf, .printable {
 			//margin-top: 3rem;
 			//height: 180px;
 
+			.title {
+				//margin-bottom: 1rem;
+			}
+
 			.types {
+				align-items: unset;
+				display: block;
+				justify-content: unset;
+
+				margin-top: -0.75rem;
+				margin-bottom: -0.75rem;
 				padding-top: 1rem;
+				
+				&.count-1 {
+					margin-top: -0.5rem;
+				}
+
+				&.count-2 {
+					//margin-top: 0.5rem;
+				}
 
 				span {
 					border-radius: 20px;
 					display: inline-block;
-					margin: 0.25rem 0.25rem 0;
-					padding: 1rem 1rem 0.5rem;
+					margin: 0 0.25rem 0;
+					padding: 1.1rem 1rem 0.5rem;
 				}
 			}
 		}
+	}
 
-		.card {
-			border-width: 2px;
-			display: block;
+	.container.bw {
+		.types {
+			.type {
+				border: 1px solid $black;
+				box-shadow: none;
+				color: $black;
+			}
 		}
 	}
 }

@@ -24,22 +24,17 @@
   margin: 1rem;
 }
 body.pdf {
-  display: table;
   margin: auto !important;
-  height: 100vh;
-  vertical-align: middle;
 }
 
-body.pdf .table, .printable .table {
-  border-spacing: 15px;
-  display: table;
+body.pdf .d-table, body.pdf table, .printable .d-table, .printable table {
   margin: auto;
+  vertical-align: middle;
 }
-body.pdf .table .table-row, .printable .table .table-row {
-  display: table-row;
-}
-body.pdf .d-tablecell, .printable .d-tablecell {
-  display: table-cell;
+body.pdf .d-caption, .printable .d-caption {
+  display: table-caption;
+  margin: auto;
+  text-align: center;
 }
 
 .jumbotron.pokedex.printable {
@@ -48,24 +43,32 @@ body.pdf .d-tablecell, .printable .d-tablecell {
   overflow: visible;
   vertical-align: middle;
 }
-.jumbotron.pokedex.printable, .jumbotron.pokedex.printable .heading {
+.jumbotron.pokedex.printable, .jumbotron.pokedex.printable .heading, .jumbotron.pokedex.printable .subheading {
   color: #000;
 }
 .jumbotron.pokedex.printable .heading {
-  display: table-caption;
-  font-family: "Pokemon Solid";
-  margin: auto;
-  text-align: center;
+  font-size: 2rem;
+}
+.jumbotron.pokedex.printable .subheading {
+  font-size: 1.5rem;
+}
+.jumbotron.pokedex.printable .heading, .jumbotron.pokedex.printable .subheading {
+  font-family: "Pokemon Hollow";
+  margin-left: auto;
+  margin-right: auto;
+}
+.jumbotron.pokedex.printable table.breakable tbody tr:nth-child(2), .jumbotron.pokedex.printable table.breakable tbody tr:nth-child(3n+5) {
+  page-break-after: always;
 }
 .jumbotron.pokedex.printable .pokemon {
   border: 1px solid #adb5bd;
   border-radius: 10px;
   padding-top: 0.5rem;
-  height: 200px;
+  height: 160px;
   width: 200px;
 }
 .jumbotron.pokedex.printable .pokemon .image {
-  height: 150px;
+  height: 120px;
 }
 .jumbotron.pokedex.printable .pokemon .image img {
   height: 100%;
@@ -75,18 +78,26 @@ body.pdf .d-tablecell, .printable .d-tablecell {
   border-top: 1px solid #adb5bd;
   padding-top: 1.5rem;
   margin-top: 10px;
-  margin-bottom: 10px;
 }
 .jumbotron.pokedex.printable .pokemon .body .types {
+  align-items: unset;
+  display: block;
+  justify-content: unset;
+  margin-top: -0.75rem;
+  margin-bottom: -0.75rem;
   padding-top: 1rem;
+}
+.jumbotron.pokedex.printable .pokemon .body .types.count-1 {
+  margin-top: -0.5rem;
 }
 .jumbotron.pokedex.printable .pokemon .body .types span {
   border-radius: 20px;
   display: inline-block;
-  margin: 0.25rem 0.25rem 0;
-  padding: 1rem 1rem 0.5rem;
+  margin: 0 0.25rem 0;
+  padding: 1.1rem 1rem 0.5rem;
 }
-.jumbotron.pokedex.printable .pokemon .card {
-  border-width: 2px;
-  display: block;
+.jumbotron.pokedex.printable .container.bw .types .type {
+  border: 1px solid #000;
+  box-shadow: none;
+  color: #000;
 }

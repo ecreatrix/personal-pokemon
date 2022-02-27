@@ -9552,17 +9552,12 @@ html.pdf body {
   margin-bottom: 1rem;
   overflow: hidden;
 }
-.jumbotron.pokedex .colour .heading {
-  font-family: Pokemon Solid, PokemonSolid, pokemonsolid, "Lato", "lato", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-.jumbotron.pokedex .bw .heading {
-  font-family: Pokemon Hollow, PokemonHollow, pokemonhollow, "Lato", "lato", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
 .jumbotron.pokedex h1, .jumbotron.pokedex .h1 {
   text-align: center;
 }
-.jumbotron.pokedex .heading {
+.jumbotron.pokedex .heading, .jumbotron.pokedex .subheading {
   color: #fff;
+  font-family: "Pokemon Solid";
   text-align: center;
 }
 .jumbotron.pokedex .filter-sidebar {
@@ -9579,6 +9574,10 @@ html.pdf body {
 .jumbotron.pokedex .filter-sidebar > div {
   width: 100%;
 }
+.jumbotron.pokedex .filter-sidebar .heading-2 {
+  font-weight: bold;
+  text-align: center;
+}
 .jumbotron.pokedex .filter-sidebar .update {
   border-top: 3px solid #fff;
 }
@@ -9593,8 +9592,18 @@ html.pdf body {
   margin-top: 1rem;
   padding-top: 1rem;
 }
+.jumbotron.pokedex .filter-sidebar .block.dashed {
+  border-style: dashed;
+}
 .jumbotron.pokedex .filter-sidebar .export {
   margin: 1rem 0.8rem 0;
+}
+.jumbotron.pokedex .filter-sidebar .accordion-button {
+  color: inherit;
+  padding: 0;
+}
+.jumbotron.pokedex .filter-sidebar .accordion-collapse {
+  padding-top: 1rem;
 }
 .jumbotron.pokedex .filter-content {
   align-items: center;
@@ -9706,6 +9715,7 @@ html.pdf body {
   width: auto;
 }
 .jumbotron.pokedex .types {
+  align-items: center;
   display: flex;
   justify-content: center;
 }
@@ -9943,6 +9953,114 @@ html.pdf body {
   color: #b8b8d0;
 }
 .jumbotron.pokedex .types .type:hover.fairy {
+  background: none;
+  border: #9b6470;
+  box-shadow: 0 0 0.25em 0.03em #ee99ac;
+  color: #ee99ac;
+}
+.jumbotron.pokedex .container.bw .types .type.normal {
+  background: none;
+  border: #6d6d4e;
+  box-shadow: 0 0 0.25em 0.03em #a8a878;
+  color: #a8a878;
+}
+.jumbotron.pokedex .container.bw .types .type.fire {
+  background: none;
+  border: #9c531f;
+  box-shadow: 0 0 0.25em 0.03em #f08030;
+  color: #f08030;
+}
+.jumbotron.pokedex .container.bw .types .type.fighting {
+  background: none;
+  border: #7d1f1a;
+  box-shadow: 0 0 0.25em 0.03em #c03028;
+  color: #c03028;
+}
+.jumbotron.pokedex .container.bw .types .type.water {
+  background: none;
+  border: #445e9c;
+  box-shadow: 0 0 0.25em 0.03em #6890f0;
+  color: #6890f0;
+}
+.jumbotron.pokedex .container.bw .types .type.flying {
+  background: none;
+  border: #6d5e9c;
+  box-shadow: 0 0 0.25em 0.03em #a890f0;
+  color: #a890f0;
+}
+.jumbotron.pokedex .container.bw .types .type.grass {
+  background: none;
+  border: #4e8234;
+  box-shadow: 0 0 0.25em 0.03em #78c850;
+  color: #78c850;
+}
+.jumbotron.pokedex .container.bw .types .type.poison {
+  background: none;
+  border: #c183c1;
+  box-shadow: 0 0 0.25em 0.03em #a040a0;
+  color: #a040a0;
+}
+.jumbotron.pokedex .container.bw .types .type.electric {
+  background: none;
+  border: #a1871f;
+  box-shadow: 0 0 0.25em 0.03em #f8d030;
+  color: #f8d030;
+}
+.jumbotron.pokedex .container.bw .types .type.ground {
+  background: none;
+  border: #927d44;
+  box-shadow: 0 0 0.25em 0.03em #e0c068;
+  color: #e0c068;
+}
+.jumbotron.pokedex .container.bw .types .type.psychic {
+  background: none;
+  border: #a13959;
+  box-shadow: 0 0 0.25em 0.03em #f85888;
+  color: #f85888;
+}
+.jumbotron.pokedex .container.bw .types .type.rock {
+  background: none;
+  border: #786824;
+  box-shadow: 0 0 0.25em 0.03em #b8a038;
+  color: #b8a038;
+}
+.jumbotron.pokedex .container.bw .types .type.ice {
+  background: none;
+  border: #638d8d;
+  box-shadow: 0 0 0.25em 0.03em #98d8d8;
+  color: #98d8d8;
+}
+.jumbotron.pokedex .container.bw .types .type.bug {
+  background: none;
+  border: #6d7815;
+  box-shadow: 0 0 0.25em 0.03em #a8b820;
+  color: #a8b820;
+}
+.jumbotron.pokedex .container.bw .types .type.dragon {
+  background: none;
+  border: #4924a1;
+  box-shadow: 0 0 0.25em 0.03em #7038f8;
+  color: #7038f8;
+}
+.jumbotron.pokedex .container.bw .types .type.ghost {
+  background: none;
+  border: #493963;
+  box-shadow: 0 0 0.25em 0.03em #705898;
+  color: #705898;
+}
+.jumbotron.pokedex .container.bw .types .type.dark {
+  background: none;
+  border: #49392f;
+  box-shadow: 0 0 0.25em 0.03em #705848;
+  color: #705848;
+}
+.jumbotron.pokedex .container.bw .types .type.steel {
+  background: none;
+  border: #787887;
+  box-shadow: 0 0 0.25em 0.03em #b8b8d0;
+  color: #b8b8d0;
+}
+.jumbotron.pokedex .container.bw .types .type.fairy {
   background: none;
   border: #9b6470;
   box-shadow: 0 0 0.25em 0.03em #ee99ac;

@@ -18,7 +18,6 @@ class Pokedex extends Component {
     public $filter = [
         'regions' => [],
         'numbers' => [],
-        'colour'  => true,
     ];
 
     public $regions;
@@ -27,63 +26,23 @@ class Pokedex extends Component {
 
     public $types;
 
-    protected $listeners = ['blob_save'];
+    public $update = [
+        'colour' => true,
+    ];
 
     protected $rules = [
-        'filter.colour'           => 'required|boolean',
+        'update.colour'           => 'required|boolean',
         'filter.selected_regions' => 'required|array',
         'filter.selected_numbers' => 'required|array',
     ];
-
-    // Generate PDF
-    public function blob_create() {
-        set_time_limit( 300 ); // Extends to 5 minutes.
-
-        $per_row = 4;
-
-        foreach ( $this->selected as $group ) {
-            $timestamp = \Carbon\Carbon::now()->format( 'YmdHs' );
-            //$timestamp = '';
-
-            $path     = 'printables/' . $timestamp;
-            $filename = 'pokedex-' . $group['slug'];
-
-            $data = [
-                'selected' => $group,
-                //'selected'   => [],
-                'colour'   => $this->filter['colour'],
-                'per_row'  => $per_row,
-                //'show_title' => true,
-            ];
-
-            /*Download::prep( $path, $filename );
-
-            $render = view( 'printables.pokedexPNG', compact( 'data' ) )->extends( 'layouts.app' )->render();
-            $this->dispatchBrowserEvent( 'blob_create', [
-            'render' => $render, 'path' => storage_path(), 'path' => $path, 'filename' => $filename,
-            ] );*/
-
-            $pdf = PDF::loadView( 'printables.pokedexPDF', compact( 'data' ) )->setPaper( 'a4', 'landscape' );
-            $pdf->save( storage_path( 'app/printables/' . $filename . '-' . $timestamp . '.pdf' ) )->stream( 'pokedex.pdf' );
-
-        }
-    }
-
-    public function blob_save( $path ) {
-        $images = ["file1.jpg", "file2.jpg"];
-
-        //$pdf = new Imagick($images);
-        //$pdf->setImageFormat('pdf');
-        // $pdf->writeImages('combined.pdf', true);
-    }
 
     public function by_pokedex( $chosen_numbers ) {
         $selected = [];
 
         foreach ( $chosen_numbers as $range ) {
-            $start = $range['start'];
-            $end   = $range['end'];
-            //$end        = 12;
+            $start      = $range['start'];
+            $end        = $range['end'];
+            $end        = $range['start'] + 3;
             $clock_name = $start . ' - ';
 
             $pokemons = Pokemon::rangedCached( $start, $end );
@@ -146,7 +105,7 @@ class Pokedex extends Component {
                     $pokemons = $region->pokemonsCached();
                 }
 
-                $title = 'Entire ' . $region->name . ' Region';
+                $title = $region->name . ' Region';
 
                 $selected[$region_id] = [
                     'title'    => $title,
@@ -205,6 +164,36 @@ class Pokedex extends Component {
     public function mount() {
         $this->regions = Region::orderBy( 'number' )->get();
         $this->types   = Type::orderBy( 'name' )->get();
+    }
+
+    // Generate PDF
+    public function pdf_save() {
+        set_time_limit( 300 ); // Extends to 5 minutes.
+
+        $per_row = 5;
+
+        foreach ( $this->selected as $group ) {
+            $timestamp = \Carbon\Carbon::now()->format( 'YmdHs' );
+            //$timestamp = '';
+
+            $colour = 'bw';
+            if ( $this->update['colour'] ) {
+                $colour = 'colour';
+            }
+
+            $path     = 'printables/' . $timestamp;
+            $filename = $colour . '-' . $group['slug'];
+
+            $data = [
+                'selected' => $group,
+                'colour'   => $this->update['colour'],
+                'per_row'  => $per_row,
+            ];
+
+            $pdf = PDF::loadView( 'printables.pokedexPDF', compact( 'data' ) )->setPaper( 'a4', 'landscape' );
+            $pdf->save( storage_path( 'app/printables/' . $filename . '-' . $timestamp . '.pdf' ) )->stream( 'pokedex.pdf' );
+
+        }
     }
 
     public function render() {

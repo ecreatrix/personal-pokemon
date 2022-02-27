@@ -30,9 +30,8 @@ Route::group( [], function () {
     Route::match( ['put'], '/cards/download', [DownloadFile::class, 'card_images'] );
     Route::match( ['get'], '/test', function () {
         $data = [
-            'show_title' => true,
-            'per_row'    => 4,
-            'selected'   => [
+            'per_row'  => 4,
+            'selected' => [
                 'title'    => "Range 1 to 5",
                 'slug'     => "range-1-to-5",
                 'pokemons' => [
@@ -182,7 +181,7 @@ Route::group( [], function () {
                     ],
                 ],
             ],
-            'colour'     => true,
+            'colour'   => false,
         ];
         return view( 'printables.pokedexPDF', compact( 'data' ) )->render();
     } );

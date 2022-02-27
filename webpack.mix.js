@@ -28,5 +28,5 @@ mix.js('resources/scripts/app.js', 'public/scripts')
 mix
     .browserSync( {
         proxy: 'pokemon.test',
-        //files: [ './resoures/views/**/*.php', './public/styles/**/*.css', './public/scripts/**/*.js' ],
+        files: [ './resoures/views/**/*.php', './resources/styles/**/*.scss', './resources/scripts/**/*.js', './resources/scripts/**/*.jsx' ],
     } )

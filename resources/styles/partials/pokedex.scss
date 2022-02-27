@@ -1,27 +1,15 @@
 .jumbotron.pokedex {
 	color: $black;
-
-	.colour {
-		.heading {
-			font-family: Pokemon Solid, PokemonSolid, pokemonsolid, $font-family-base;
-		}
-	}
-
-	.bw {
-		.heading {
-			font-family: Pokemon Hollow, PokemonHollow, pokemonhollow, $font-family-base;
-		}
-	}
+	margin-bottom: 1rem;
+	overflow: hidden;
 
 	h1 {
 		text-align: center;
 	}
 
-	margin-bottom: 1rem;
-	overflow: hidden;
-
-	.heading {
+	.heading, .subheading {
 		color: $white;
+		font-family: 'Pokemon Solid';
 		text-align: center;
 	}
 
@@ -41,6 +29,11 @@
 			width: 100%;
 		}
 
+		.heading-2 {
+			font-weight: bold;
+			text-align: center;
+		}
+
 		.update {
 			border-top: $accordion-border-width solid $accordion-border-color;
 		}
@@ -56,10 +49,23 @@
 			border-top: 1px solid $gray-500;
 			margin-top: 1rem;
 			padding-top: 1rem;
+
+			&.dashed {
+				border-style: dashed;
+			}
 		}
 
 		.export {
 			margin: 1rem 0.8rem 0;
+		}
+
+		.accordion-button {
+			color: inherit;
+			padding: 0;
+		}
+
+		.accordion-collapse {
+			padding-top: 1rem;
 		}
 	}
 
@@ -163,6 +169,7 @@
 	}
 
 	.types {
+		align-items: center;
 		display: flex;
 		justify-content: center;
 
@@ -176,6 +183,13 @@
 				@include types-outline();
 			}
 		}
+	}
 
+	.container.bw {
+		.types {
+			.type {
+				@include types-outline();
+			}
+		}
 	}
 }

@@ -9,36 +9,35 @@
         <link href="http://pokemon.test/styles/printable.css" rel="stylesheet" crossorigin="anonymous">
     </head>
     <body class="pdf">
-		<div class="jumbotron pokedex printable">
-			<div class="table @if($data['colour'])colour @else bw @endif">
-			
-				@if( count($data['selected']['pokemons']) > 0 ) 
-					@foreach($data['selected']['pokemons'] as $key => $pokemon)
-						@if($key == 0 ) <div class="table-row heading"><span>{{ $data['selected']['title'] }}</span></div> @endif
+		<div class="d-table h-100"><div class="d-table-row"><div class="jumbotron pokedex printable d-table-cell">
+			<table class="container @if($data['colour'])colour @else bw @endif" align="center" cellpadding="0">
+				<thead class="subheading"><td>{{ $data['selected']['title'] }}</td></thead>
+				<tr><td><table class="breakable" align="center" cellpadding="0">
+					@if( count($data['selected']['pokemons']) > 0 ) 
+						@foreach($data['selected']['pokemons'] as $key => $pokemon)
+							@if($key % $data['per_row'] == 0 ) <tr class="{{ $key }}"> @endif
 
-						@if($key % $data['per_row'] == 0 ) <div class="table-row {{ $key }}"> @endif
+							<td id="{{ $pokemon['slug'] }}" class="pokemon">
+								<div class="image"><img src="http://pokemon.test/{{ \App\Services\Naming::pokemon_images( $pokemon, 'front', $data['colour'], false ) }}" /></div>
 
-						<div id="{{ $pokemon['slug'] }}" class="pokemon d-tablecell">
-
-							<div class="image"><img src="http://pokemon.test/{{ \App\Services\Naming::pokemon_images( $pokemon, 'front', $data['colour'], false ) }}" /></div>
-
-							<div class="body">
-								<div class="title">
-									No {{ $pokemon['pokedex_no'] }} - {{ $pokemon['name'] }}
+								<div class="body">
+									<div class="title">
+										No {{ $pokemon['pokedex_no'] }} - {{ $pokemon['name'] }}
+									</div>
+									<div class="types count-{{ count($pokemon['types']) }}">
+										@foreach($pokemon['types'] as $type)
+											<span class="type {{ $type['slug'] }}">{{ $type['name'] }}</span>
+										@endforeach
+									</div>
 								</div>
-								<div class="types">
-									@foreach($pokemon['types'] as $type)
-										<span class="type {{ $type['slug'] }}">{{ $type['name'] }}</span>
-									@endforeach
-								</div>
-							</div>
-						</div>
-						@if( ($key + 1) % $data['per_row'] == 0 ) </div> @endif
-					@endforeach
-				@else 
-					<h3 class="heading">No pokemon found within range</h3>
-				@endif
-			</div>
-		</div>
+							</td>
+							@if( ($key + 1) % $data['per_row'] == 0 ) </tr> @endif
+						@endforeach
+					@else 
+						<h3 class="heading">No pokemon found within range</h3>
+					@endif
+				</table></td></tr>
+			</table>
+		</div></div>
 	</body>
 </html>
