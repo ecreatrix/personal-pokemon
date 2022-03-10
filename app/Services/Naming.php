@@ -101,6 +101,13 @@ class Naming {
         return $images;
     }
 
+    public static function split_name( $name, $to_split ) {
+        $to_split = str_replace( $name . '-', '', $to_split );
+        $exploded = explode( '-', $to_split );
+
+        return $exploded;
+    }
+
     public static function url_id( $url, $slug ) {
         $slug   = $slug . '/';
         $length = strlen( $slug );

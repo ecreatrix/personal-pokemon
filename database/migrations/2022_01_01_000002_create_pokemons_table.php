@@ -23,39 +23,48 @@ class CreatePokemonsTable extends Migration {
         Schema::create( 'pokemons', function ( Blueprint $table ) {
             $table->id();
 
-            $table->string( 'name' )->unique();
+            $table->string( 'name' );
             $table->string( 'slug' )->unique();
             $table->string( 'pokedex_no' );
 
             //$table->string( 'supertype' );
-
-            $table->string( 'colour' )->nullable();
-
-            $table->string( 'generation' )->nullable();
-
-            $table->string( 'habitat' )->nullable();
-
-            $table->string( 'text' )->nullable();
-            $table->string( 'genus' )->nullable();
-
-            $table->string( 'previous_stage' )->nullable();
-            $table->string( 'next_stage' )->nullable();
-
-            $table->string( 'height' )->nullable();
-            $table->string( 'weight' )->nullable();
 
             $table->foreignId( 'variety_id' )
                   ->references( 'id' )->on( 'varieties' )
                   ->onUpdate( 'cascade' )
                   ->onDelete( 'cascade' );
 
-            $table->json( 'description' )->nullable();
+            $table->string( 'previous_stage' )->nullable();
+            $table->string( 'next_stage' )->nullable();
+
+            $table->string( 'genus' )->nullable();
+            $table->string( 'text' )->nullable();
+
+            $table->boolean( 'genderable' )->nullable();
+
+            $table->integer( 'height' )->nullable();
+            $table->integer( 'weight' )->nullable();
+            $table->integer( 'hp' )->nullable();
+            $table->integer( 'attack' )->nullable();
+            $table->integer( 'defense' )->nullable();
+            $table->integer( 'special_attack' )->nullable();
+            $table->integer( 'special_defense' )->nullable();
+            $table->integer( 'speed' )->nullable();
+            $table->string( 'colour' )->nullable();
+
+            $table->string( 'generation' )->nullable();
+
+            $table->string( 'habitat' )->nullable();
+
+            $table->integer( 'pokeapi_id' )->nullable();
 
             $table->string( 'image_slug' );
 
+            $table->string( 'source' );
+
             $table->json( 'sprites' )->nullable();
 
-            $table->string( 'source' );
+            $table->json( 'description' )->nullable();
 
             // Entire API call
             $table->json( 'api' );

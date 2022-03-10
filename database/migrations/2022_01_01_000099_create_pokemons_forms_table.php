@@ -25,15 +25,12 @@ class CreatePokemonsFormsTable extends Migration {
 
             $table->string( 'slug' );
             $table->string( 'name' );
-            $table->boolean( 'primary' );
 
             // Relations
             $table->foreignId( 'pokemon_id' )
                   ->references( 'id' )->on( 'pokemons' )
                   ->onUpdate( 'cascade' )
                   ->onDelete( 'cascade' );
-
-            $table->string( 'source' );
 
             $table->timestamps();
         } );

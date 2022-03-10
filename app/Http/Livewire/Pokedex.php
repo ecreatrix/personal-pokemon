@@ -36,13 +36,13 @@ class Pokedex extends Component {
         'filter.selected_numbers' => 'required|array',
     ];
 
-    public function by_pokedex( $chosen_numbers ) {
+    public function by_pokedex_no( $chosen_numbers ) {
         $selected = [];
 
         foreach ( $chosen_numbers as $range ) {
-            $start      = $range['start'];
-            $end        = $range['end'];
-            $end        = $range['start'] + 3;
+            $start = $range['start'];
+            $end   = $range['end'];
+            //$end        = $range['start'] + 3;
             $clock_name = $start . ' - ';
 
             $pokemons = Pokemon::rangedCached( $start, $end );
@@ -155,7 +155,7 @@ class Pokedex extends Component {
         if ( count( $chosen_regions ) > 0 ) {
             $selected = $this->by_region( $chosen_regions, $chosen_numbers );
         } else if ( count( $chosen_numbers ) > 0 ) {
-            $selected = $this->by_pokedex( $chosen_numbers );
+            $selected = $this->by_pokedex_no( $chosen_numbers );
         }
 
         $this->selected = $selected;

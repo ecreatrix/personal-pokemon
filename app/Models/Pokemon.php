@@ -7,6 +7,7 @@ use App\Models\Card;
 use App\Models\Move;
 use App\Models\Region;
 use App\Models\Type;
+use App\Models\Variety;
 use App\Services\Naming;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -19,7 +20,7 @@ class Pokemon extends Model {
 
 	protected $fillable = ['slug', 'pokedex_no'];
 
-	private static $main_pokemon_columns = ['pokemons.id', 'pokedex_no', 'name', 'slug', 'colour', 'image_slug'];
+	private static $main_pokemon_columns = ['pokemons.id', 'pokedex_no', 'name', 'slug', 'colour', 'image_slug', 'text'];
 
 	public function abilities() {
 		//return $this->belongsToMany( Ability::class, 'pokemons_abilities' );
@@ -54,13 +55,13 @@ class Pokemon extends Model {
 	}
 
 	public static function ranged( $start, $end ) {
-		return Pokemon::where( 'pokedex_no', '>=', $start )->where( 'pokedex_no', '<=', $end )->select( self::$main_pokemon_columns )->with( 'types' );
+		return Pokemon::where( 'pokedex_no', '>=', $start )->select( $this->main_pokemon_columns )->where( 'pokedex_no', '<=', $end )->select( self::$main_pokemon_columns )->with( 'types' )->with( 'varieties' );
 	}
 
 	public static function rangedCached( $start, $end ) {
 		$cache_key = 'numbers_pokemons_' . $start . '_' . $end;
 		$cache     = Cache::get( $cache_key );
-		//Cache::forget( $cache_key );
+		Cache::forget( $cache_key );
 
 		if ( false && $cache ) {
 			return $cache;

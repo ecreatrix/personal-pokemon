@@ -12,9 +12,9 @@ class API {
 
         $cache_key = 'pokeapi-' . $query;
         $cache     = Cache::get( $cache_key );
-        //\Debugbar::info( 'https://pokeapi.co/api/v2/' . $query );
+        //clock( 'https://pokeapi.co/api/v2/' . $query );
 
-        if ( $cache ) {
+        if ( $cache && null != $cache ) {
             //\Debugbar::info( 'poke: ' . $cache_key . ' used' );
             $cache = json_decode( $cache );
 

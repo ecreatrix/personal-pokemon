@@ -15,7 +15,7 @@ class Region extends Model {
 
 	protected $fillable = ['name', 'slug', 'number'];
 
-	private $main_pokemon_columns = ['pokemons.id', 'pokedex_no', 'name', 'slug', 'colour', 'image_slug'];
+	private $main_pokemon_columns = ['pokemons.id', 'pokedex_no', 'name', 'slug', 'colour', 'image_slug', 'text'];
 
 	public function pokemons() {
 		return $this->belongsToMany( Pokemon::class, 'pokemons_regions' )->select( $this->main_pokemon_columns )->with( 'types' );
@@ -23,7 +23,7 @@ class Region extends Model {
 
 	public function pokemonsCached() {
 		$key = Naming::cacheKey( $this, 'pokemons_regions' );
-		//Cache::forget( $key );
+		Cache::forget( $key );
 
 		return Cache::rememberForever( $key, function () {
 			return $this->pokemons()->get()->toArray();
@@ -36,7 +36,7 @@ class Region extends Model {
 
 	public function pokemonsRangedCached( $start, $end ) {
 		$key = Naming::cacheKey( $this, 'pokemons_regions_ranged_' . $start . '_' . $end );
-		//Cache::forget( $key );
+		Cache::forget( $key );
 
 		return Cache::rememberForever( $key, function () use ( $start, $end ) {
 			return $this->pokemonsRanged( $start, $end )->get()->toArray();
@@ -49,7 +49,7 @@ class Region extends Model {
 
 	public function primaryPokemonsCached() {
 		$key = Naming::cacheKey( $this, 'primary_pokemons_regions' );
-		//Cache::forget( $key );
+		Cache::forget( $key );
 
 		return Cache::rememberForever( $key, function () {
 			return $this->primaryPokemons()->get()->toArray();
@@ -62,7 +62,7 @@ class Region extends Model {
 
 	public function primaryPokemonsRangedCached( $start, $end ) {
 		$key = Naming::cacheKey( $this, 'primary_pokemons_regions_ranged_' . $start . '_' . $end );
-		//Cache::forget( $key );
+		Cache::forget( $key );
 
 		return Cache::rememberForever( $key, function () use ( $start, $end ) {
 			return $this->primaryPokemonsRanged( $start, $end )->get()->toArray();
