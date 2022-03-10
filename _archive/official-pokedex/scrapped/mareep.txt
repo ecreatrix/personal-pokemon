@@ -1,0 +1,1 @@
+179,"Mareep","y","Rubbing its fleece generates electricity. You’ll want to pet it because it’s cute, but if you use your bare hand, you’ll get a painful shock.","x","Clothing made from Mareep’s fleece is easily charged with static electricity, so a special process is used on it.",

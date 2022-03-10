@@ -1,0 +1,1 @@
+405,"Luxray","y","Seeing through solid objects uses up a lot of Luxray’s electricity, so the Pokémon sleeps for long periods of time to store up energy.","x","Luxray can see through solid objects. It will instantly spot prey trying to hide behind walls, even if the walls are thick.",
