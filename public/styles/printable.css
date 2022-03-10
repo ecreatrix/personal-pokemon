@@ -96,6 +96,9 @@ body.pdf .d-caption, .printable .d-caption {
   margin: 0 0.25rem 0;
   padding: 1.1rem 1rem 0.5rem;
 }
+.jumbotron.pokedex.printable .pokemon .body .types .type.empty {
+  border: none;
+}
 .jumbotron.pokedex.printable .container.bw .types .type {
   border: 1px solid #000;
   box-shadow: none;

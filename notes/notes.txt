@@ -21,3 +21,6 @@ php artisan config:cache
 
 
 https://docs.google.com/spreadsheets/d/1-zBz2PtTpGpnSb_d61LmM0YkG0tdGeZpd3EW6BdAUc4/edit#gid=264492021
+
+https://pokeonecommunity.com/index.php?mod=pokemon&action=list
+https://app.diagrams.net/#Hecreatrix%2Fpersonal-pokemon%2Fmain%2FPokemon.drawio

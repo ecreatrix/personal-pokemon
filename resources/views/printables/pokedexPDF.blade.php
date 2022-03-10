@@ -22,12 +22,15 @@
 
 								<div class="body">
 									<div class="title">
-										No {{ $pokemon['pokedex_no'] }} - {{ $pokemon['name'] }}
+										No. {{ $pokemon['pokedex_no'] }} - {{ $pokemon['name'] }}
 									</div>
 									<div class="types count-{{ count($pokemon['types']) }}">
 										@foreach($pokemon['types'] as $type)
 											<span class="type {{ $type['slug'] }}">{{ $type['name'] }}</span>
 										@endforeach
+										@if( count($pokemon['types']) == 1 )
+											<span class="type empty"></span>
+										@endif
 									</div>
 								</div>
 							</td>

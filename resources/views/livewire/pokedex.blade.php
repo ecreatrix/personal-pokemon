@@ -78,6 +78,7 @@
 											<div class="card-body"><div class="moving-border"></div>
 												<div class="card-title">
 													No. {{ $pokemon['pokedex_no'] }} - {{ $pokemon['name'] }}
+													<div class="text my-2">{{ $pokemon['text'] }}</div>
 												</div>
 												<div class="types">
 													@foreach($pokemon['types'] as $type)
