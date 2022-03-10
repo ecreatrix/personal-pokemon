@@ -1,0 +1,1 @@
+043,"Oddish","Basic_y","During the day, it stays in the cold underground to avoid the sun. It grows by bathing in moonlight.","Basic_x","If exposed to moonlight, it starts to move. It roams far and wide at night to scatter its seeds.",

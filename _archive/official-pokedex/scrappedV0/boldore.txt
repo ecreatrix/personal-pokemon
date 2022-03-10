@@ -1,0 +1,1 @@
+525,"Boldore","Basic_y","It relies on sound in order to monitor what’s in its vicinity. When angered, it will attack without ever changing the direction it’s facing.","Basic_x","If you see its orange crystals start to glow, be wary. It’s about to fire off bursts of energy.",

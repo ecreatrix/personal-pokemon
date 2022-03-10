@@ -1,0 +1,1 @@
+338,"Solrock","Basic_y","Solar energy is the source of its power, so it is strong during the daytime. When it spins, its body shines.","Basic_x","When it rotates itself, it gives off light similar to the sun, thus blinding its foes.",

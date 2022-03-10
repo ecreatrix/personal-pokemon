@@ -1,0 +1,1 @@
+180,"Flaaffy","Basic_y","It stores electricity in its fluffy fleece. If it stores up too much, it will start to go bald in those patches.","Basic_x","In the places on its body where fleece doesn’t grow, its skin is rubbery and doesn’t conduct electricity. Those spots are safe to touch.",

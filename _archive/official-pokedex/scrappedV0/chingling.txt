@@ -1,0 +1,1 @@
+433,"Chingling","Basic_y","There is an orb inside its mouth. When it hops, the orb bounces all over and makes a ringing sound.","Basic_x","Each time it hops, it makes a ringing sound. It deafens foes by emitting high-frequency cries.",

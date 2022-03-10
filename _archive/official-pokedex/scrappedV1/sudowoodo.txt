@@ -1,0 +1,1 @@
+185,"Sudowoodo","y","It disguises itself as a tree to avoid attack. It hates water, so it will disappear if it starts raining.","x","If a tree branch shakes when there is no wind, it’s a Sudowoodo, not a tree. It hides from the rain.",

@@ -1,0 +1,1 @@
+108,"Lickitung","Basic_y","Bug Pokémon are Lickitung’s main food source. This Pokémon paralyzes its prey with a lick from its long tongue, then swallows the prey whole.","Basic_x","If this Pokémon’s sticky saliva gets on you and you don’t clean it off, an intense itch will set in. The itch won’t go away, either.",

@@ -1,0 +1,1 @@
+082,"Magneton","Basic_y","This Pokémon is constantly putting out a powerful magnetic force. Most computers go haywire when a Magneton approaches.","Basic_x","This Pokémon is three Magnemite that have linked together. Magneton sends out powerful radio waves to study its surroundings.",

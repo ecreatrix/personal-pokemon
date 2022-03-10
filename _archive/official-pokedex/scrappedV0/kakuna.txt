@@ -1,0 +1,1 @@
+014,"Kakuna","Basic_y","Able to move only slightly. When endangered, it may stick out its stinger and poison its enemy.","Basic_x","Able to move only slightly. When endangered, it may stick out its stinger and poison its enemy.",

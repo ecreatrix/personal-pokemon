@@ -1,0 +1,1 @@
+352,"Kecleon","Basic_y","Its color changes for concealment and also when its mood or health changes. The darker the color, the healthier it is.","Basic_x","It changes its hue to blend into its surroundings. If no one takes notice of it for too long, it will pout and never reveal itself.",
