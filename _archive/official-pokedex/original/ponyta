@@ -1,0 +1,3137 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html class="no-js " lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="Content-Language" content="en" />
+  <meta name="language" content="en" />
+  <link rel="shortcut icon" href="https://assets.pokemon.com/static2/_ui/img/favicon.ico" />
+
+  <title>Ponyta | Pokédex</title>
+  
+  
+  <meta property="og:image" content="https://assets.pokemon.com/assets/cms2/img/pokedex/full/077.png" />
+  <meta property="og:image:width" content="215" />
+  <meta property="og:image:height" content="215" />
+  <meta property="og:description" content="If you’ve been accepted by Ponyta, its burning mane is mysteriously no longer hot to the touch." />
+  <meta property="og:title" content="Ponyta | Pokédex | More at Pokemon.com" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="https://assets.pokemon.com/assets/cms2/img/pokedex/full/077.png" />
+
+
+
+
+  <meta name="description" content="If you’ve been accepted by Ponyta, its burning mane is mysteriously no longer hot to the touch." />
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <link rel="stylesheet" href="https://assets.pokemon.com/static2/_ui/css/main.css" />
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css' />
+
+  
+  
+  <link rel="alternate" hreflang="fr" href="https://www.pokemon.com/fr/pokedex/ponyta" />
+  <link rel="alternate" hreflang="en" href="https://www.pokemon.com/us/pokedex/ponyta" />
+  <link rel="alternate" hreflang="es-do" href="https://www.pokemon.com/el/pokedex/ponyta" />
+  <link rel="alternate" hreflang="de" href="https://www.pokemon.com/de/pokedex/ponita" />
+  <link rel="alternate" hreflang="it" href="https://www.pokemon.com/it/pokedex/ponyta" />
+  <link rel="alternate" hreflang="es-py" href="https://www.pokemon.com/el/pokedex/ponyta" />
+  <link rel="alternate" hreflang="es-cl" href="https://www.pokemon.com/el/pokedex/ponyta" />
+  <link rel="alternate" hreflang="pt-br" href="https://www.pokemon.com/br/pokedex/ponyta" />
+  <link rel="alternate" hreflang="es-gt" href="https://www.pokemon.com/el/pokedex/ponyta" />
+  <link rel="alternate" hreflang="fi" href="https://www.pokemon.com/fi/pokedex/ponyta" />
+  <link rel="alternate" hreflang="es-mx" href="https://www.pokemon.com/el/pokedex/ponyta" />
+  <link rel="alternate" hreflang="es" href="https://www.pokemon.com/es/pokedex/ponyta" />
+  <link rel="alternate" hreflang="en-gb" href="https://www.pokemon.com/uk/pokedex/ponyta" />
+  <link rel="alternate" hreflang="ru" href="https://www.pokemon.com/ru/pokedex/ponyta" />
+  <link rel="alternate" hreflang="es-hn" href="https://www.pokemon.com/el/pokedex/ponyta" />
+  <link rel="alternate" hreflang="nl" href="https://www.pokemon.com/nl/pokedex/ponyta" />
+  <link rel="alternate" hreflang="es-uy" href="https://www.pokemon.com/el/pokedex/ponyta" />
+  <link rel="alternate" hreflang="es-bo" href="https://www.pokemon.com/el/pokedex/ponyta" />
+  <link rel="alternate" hreflang="es-ar" href="https://www.pokemon.com/el/pokedex/ponyta" />
+  <link rel="alternate" hreflang="nb" href="https://www.pokemon.com/no/pokedex/ponyta" />
+  <link rel="alternate" hreflang="sv" href="https://www.pokemon.com/se/pokedex/ponyta" />
+  <link rel="alternate" hreflang="es-cr" href="https://www.pokemon.com/el/pokedex/ponyta" />
+  <link rel="alternate" hreflang="es-pe" href="https://www.pokemon.com/el/pokedex/ponyta" />
+  <link rel="alternate" hreflang="es-co" href="https://www.pokemon.com/el/pokedex/ponyta" />
+  <link rel="alternate" hreflang="es-pa" href="https://www.pokemon.com/el/pokedex/ponyta" />
+  <link rel="alternate" hreflang="es-sv" href="https://www.pokemon.com/el/pokedex/ponyta" />
+  <link rel="alternate" hreflang="da" href="https://www.pokemon.com/dk/pokedex/ponyta" />
+
+    <!-- google search appliance meta tags -->
+<meta name="pkm-title" content="Ponyta" /><meta name="pkm-category" content="pokedex" /><meta name="pkm-image" content="https://assets.pokemon.com/assets/cms2/img/pokedex/site_search/077.png" /><meta name="pkm-id" content="077" />
+
+<script src="https://assets.pokemon.com/static2/_ui/js/vendor/modernizr.custom.js"></script>
+
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-V9L7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-V9L7');</script>
+<!-- End Google Tag Manager -->
+
+
+  <!-- START: GOOGLE TAG MANAGER - PAGE DETAILS -->
+
+  <!-- END: GOOGLE TAG MANAGER - PAGE DETAILS -->
+
+
+  <script>
+    // TODO: this should be moved to a better place in the application
+    // needed for image deferred loading in sliders
+    window.addEventListener('load', function(){
+      window.loaded = true;
+    });
+  </script>
+
+
+  <script>
+    window.token = "9AkBH1AxeM9bgODCNAFAAipy4am4DVyTUwD20AjDN92T73bx0raDxPekkbtgVxL0";
+    window.mockAPI = false;
+    window.loginURL = '/us/pokemon-trainer-club/login';
+    window.pokemonUI = window.pokemonUI || {};
+
+    window.pokemonUI.countryCode = 'us'.replace('/', '');
+    window.pokemonUI.api = {
+      'user-details': 'https://www.pokemon.com/api/users/details',
+      'base-url-secure': 'https://www.pokemon.com',
+
+      'gsa': '/us/search/api/'
+
+    };
+
+    window.pokemonUI.config = {
+        'collection': 'production_pokemon_collection'
+    };
+
+    window.pokemonUI.modals = window.pokemonUI.modals || {};
+    window.pokemonUI.modals = {
+      "season": "Season",
+      "episode": "Episode",
+      "legal": "Notice: If you click on the YouTube video above, you will leave Pokemon.com. The Pokémon Company International is not responsible for the content of any linked website that is not operated by The Pokémon Company International. Please note that these websites' privacy policies and security practices may differ from The Pokémon Company International's standards.",
+      
+      "twitchlegal": "Notice: If you click on the Twitch video above, you will leave Pokemon.com. The Pokémon Company International is not responsible for the content of any linked website that is not operated by The Pokémon Company International. Please note that these websites' privacy policies and security practices may differ from The Pokémon Company International's standards.",
+    };
+    window.pokemonUI.dictionary = window.pokemonUI.dictionary || {};
+    window.pokemonUI.dictionary.dashboard = {
+      "youRecentlyPurchased": "You Recently Redeemed",
+      "shopMore": "Shop More"
+    };
+    window.pokemonUI.global_dictionary = window.pokemonUI.global_dictionary || {};
+    window.pokemonUI.global_dictionary.search = {
+        'searchUrl': '/us/search/',
+        'GSALanguageCode': 'us'.replace('/', ''),
+        'sortBy': 'Sort by:',
+        'filterBy': 'Filter by:',
+        'selectCategory': 'View All',
+        'mostRelevant': 'Most Relevant',
+        'mostRecent': 'Most Recent',
+        'returnedResults': 'Returned XXXX Results',
+        'recommendedResults': 'Recommended Results',
+        'playGame': 'Play Game',
+        'all': {title : 'View All'},
+        'pokedex' : {title : 'Pokédex'},
+        'videogames' : {title : 'Video Game'},
+        'tcg' : {title : 'Trading Card Game'},
+        'funzone' : {title : 'Online Game'},
+        'animation' : {title : 'Pokémon TV'},
+        'news' : {title : 'News'},
+        'events' : {title : 'Events'},
+        'strategy' : {title : 'Strategy'},
+        
+        "numberPrefix": "#"
+    };
+    window.pokemonUI.global_dictionary.datatables = {
+        'search': 'Search:',
+        'previous': 'Previous',
+        'next': 'Next',
+        'emptyTable': "No data is available.",
+        'zeroRecords': "No matching records found."
+    };
+    window.pokemonUI.global_dictionary.errorMessages = {
+        
+        'dataError': 'Currently unavailable. Please try again.'
+    };
+    window.pokemonUI['ui-path'] = 'https://assets.pokemon.com/static2/_ui/'
+
+    window.pokemonUI.global_api = {
+
+       'gsa': '/us/search/api/',
+ 
+       'status-indicators': {
+            'game-server-status': '/api/tcg/game_server_status',
+            'tcgo-in-maintenance': '/api/tcg/in_maintenance_status',
+            'notifications': 'https://www.pokemon.com/api/user/notifications/config'
+        }
+    };
+
+    
+
+    window.pokemonUI.cookie = {
+        set: function (name, value, days) {
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime()+(days*24*60*60*1000));
+                var expires = "; expires="+date.toGMTString();
+            }
+            else var expires = "";
+            document.cookie = name+"="+value+expires+"; path=/";
+        },
+
+        get:function(name){
+            var nameEQ = name + '=',
+                ca = document.cookie.split(';'),
+                c, i = 0, ii = 0;
+
+            for(i = 0, ii = ca.length; i < ii; i++) {
+                c = ca[i];
+
+                while(c.charAt(0) === ' '){
+                    c = c.substring(1, c.length);
+                }
+
+                if(c.indexOf(nameEQ) === 0){
+                    var value = c.substring(nameEQ.length, c.length);
+                    if (value.charAt(0) == '"' && value.charAt(value.length-1) == '"') {
+                        value = value.substring(1,value.length-1);
+                    }
+                    return value;
+                }
+            }
+            return null;
+        }
+    };
+    
+    window.pokemonUI.cookie.set("django_language", "en", 365);
+    
+
+    
+
+    
+    window.enableDashboard = true;
+    
+  </script>
+
+
+  <script>
+    window.pokemonUI.api = window.pokemonUI.api || {};
+    window.pokemonUI.api['pokedex'] = '/us/api/pokedex/';
+    window.pokemonUI.collectiblesSlug = "collectible-ponyta";
+  </script>
+  <script>
+window.pokemonUI = window.pokemonUI || {};
+window.pokemonUI.collectibles = window.pokemonUI.collectibles || {};
+window.pokemonUI.collectibles.toggles = {
+  addToCollection: "Add to My Collection",
+  addToWishlist: "Add to My Wish List",
+  addToTradelist: "Add to My Trade List",
+  friendsHaveThis: "0 friends have this",
+  friendsWantThis: "0 friends want this",
+  friendsTradeThis: "0 friends want to trade this"
+};
+window.pokemonUI.collectibles.friends = {
+  tradeWithFriends: "Trade with Friends",
+  canTrade: "You can trade this collectible with these friends:",
+  cannotTrade: "If you add this collectible to your collection, wish list, or trade list, you can trade it with your friends!",
+  noFriends: "None of your friends can trade this with you."
+};
+window.pokemonUI.collectibles.compare = {
+  yourCollectibles: "Your Collectibles",
+  friendCollectibles: "Collectibles"
+};
+window.pokemonUI.collectibles.search = {
+  
+  zeroResults: "No results were found using these filters."
+}
+</script>
+
+
+  <script>
+    
+    window.pokemonUI.collectibles.friends['canTrade'] = 'You can trade this Pokémon with these friends:';
+    
+    window.pokemonUI.collectibles.friends['cannotTrade'] = 'If you add this Pokémon to your collection, wish list, or trade list, you can trade it with your friends!';
+  </script>
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://assets.pokemon.com/static2/_ui/css/pokedex.css" />
+  
+    
+  <link rel="image_src" href="https://assets.pokemon.com/assets/cms2/img/pokedex/full/077.png" />
+    
+  
+    
+  <link rel="image_src" href="https://assets.pokemon.com/assets/cms2/img/pokedex/full/077_f2.png" />
+    
+  
+
+
+
+  <script data-main="https://assets.pokemon.com/static2/_ui/js/pokemon-detail.js" src="https://assets.pokemon.com/static2/_ui/js/vendor/require.js"></script>
+
+
+
+
+
+<link rel="stylesheet" href="https://assets.pokemon.com/static2/_ui/css/gus.css" media="all" type="text/css"/>
+<link rel="stylesheet" href="https://assets.pokemon.com/static2/_ui/css/gus_integration.css" />
+
+</head>
+<body class="us fluid custom-form-elements 
+
+">
+
+
+    <div id='gus-wrapper'>
+<div class="pokemon-gus-container" data-site="pcom" data-locale="en" data-api="https://www.pokemon.com/api/gus/" data-width="913px"></div>
+</div>
+
+
+
+
+
+  
+    
+
+
+
+
+
+<div class="main-filler"></div>
+<nav class="main">
+
+    
+
+    <div class="blocker"></div>
+
+    <div class="content-wrapper">
+
+        <div class="nav-bar">
+            <a href="#" class="nav-toggle"><span
+                    class="icon icon_hamburger"></span></a>
+
+            <ul class="dashboard-open visible-mobile">
+                <li class="visible-signed-in">
+                    <a href="/us/pokemon-trainer-club/login">
+                        <div class="avatar-icon-wrapper">
+                            <img class="avatar-icon avatar-icon-mobile"
+                                 src="https://assets.pokemon.com/static2/_ui/img/chrome/profile-navigation/profile-nav-avatar.png"
+                                 alt="View Profile"/>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="visible-not-signed-in">
+                    <a href="/us/pokemon-trainer-club/login">
+                        <div class="avatar-icon-wrapper">
+                            <img class="avatar-icon avatar-icon-mobile"
+                                src="https://assets.pokemon.com/static2/_ui/img/chrome/profile-navigation/profile-nav-signup.png"
+                                alt="Log In / Sign Up"/>
+                        </div>
+                        <div class="sign-in-text-wrapper sign-in-text-wrapper-mobile">
+                            Log In
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <ul data-analytics-label="primary-nav">
+
+  
+
+
+<li class="home">
+  <a href="/us/"
+     
+     
+     
+     target="_self"
+     data-content-id=""
+     data-content-type="Sidebar"
+     data-content-variation="sidebarLeft"
+     data-content-location=""
+     data-content-category=""
+     data-content-download="">
+    <span class="fill"></span>
+
+    <span class="icon icon_home">
+        
+        
+    </span>
+
+    <span class="title title_home">Home</span>
+  </a>
+
+
+
+</li>
+
+
+
+<li class="explore">
+  <a href="/us/pokedex/"
+     
+     
+     
+     target="_self"
+     data-content-id=""
+     data-content-type="Sidebar"
+     data-content-variation="sidebarLeft"
+     data-content-location=""
+     data-content-category=""
+     data-content-download="">
+    <span class="fill"></span>
+
+    <span class="icon icon_pokeball">
+        
+        
+    </span>
+
+    <span class="title title_pokeball">Pokédex</span>
+  </a>
+
+
+
+</li>
+
+
+
+<li class="watch">
+  <a href="/us/pokemon-video-games/"
+     
+     
+     
+     target="_self"
+     data-content-id=""
+     data-content-type="Sidebar"
+     data-content-variation="sidebarLeft"
+     data-content-location=""
+     data-content-category=""
+     data-content-download="">
+    <span class="fill"></span>
+
+    <span class="icon icon_joystick">
+        
+        
+    </span>
+
+    <span class="title title_joystick">Video Games & Apps</span>
+  </a>
+
+
+
+</li>
+
+
+
+<li class="play">
+  <a href="/us/pokemon-tcg/"
+     
+     
+     
+     target="_self"
+     data-content-id=""
+     data-content-type="Sidebar"
+     data-content-variation="sidebarLeft"
+     data-content-location=""
+     data-content-category=""
+     data-content-download="">
+    <span class="fill"></span>
+
+    <span class="icon icon_cards">
+        
+        
+    </span>
+
+    <span class="title title_cards">Trading Card Game</span>
+  </a>
+
+<a href="#" class="subnav-toggle"><span class="icon"></span></a>
+
+<ul class="subnav secondary">
+
+    <li class="subnav-title"
+        data-content-id=""
+        data-content-type="Sidebar"
+        data-content-variation="sidebarLeft"
+        data-content-location=""
+        data-content-category=""
+        data-content-download="">
+        <a href="#" class="subnav-toggle"><span class="icon"></span></a>
+        <a href="#"><span class="title">Trading Card Game</span></a>
+    </li>
+
+
+    
+<li>
+    <a href="/us/pokemon-tcg/play-online/"
+       
+       
+       
+       data-content-id=""
+       data-content-type="Sidebar"
+       data-content-variation="sidebarLeft"
+       data-content-location=""
+       data-content-category=""
+       data-content-download=""
+       target="_self">Pokémon TCG Online</a>
+    
+    
+    
+</li>
+<li>
+    <a href="/us/pokemon-tcg/play-online/leaderboards/"
+       
+       
+       
+       data-content-id=""
+       data-content-type="Sidebar"
+       data-content-variation="sidebarLeft"
+       data-content-location=""
+       data-content-category=""
+       data-content-download=""
+       target="_self">TCG Online Leaderboards</a>
+    
+    
+    
+</li>
+
+
+</ul>
+
+
+</li>
+
+
+
+<li class="attend">
+  <a href="/us/pokemon-episodes/"
+     
+     
+     
+     target="_self"
+     data-content-id=""
+     data-content-type="Sidebar"
+     data-content-variation="sidebarLeft"
+     data-content-location=""
+     data-content-category=""
+     data-content-download="">
+    <span class="fill"></span>
+
+    <span class="icon icon_pokemontv">
+        
+        
+    </span>
+
+    <span class="title title_pokemontv">Pokémon TV</span>
+  </a>
+
+
+
+</li>
+
+
+
+<li class="trade">
+  <a href="/us/play-pokemon/"
+     
+     
+     
+     target="_self"
+     data-content-id=""
+     data-content-type="Sidebar"
+     data-content-variation="sidebarLeft"
+     data-content-location=""
+     data-content-category=""
+     data-content-download="">
+    <span class="fill"></span>
+
+    <span class="icon icon_event">
+        
+        
+    </span>
+
+    <span class="title title_event">Play! Pokémon Events</span>
+  </a>
+
+<a href="#" class="subnav-toggle"><span class="icon"></span></a>
+
+<ul class="subnav secondary">
+
+    <li class="subnav-title"
+        data-content-id=""
+        data-content-type="Sidebar"
+        data-content-variation="sidebarLeft"
+        data-content-location=""
+        data-content-category=""
+        data-content-download="">
+        <a href="#" class="subnav-toggle"><span class="icon"></span></a>
+        <a href="#"><span class="title">Play! Pokémon Events</span></a>
+    </li>
+
+
+    
+<li>
+    <a href="/us/play-pokemon/"
+       
+       
+       
+       data-content-id=""
+       data-content-type="Sidebar"
+       data-content-variation="sidebarLeft"
+       data-content-location=""
+       data-content-category=""
+       data-content-download=""
+       target="_self">Play! Pokémon Events</a>
+    
+    <a href="#" class="subnav-toggle"><span class="icon"></span></a>
+
+<ul class="subnav tertiary">
+
+    <li class="subnav-title"
+        data-content-id=""
+        data-content-type="Sidebar"
+        data-content-variation="sidebarLeft"
+        data-content-location=""
+        data-content-category=""
+        data-content-download="">
+        <a href="#" class="subnav-toggle"><span class="icon"></span></a>
+        <a href="#"><span class="title">Play! Pokémon Events</span></a>
+    </li>
+
+
+    
+<li>
+    <a href="/us/play-pokemon/pokemon-events/"
+       
+       
+       
+       data-content-id=""
+       data-content-type="Sidebar"
+       data-content-variation="sidebarLeft"
+       data-content-location=""
+       data-content-category=""
+       data-content-download=""
+       target="_self">Play! Pokémon Events</a>
+    
+    <a href="#" class="subnav-toggle"><span class="icon"></span></a>
+
+<ul class="subnav tertiary">
+
+    <li class="subnav-title"
+        data-content-id=""
+        data-content-type="Sidebar"
+        data-content-variation="sidebarLeft"
+        data-content-location=""
+        data-content-category=""
+        data-content-download="">
+        <a href="#" class="subnav-toggle"><span class="icon"></span></a>
+        <a href="#"><span class="title">Play! Pokémon Events</span></a>
+    </li>
+
+
+    
+<li>
+    <a href="/us/play-pokemon/pokemon-events/find-an-event/"
+       
+       
+       
+       data-content-id=""
+       data-content-type="Sidebar"
+       data-content-variation="sidebarLeft"
+       data-content-location=""
+       data-content-category=""
+       data-content-download=""
+       target="_self">Event Locator</a>
+    
+    
+    
+</li>
+<li>
+    <a href="/us/play-pokemon/pokemon-events/play-in-a-league/"
+       
+       
+       
+       data-content-id=""
+       data-content-type="Sidebar"
+       data-content-variation="sidebarLeft"
+       data-content-location=""
+       data-content-category=""
+       data-content-download=""
+       target="_self">Pokémon League</a>
+    
+    
+    
+</li>
+<li>
+    <a href="/us/play-pokemon/pokemon-events/pokemon-tournaments/"
+       
+       
+       
+       data-content-id=""
+       data-content-type="Sidebar"
+       data-content-variation="sidebarLeft"
+       data-content-location=""
+       data-content-category=""
+       data-content-download=""
+       target="_self">Pokémon Championship Series</a>
+    
+    
+    
+</li>
+<li>
+    <a href="/us/play-pokemon/pokemon-events/pokemon-tournaments/earn-championship-points/"
+       
+       
+       
+       data-content-id=""
+       data-content-type="Sidebar"
+       data-content-variation="sidebarLeft"
+       data-content-location=""
+       data-content-category=""
+       data-content-download=""
+       target="_self">Championship Points</a>
+    
+    
+    
+</li>
+<li>
+    <a href="/us/play-pokemon/leaderboards/"
+       
+       
+       
+       data-content-id=""
+       data-content-type="Sidebar"
+       data-content-variation="sidebarLeft"
+       data-content-location=""
+       data-content-category=""
+       data-content-download=""
+       target="_self">Championship Rating and Rankings</a>
+    
+    
+    
+</li>
+<li>
+    <a href="/us/play-pokemon/pokemon-events/pre-release-tournaments/"
+       
+       
+       
+       data-content-id=""
+       data-content-type="Sidebar"
+       data-content-variation="sidebarLeft"
+       data-content-location=""
+       data-content-category=""
+       data-content-download=""
+       target="_self">Prerelease Tournaments</a>
+    
+    
+    
+</li>
+
+
+</ul>
+
+    
+</li>
+<li>
+    <a href="/us/play-pokemon/about/"
+       
+       
+       
+       data-content-id=""
+       data-content-type="Sidebar"
+       data-content-variation="sidebarLeft"
+       data-content-location=""
+       data-content-category=""
+       data-content-download=""
+       target="_self">About Play! Pokémon</a>
+    
+    <a href="#" class="subnav-toggle"><span class="icon"></span></a>
+
+<ul class="subnav tertiary">
+
+    <li class="subnav-title"
+        data-content-id=""
+        data-content-type="Sidebar"
+        data-content-variation="sidebarLeft"
+        data-content-location=""
+        data-content-category=""
+        data-content-download="">
+        <a href="#" class="subnav-toggle"><span class="icon"></span></a>
+        <a href="#"><span class="title">About Play! Pokémon</span></a>
+    </li>
+
+
+    
+<li>
+    <a href="/us/play-pokemon/about/play-points/"
+       
+       
+       
+       data-content-id=""
+       data-content-type="Sidebar"
+       data-content-variation="sidebarLeft"
+       data-content-location=""
+       data-content-category=""
+       data-content-download=""
+       target="_self">Play! Points</a>
+    
+    
+    
+</li>
+<li>
+    <a href="/us/play-pokemon/about/tournaments-rules-and-resources/"
+       
+       
+       
+       data-content-id=""
+       data-content-type="Sidebar"
+       data-content-variation="sidebarLeft"
+       data-content-location=""
+       data-content-category=""
+       data-content-download=""
+       target="_self">Rules & Resources</a>
+    
+    
+    
+</li>
+<li>
+    <a href="/us/play-pokemon/about/tournaments-glossary/"
+       
+       
+       
+       data-content-id=""
+       data-content-type="Sidebar"
+       data-content-variation="sidebarLeft"
+       data-content-location=""
+       data-content-category=""
+       data-content-download=""
+       target="_self">Play! Pokémon Glossary</a>
+    
+    
+    
+</li>
+<li>
+    <a href="/us/play-pokemon/about/video-game-glossary/"
+       
+       
+       
+       data-content-id=""
+       data-content-type="Sidebar"
+       data-content-variation="sidebarLeft"
+       data-content-location=""
+       data-content-category=""
+       data-content-download=""
+       target="_self">Video Game Glossary</a>
+    
+    
+    
+</li>
+<li>
+    <a href="/us/play-pokemon/about/parents-guide/"
+       
+       
+       
+       data-content-id=""
+       data-content-type="Sidebar"
+       data-content-variation="sidebarLeft"
+       data-content-location=""
+       data-content-category=""
+       data-content-download=""
+       target="_self">Parents Guide</a>
+    
+    
+    
+</li>
+
+
+</ul>
+
+    
+</li>
+<li>
+    <a href="/us/play-pokemon/organize/"
+       
+       
+       
+       data-content-id=""
+       data-content-type="Sidebar"
+       data-content-variation="sidebarLeft"
+       data-content-location=""
+       data-content-category=""
+       data-content-download=""
+       target="_self">Organize Events</a>
+    
+    
+    
+</li>
+
+
+</ul>
+
+    
+</li>
+<li>
+    <a href="/us/play-pokemon/leaderboards/"
+       
+       
+       
+       data-content-id=""
+       data-content-type="Sidebar"
+       data-content-variation="sidebarLeft"
+       data-content-location=""
+       data-content-category=""
+       data-content-download=""
+       target="_self">Play! Pokémon Leaderboards</a>
+    
+    
+    
+</li>
+
+
+</ul>
+
+
+</li>
+
+
+
+<li class="game last-item">
+  <a href="/us/pokemon-news/"
+     
+     
+     
+     target="_self"
+     data-content-id=""
+     data-content-type="Sidebar"
+     data-content-variation="sidebarLeft"
+     data-content-location=""
+     data-content-category=""
+     data-content-download="">
+    <span class="fill"></span>
+
+    <span class="icon icon_news">
+        
+        
+    </span>
+
+    <span class="title title_news">News</span>
+  </a>
+
+
+
+</li>
+
+
+
+    <li class="search">
+        <div class="search-wrapper">
+            <form id="mobile-nav-site-search-widget" action="/search/" method="GET">
+                <input id="mobile-search" type="search" value="" placeholder="Search" name="q"
+                       id="mobile-nav-site-search-widget-term"/>
+                <span class="icon icon_search"></span>
+            </form>
+        </div>
+    </li>
+</ul>
+
+
+        
+    </div>
+
+</nav>
+
+
+  
+  
+    
+    
+      
+
+
+
+
+
+<div id="user-dashboard" class="
+
+    default-background
+
+">
+
+    <div class="drawer">
+
+        <nav class="profile-nav hidden-mobile">
+
+            <ul class="dashboard-open">
+                <li class="visible-not-signed-in sign-up">
+                    <a href="https://club.pokemon.com/us/pokemon-trainer-club/login">
+                        <span class="">
+                            <div class="avatar-icon-wrapper">
+                                <img class="avatar-icon" src="https://assets.pokemon.com/static2/_ui/img/chrome/profile-navigation/profile-nav-signup.png"
+                                     alt="Sign In"/>
+                            </div>
+                            <div class="sign-in-text-wrapper">
+                                Log In
+                            </div>
+                        </span>
+                    </a>
+                </li>
+
+                <li class="visible-signed-in">
+                    <a href="https://club.pokemon.com/us/pokemon-trainer-club/edit-profile/">
+                        <span class="">
+                            <div class="avatar-icon-wrapper">
+                                <img class="avatar-icon"
+                                     src="https://assets.pokemon.com/static2/_ui/img/chrome/profile-navigation/profile-nav-avatar.png"
+                                     alt="Profile"/>
+                            </div>
+                        </span>
+                    </a>
+                </li>
+
+                
+                    <li class="visible-signed-in organizer-link">
+                        <a href="/us/pokemon-trainer-club/play-pokemon/events/">
+                            <span class="" >
+                                <div class="organizer-icon-wrapper">
+                                    <img class="organizer-icon default" alt="Profile"
+                                         src="https://assets.pokemon.com/static2/_ui/img/chrome/profile-navigation/profile-nav-builder.png" />
+                                    <img class="organizer-icon ie9-hover" alt="Profile"
+                                         src="https://assets.pokemon.com/static2/_ui/img/chrome/profile-navigation/profile-nav-builder-ie9-hover.png" />
+                                    <span class="offscreen">Profile</span>
+                                </div>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                <li class="visible-signed-in sign-in" id="sidebar-logout-button">
+                    <a href="/us/pokemon-trainer-club/logout">
+                        <span>Log Out</span>
+                    </a>
+                </li>
+
+            </ul>
+            <div class="search">
+                <a class="icon icon_search" href="">
+                    <span class="offscreen"></span>
+                </a>
+            </div>
+            <div class="bottom-angle"></div>
+        </nav>
+
+        <div class="dashboard"></div>
+
+    </div>
+
+</div>
+
+    
+    
+  
+
+
+  <div class="container
+  
+  ">
+    
+    
+    
+    
+      
+
+  
+
+<section class="section pokedex-pokemon-header overflow-visible">
+  <div class="pokedex-pokemon-pagination">
+    <a href="/us/pokedex/golem" class="previous">
+      <div class="pokedex-pokemon-pagination-wrapper">
+        <span class="icon icon_arrow_sm_left"></span>
+        <span class="pokemon-number">#076</span>
+        <span class="pokemon-name hidden-mobile">Golem</span>
+      </div>
+    </a>
+
+    <a href="/us/pokedex/rapidash" class="next">
+      <div class="pokedex-pokemon-pagination-wrapper">
+        <span class="icon icon_arrow_sm_right"></span>
+        <span class="pokemon-number">#078</span>
+        <span class="pokemon-name hidden-mobile">Rapidash</span>
+      </div>
+    </a>
+  </div>
+  <div class="pokedex-pokemon-pagination-title">
+    <div>
+      Ponyta
+      <span class="pokemon-number">#077</span>
+    </div>
+  </div>
+</section>
+
+  <section class="section pokedex-pokemon-form">
+  <div class="column-12 push-1">
+    <div class="styled-select button-black right">
+
+
+      <select id="formes" name="formes" >
+  
+        <option value="0">Ponyta</option>
+  
+        <option value="1">Galarian Form</option>
+  
+      </select>
+      <i class="icon icon_arrow_sm_down"></i>
+
+
+    </div>
+  </div>
+</section>
+
+  
+
+
+
+
+
+
+<section class="section pokedex-pokemon-details">
+  <div class="column-6 push-1">
+    <div class="pokedex-pokemon-profile">
+      <div class="profile-images">
+
+  
+        <img class="active" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/077.png" alt="Ponyta" />
+  
+
+  
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/077_f2.png" alt="Galarian Form" />
+  
+
+      </div>
+    </div>
+
+  
+      <div class="pokemon-stats-info active">
+            <h3>Stats</h3>
+    
+            <ul>
+              <li class="first">
+                <ul class="gauge">
+                  <li data-value="3" class="meter"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <span>HP</span>
+              </li>
+
+              <li>
+                <ul class="gauge">
+                  <li data-value="5" class="meter"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <span>Attack</span>
+              </li>
+
+              <li>
+                <ul class="gauge">
+                  <li data-value="4" class="meter"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <span>Defense</span>
+              </li>
+
+              <li>
+                <ul class="gauge">
+                  <li data-value="4" class="meter"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <span>Special Attack</span>
+              </li>
+
+              <li>
+                <ul class="gauge">
+                  <li data-value="4" class="meter"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <span>Special Defense</span>
+              </li>
+
+              <li>
+                <ul class="gauge">
+                  <li data-value="6" class="meter"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <span>Speed</span>
+              </li>
+            </ul>
+    
+      </div>
+  
+      <div class="pokemon-stats-info ">
+            <h3>Stats</h3>
+    
+            <ul>
+              <li class="first">
+                <ul class="gauge">
+                  <li data-value="3" class="meter"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <span>HP</span>
+              </li>
+
+              <li>
+                <ul class="gauge">
+                  <li data-value="5" class="meter"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <span>Attack</span>
+              </li>
+
+              <li>
+                <ul class="gauge">
+                  <li data-value="4" class="meter"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <span>Defense</span>
+              </li>
+
+              <li>
+                <ul class="gauge">
+                  <li data-value="4" class="meter"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <span>Special Attack</span>
+              </li>
+
+              <li>
+                <ul class="gauge">
+                  <li data-value="4" class="meter"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <span>Special Defense</span>
+              </li>
+
+              <li>
+                <ul class="gauge">
+                  <li data-value="6" class="meter"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <span>Speed</span>
+              </li>
+            </ul>
+    
+      </div>
+  >
+
+  </div> <!-- column-6 push-1 -->
+
+  <div class="column-6 push-7">
+    <div class="pokedex-pokemon-details-right">
+    
+          <div class="version-descriptions active">
+          
+            
+                <p class="version-y
+                                  ">
+                  If you’ve been accepted by Ponyta, its burning mane is mysteriously no longer hot to the touch.
+                </p>
+            
+                <p class="version-x
+                                  active">
+                  It can’t run properly when it’s newly born. As it races around with others of its kind, its legs grow stronger.
+                </p>
+            
+          
+          </div>
+    
+          <div class="version-descriptions ">
+          
+            
+                <p class="version-y
+                                  ">
+                  This Pokémon will look into your eyes and read the contents of your heart. If it finds evil there, it promptly hides away.
+                </p>
+            
+                <p class="version-x
+                                  active">
+                  Its small horn hides a healing power. With a few rubs from this Pokémon’s horn, any slight wound you have will be healed.
+                </p>
+            
+          
+          </div>
+    
+
+      <h3>Versions:</h3>
+      <div class="version-labels">
+        <span class="version-label version-x active"><i class="icon icon_pokeball"></i></span>
+        <span class="version-label version-y"><i class="icon icon_pokeball"></i></span>
+      </div>
+
+      <div class="info match-height-tablet">
+
+
+        <div class="pokemon-ability-info color-bg color-lightblue match active">
+
+          <div class="column-7">
+            <ul>
+              <li>
+                <span class="attribute-title">Height</span>
+                <span class="attribute-value">3' 03"</span>
+              </li>
+
+              <li>
+                <span class="attribute-title">Weight</span>
+                <span class="attribute-value">66.1 lbs</span>
+              </li>
+
+              <li>
+                <span class="attribute-title">Gender</span>
+  
+                <span class="attribute-value">
+    <i class="icon icon_male_symbol"></i>
+    <i class="icon icon_female_symbol"></i>
+                </span>
+  
+              </li>
+            </ul>
+          </div>
+
+          <div class="column-7 push-7">
+            <ul>
+              <li>
+                <span class="attribute-title">Category</span>
+                <span class="attribute-value">Fire Horse</span>
+              </li>
+              
+              <li>
+                <span class="attribute-title">Abilities</span>
+
+                <ul class="attribute-list">
+  
+                  <li>
+                    <a href="" class="moreInfo">
+                      <span class="attribute-value">Run Away</span>
+                    </a>
+                  </li>
+  
+                  <li>
+                    <a href="" class="moreInfo">
+                      <span class="attribute-value">Flash Fire</span>
+                    </a>
+                  </li>
+  
+                </ul>
+              </li>
+              
+            </ul>
+          </div>
+
+  
+          <div class="pokemon-ability-info-detail match">
+            <span class="button-close">
+              <i class="icon icon_multiply"></i>Close</span>
+            <span class="title">Ability Info</span>
+            <h3>Run Away</h3>
+            <p>Enables a sure getaway from wild Pokémon.</p>
+          </div>
+  
+          <div class="pokemon-ability-info-detail match">
+            <span class="button-close">
+              <i class="icon icon_multiply"></i>Close</span>
+            <span class="title">Ability Info</span>
+            <h3>Flash Fire</h3>
+            <p>Powers up the Pokémon&#39;s Fire-type moves if it&#39;s hit by one.</p>
+          </div>
+  
+
+        </div> <!-- pokemon-ability-info color-bg color-lightblue match -->
+
+        <div class="pokedex-pokemon-attributes active">
+	        <div class="dtm-type">
+	          <h3>Type</h3>
+	          <ul>
+	            <li class="background-color-fire">
+              
+	              <a href="/us/pokedex/?type=fire">Fire</a>
+              
+	            </li>
+	
+	          </ul>
+          </div> <!-- dtm-type -->
+
+	        <div class="dtm-weaknesses">
+	          <h3>Weaknesses</h3>
+	          <ul>
+	
+	            <li class="background-color-water first">
+              
+	              <a href="/us/pokedex/?weakness=water">
+              
+	                <span>Water
+	  
+	                </span>
+	              </a>
+	            </li>
+  
+	            <li class="background-color-ground middle">
+              
+	              <a href="/us/pokedex/?weakness=ground">
+              
+	                <span>Ground
+	  
+	                </span>
+	              </a>
+	            </li>
+  
+	            <li class="background-color-rock last">
+              
+	              <a href="/us/pokedex/?weakness=rock">
+              
+	                <span>Rock
+	  
+	                </span>
+	              </a>
+	            </li>
+  
+	          </ul>
+          </div> <!-- dtm-weaknesses -->
+        </div> <!-- pokedex-pokemon-attributes -->
+
+
+
+        <div class="pokemon-ability-info color-bg color-lightblue match ">
+
+          <div class="column-7">
+            <ul>
+              <li>
+                <span class="attribute-title">Height</span>
+                <span class="attribute-value">2' 07"</span>
+              </li>
+
+              <li>
+                <span class="attribute-title">Weight</span>
+                <span class="attribute-value">52.9 lbs</span>
+              </li>
+
+              <li>
+                <span class="attribute-title">Gender</span>
+  
+                <span class="attribute-value">
+    <i class="icon icon_male_symbol"></i>
+    <i class="icon icon_female_symbol"></i>
+                </span>
+  
+              </li>
+            </ul>
+          </div>
+
+          <div class="column-7 push-7">
+            <ul>
+              <li>
+                <span class="attribute-title">Category</span>
+                <span class="attribute-value">Unique Horn</span>
+              </li>
+              
+              <li>
+                <span class="attribute-title">Abilities</span>
+
+                <ul class="attribute-list">
+  
+                  <li>
+                    <a href="" class="moreInfo">
+                      <span class="attribute-value">Run Away</span>
+                    </a>
+                  </li>
+  
+                  <li>
+                    <a href="" class="moreInfo">
+                      <span class="attribute-value">Pastel Veil</span>
+                    </a>
+                  </li>
+  
+                </ul>
+              </li>
+              
+            </ul>
+          </div>
+
+  
+          <div class="pokemon-ability-info-detail match">
+            <span class="button-close">
+              <i class="icon icon_multiply"></i>Close</span>
+            <span class="title">Ability Info</span>
+            <h3>Run Away</h3>
+            <p>Enables a sure getaway from wild Pokémon.</p>
+          </div>
+  
+          <div class="pokemon-ability-info-detail match">
+            <span class="button-close">
+              <i class="icon icon_multiply"></i>Close</span>
+            <span class="title">Ability Info</span>
+            <h3>Pastel Veil</h3>
+            <p>Protects the Pokémon and its ally Pokémon from being poisoned.</p>
+          </div>
+  
+
+        </div> <!-- pokemon-ability-info color-bg color-lightblue match -->
+
+        <div class="pokedex-pokemon-attributes ">
+	        <div class="dtm-type">
+	          <h3>Type</h3>
+	          <ul>
+	            <li class="background-color-psychic">
+              
+	              <a href="/us/pokedex/?type=psychic">Psychic</a>
+              
+	            </li>
+	
+	          </ul>
+          </div> <!-- dtm-type -->
+
+	        <div class="dtm-weaknesses">
+	          <h3>Weaknesses</h3>
+	          <ul>
+	
+	            <li class="background-color-ghost first">
+              
+	              <a href="/us/pokedex/?weakness=ghost">
+              
+	                <span>Ghost
+	  
+	                </span>
+	              </a>
+	            </li>
+  
+	            <li class="background-color-dark middle">
+              
+	              <a href="/us/pokedex/?weakness=dark">
+              
+	                <span>Dark
+	  
+	                </span>
+	              </a>
+	            </li>
+  
+	            <li class="background-color-bug last">
+              
+	              <a href="/us/pokedex/?weakness=bug">
+              
+	                <span>Bug
+	  
+	                </span>
+	              </a>
+	            </li>
+  
+	          </ul>
+          </div> <!-- dtm-weaknesses -->
+        </div> <!-- pokedex-pokemon-attributes -->
+
+  
+      </div> <!-- info match-height-tablet -->
+
+      <div class="collectibles-detail-friends"></div>
+    </div>
+  </div>
+</section>
+
+  
+    
+
+<section class="section pokedex-pokemon-evolution evolution-two">
+
+    <div class="column-12 push-1 dog-ear-bl">
+
+        <h2>Evolutions</h2>
+
+        <ul class="evolution-profile match-height-tablet">
+            
+                <li class="first">
+                    
+
+
+
+<a href="/us/pokedex/ponyta">
+
+    
+     <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/077.png"
+         alt="Ponyta" />
+    <h3 class="match">
+        Ponyta
+        <span class="pokemon-number">
+            #077
+        </span>
+    </h3>
+    
+    <ul class="evolution-attributes match-height">
+        <li class="background-color-fire match">Fire</li>
+        
+    </ul>
+</a>
+
+                </li>
+            
+                <li class="last">
+                    
+
+
+
+<a href="/us/pokedex/rapidash">
+
+    
+     <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/078.png"
+         alt="Rapidash" />
+    <h3 class="match">
+        Rapidash
+        <span class="pokemon-number">
+            #078
+        </span>
+    </h3>
+    
+    <ul class="evolution-attributes match-height">
+        <li class="background-color-fire match">Fire</li>
+        
+    </ul>
+</a>
+
+                </li>
+            
+        </ul>
+    </div>
+
+</section>
+  
+  
+
+<section class="section pokedex-pokemon-share no-padding-top">
+
+	<div class="column-12 push-1">
+
+		<div class="content-block content-block-half-first">
+
+
+		</div>
+
+		<div class="content-block content-block-half">
+		
+			<a href="/us/pokedex/" class="button button-orange right">Explore More Pokémon</a>
+		
+		</div>
+	</div>
+
+</section>
+
+
+  
+    <!--googleoff: index-->
+    
+      
+
+<section id="homepage-video-slider"
+         class="slider-widget generic-slider video-slider preload-images
+  
+  
+  
+  
+  slider-description
+  
+  ">
+
+
+  <div class="slider-title">
+    <div class="column-12 push-1">
+      <h3 class="pokemon-character-slider-title">
+        <span class="notch-left-top-outer"></span>
+        
+        <span class="icon icon_pokemontv"></span>
+        
+        Ponyta Pok&eacute;mon TV Episodes
+      </h3>
+    </div>
+  </div>
+
+
+
+  <div class="slider-wrapper">
+    <ul class="slider">
+    
+      
+
+
+<li class="match" data-analytics-label="S1 | Episode 32 | The Flame Pokémon-athon! | /us/pokedex/ponyta"
+    data-content-id="item-episodes"
+    data-content-type="Slider"
+    data-content-variation="slideCenter"
+    data-content-location=""
+    data-content-category="Episode"
+    data-content-download="">
+    
+
+    <div class="poster">
+        
+            <span class="video-play-button"></span>
+        
+
+        <img data-preload-src="https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season01/season01_ep32_ss01.jpg"
+                class="preload"
+                alt="None">
+    </div>
+
+  
+
+  <div class="text">
+     
+    <h5 class="title">The Flame Pokémon-athon!</h5>
+    
+    
+      <div class="description">S1 | Episode 32</div>
+    
+  </div>
+
+  <span class="notch-bottom-center-small"></span>
+
+  
+  <a href="/us/pokemon-episodes/01_32-the-flame-pokemon-athon/" class="block-link" title="S1 | Episode 32">
+    <span class="offscreen">
+      The Flame Pokémon-athon!
+      -
+      S1 | Episode 32
+    </span>
+  </a>
+  
+</li>
+
+    
+      
+
+
+<li class="match" data-analytics-label="S1 | Episode 40 | The March of the Exeggutor Squad | /us/pokedex/ponyta"
+    data-content-id="item-episodes"
+    data-content-type="Slider"
+    data-content-variation="slideCenter"
+    data-content-location=""
+    data-content-category="Episode"
+    data-content-download="">
+    
+
+    <div class="poster">
+        
+            <span class="video-play-button"></span>
+        
+
+        <img data-preload-src="https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season01/season01_ep40_ss01.jpg"
+                class="preload"
+                alt="None">
+    </div>
+
+  
+
+  <div class="text">
+     
+    <h5 class="title">The March of the Exeggutor Squad</h5>
+    
+    
+      <div class="description">S1 | Episode 40</div>
+    
+  </div>
+
+  <span class="notch-bottom-center-small"></span>
+
+  
+  <a href="/us/pokemon-episodes/01_40-the-march-of-the-exeggutor-squad/" class="block-link" title="S1 | Episode 40">
+    <span class="offscreen">
+      The March of the Exeggutor Squad
+      -
+      S1 | Episode 40
+    </span>
+  </a>
+  
+</li>
+
+    
+      
+
+
+<li class="match" data-analytics-label="S2 | Episode 32 | Pikachu Re-Volts | /us/pokedex/ponyta"
+    data-content-id="item-episodes"
+    data-content-type="Slider"
+    data-content-variation="slideCenter"
+    data-content-location=""
+    data-content-category="Episode"
+    data-content-download="">
+    
+
+    <div class="poster">
+        
+            <span class="video-play-button"></span>
+        
+
+        <img data-preload-src="https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season02/season02_ep32_ss01.jpg"
+                class="preload"
+                alt="None">
+    </div>
+
+  
+
+  <div class="text">
+     
+    <h5 class="title">Pikachu Re-Volts</h5>
+    
+    
+      <div class="description">S2 | Episode 32</div>
+    
+  </div>
+
+  <span class="notch-bottom-center-small"></span>
+
+  
+  <a href="/us/pokemon-episodes/02_32-pikachu-re-volts/" class="block-link" title="S2 | Episode 32">
+    <span class="offscreen">
+      Pikachu Re-Volts
+      -
+      S2 | Episode 32
+    </span>
+  </a>
+  
+</li>
+
+    
+      
+
+
+<li class="match" data-analytics-label="S5 | Episode 14 | Throwing in the Noctowl! | /us/pokedex/ponyta"
+    data-content-id="item-episodes"
+    data-content-type="Slider"
+    data-content-variation="slideCenter"
+    data-content-location=""
+    data-content-category="Episode"
+    data-content-download="">
+    
+
+    <div class="poster">
+        
+
+        <img data-preload-src="https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season05/season05_ep14_ss01.jpg"
+                class="preload"
+                alt="None">
+    </div>
+
+  
+
+  <div class="text">
+     
+    <h5 class="title">Throwing in the Noctowl!</h5>
+    
+    
+      <div class="description">S5 | Episode 14</div>
+    
+  </div>
+
+  <span class="notch-bottom-center-small"></span>
+
+  
+  <a href="/us/pokemon-episodes/05_14-throwing-in-the-noctowl/" class="block-link" title="S5 | Episode 14">
+    <span class="offscreen">
+      Throwing in the Noctowl!
+      -
+      S5 | Episode 14
+    </span>
+  </a>
+  
+</li>
+
+    
+      
+
+
+<li class="match" data-analytics-label="S2 | Episode 9 | It&#39;s Mr. Mime Time | /us/pokedex/ponyta"
+    data-content-id="item-episodes"
+    data-content-type="Slider"
+    data-content-variation="slideCenter"
+    data-content-location=""
+    data-content-category="Episode"
+    data-content-download="">
+    
+
+    <div class="poster">
+        
+            <span class="video-play-button"></span>
+        
+
+        <img data-preload-src="https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season02/season02_ep09_ss01.jpg"
+                class="preload"
+                alt="None">
+    </div>
+
+  
+
+  <div class="text">
+     
+    <h5 class="title">It's Mr. Mime Time</h5>
+    
+    
+      <div class="description">S2 | Episode 9</div>
+    
+  </div>
+
+  <span class="notch-bottom-center-small"></span>
+
+  
+  <a href="/us/pokemon-episodes/02_09-its-mr-mime-time/" class="block-link" title="S2 | Episode 9">
+    <span class="offscreen">
+      It's Mr. Mime Time
+      -
+      S2 | Episode 9
+    </span>
+  </a>
+  
+</li>
+
+    
+      
+
+
+<li class="match" data-analytics-label="S2 | Episode 11 | Showdown at the Po-ké Corral | /us/pokedex/ponyta"
+    data-content-id="item-episodes"
+    data-content-type="Slider"
+    data-content-variation="slideCenter"
+    data-content-location=""
+    data-content-category="Episode"
+    data-content-download="">
+    
+
+    <div class="poster">
+        
+            <span class="video-play-button"></span>
+        
+
+        <img data-preload-src="https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season02/season02_ep11_ss01.jpg"
+                class="preload"
+                alt="None">
+    </div>
+
+  
+
+  <div class="text">
+     
+    <h5 class="title">Showdown at the Po-ké Corral</h5>
+    
+    
+      <div class="description">S2 | Episode 11</div>
+    
+  </div>
+
+  <span class="notch-bottom-center-small"></span>
+
+  
+  <a href="/us/pokemon-episodes/02_11-showdown-at-the-po-ke-corral/" class="block-link" title="S2 | Episode 11">
+    <span class="offscreen">
+      Showdown at the Po-ké Corral
+      -
+      S2 | Episode 11
+    </span>
+  </a>
+  
+</li>
+
+    
+      
+
+
+<li class="match" data-analytics-label="S10 | Episode 10 | Not On My Watch Ya Don&#39;t | /us/pokedex/ponyta"
+    data-content-id="item-episodes"
+    data-content-type="Slider"
+    data-content-variation="slideCenter"
+    data-content-location=""
+    data-content-category="Episode"
+    data-content-download="">
+    
+
+    <div class="poster">
+        
+
+        <img data-preload-src="https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season10/season10_ep10_ss01.jpg"
+                class="preload"
+                alt="None">
+    </div>
+
+  
+
+  <div class="text">
+     
+    <h5 class="title">Not On My Watch Ya Don't</h5>
+    
+    
+      <div class="description">S10 | Episode 10</div>
+    
+  </div>
+
+  <span class="notch-bottom-center-small"></span>
+
+  
+  <a href="/us/pokemon-episodes/10_10-not-on-my-watch-ya-dont/" class="block-link" title="S10 | Episode 10">
+    <span class="offscreen">
+      Not On My Watch Ya Don't
+      -
+      S10 | Episode 10
+    </span>
+  </a>
+  
+</li>
+
+    
+      
+
+
+<li class="match" data-analytics-label="S9 | Episode 16 | Odd Pokémon Out | /us/pokedex/ponyta"
+    data-content-id="item-episodes"
+    data-content-type="Slider"
+    data-content-variation="slideCenter"
+    data-content-location=""
+    data-content-category="Episode"
+    data-content-download="">
+    
+
+    <div class="poster">
+        
+
+        <img data-preload-src="https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season09/season09_ep16_ss01.jpg"
+                class="preload"
+                alt="None">
+    </div>
+
+  
+
+  <div class="text">
+     
+    <h5 class="title">Odd Pokémon Out</h5>
+    
+    
+      <div class="description">S9 | Episode 16</div>
+    
+  </div>
+
+  <span class="notch-bottom-center-small"></span>
+
+  
+  <a href="/us/pokemon-episodes/09_16-odd-pokemon-out/" class="block-link" title="S9 | Episode 16">
+    <span class="offscreen">
+      Odd Pokémon Out
+      -
+      S9 | Episode 16
+    </span>
+  </a>
+  
+</li>
+
+    
+    </ul>
+  </div><!-- class="slider-wrapper" -->
+
+
+
+  <div class="slider-more-button">
+    <div class="column-12 push-1">
+      <div class="content-block content-block-full">
+        <a class="button button-black right "
+           
+           
+           href="/us/pokemon-episodes/">Watch Pokémon TV</a>
+      </div>
+    </div>
+  </div>
+
+
+
+<noscript>
+
+  
+<div>
+    <a href="/us/pokemon-episodes/01_32-the-flame-pokemon-athon/">
+        <h5>The Flame Pokémon-athon!</h5>
+        <span class="subtitle">S1 | Episode 32</span>
+        <img src="https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season01/season01_ep32_ss01.jpg" alt="None" />
+    </a>
+</div>
+
+
+  
+<div>
+    <a href="/us/pokemon-episodes/01_40-the-march-of-the-exeggutor-squad/">
+        <h5>The March of the Exeggutor Squad</h5>
+        <span class="subtitle">S1 | Episode 40</span>
+        <img src="https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season01/season01_ep40_ss01.jpg" alt="None" />
+    </a>
+</div>
+
+
+  
+<div>
+    <a href="/us/pokemon-episodes/02_32-pikachu-re-volts/">
+        <h5>Pikachu Re-Volts</h5>
+        <span class="subtitle">S2 | Episode 32</span>
+        <img src="https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season02/season02_ep32_ss01.jpg" alt="None" />
+    </a>
+</div>
+
+
+  
+<div>
+    <a href="/us/pokemon-episodes/05_14-throwing-in-the-noctowl/">
+        <h5>Throwing in the Noctowl!</h5>
+        <span class="subtitle">S5 | Episode 14</span>
+        <img src="https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season05/season05_ep14_ss01.jpg" alt="None" />
+    </a>
+</div>
+
+
+  
+<div>
+    <a href="/us/pokemon-episodes/02_09-its-mr-mime-time/">
+        <h5>It&#39;s Mr. Mime Time</h5>
+        <span class="subtitle">S2 | Episode 9</span>
+        <img src="https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season02/season02_ep09_ss01.jpg" alt="None" />
+    </a>
+</div>
+
+
+  
+<div>
+    <a href="/us/pokemon-episodes/02_11-showdown-at-the-po-ke-corral/">
+        <h5>Showdown at the Po-ké Corral</h5>
+        <span class="subtitle">S2 | Episode 11</span>
+        <img src="https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season02/season02_ep11_ss01.jpg" alt="None" />
+    </a>
+</div>
+
+
+  
+<div>
+    <a href="/us/pokemon-episodes/10_10-not-on-my-watch-ya-dont/">
+        <h5>Not On My Watch Ya Don&#39;t</h5>
+        <span class="subtitle">S10 | Episode 10</span>
+        <img src="https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season10/season10_ep10_ss01.jpg" alt="None" />
+    </a>
+</div>
+
+
+  
+<div>
+    <a href="/us/pokemon-episodes/09_16-odd-pokemon-out/">
+        <h5>Odd Pokémon Out</h5>
+        <span class="subtitle">S9 | Episode 16</span>
+        <img src="https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season09/season09_ep16_ss01.jpg" alt="None" />
+    </a>
+</div>
+
+
+</noscript>
+
+</section>
+
+    
+    <!--googleon: index-->
+  
+  
+    
+
+<section id="trading-card-slider"
+         class="slider-widget generic-slider preload-images
+  
+  
+  
+  
+  
+  slider-option-enable-when-all-content-visible-true
+  
+  
+  
+  ">
+
+
+  <div class="slider-title">
+    <div class="column-12 push-1">
+      <h3 class="pokemon-character-slider-title">
+        <span class="notch-left-top-outer"></span>
+        
+        <span class="icon icon_cards"></span>
+        
+        Ponyta Cards
+      </h3>
+    </div>
+  </div>
+
+
+
+  <div class="slider-wrapper">
+    <ul class="slider">
+    
+      
+
+
+<li data-analytics-label="Galarian Ponyta | Shining Fates: Shiny Vault | /us/pokedex/ponyta"
+    data-content-id="item-cards"
+    data-content-type="Slider"
+    data-content-variation="slideCenter"
+    data-content-location=""
+    data-content-category="Card"
+    data-content-download=""
+    >
+    
+      <a href="/us/pokemon-tcg/pokemon-cards/ss-series/swsh45sv/SV047/">
+    
+  <div class="card-img">
+    <img data-preload-src="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH45/SWSH45_EN_SV047.png"
+         alt="Galarian Ponyta"
+         class="preload">
+  </div>
+  <div class="card-name">
+    <h5>Galarian Ponyta</h5>
+    <span class="card-number">SV047</span>
+
+    <br style="clear:both;">
+    <img class="card-expansion-symbol" width="25" height="25" src="https://assets.pokemon.com/assets/cms2/img/trading-card-game/_symbols/expansion_symbol_25x25/swsh45sv-expansion-symbol.png">
+    <span class="expansion-name">Shining Fates: Shiny Vault</span>
+    <span class="notch-bottom-center-small"></span>
+  </div>
+  </a>
+</li>
+
+    
+      
+
+
+<li data-analytics-label="Galarian Ponyta | Sword &amp; Shield Promo | /us/pokedex/ponyta"
+    data-content-id="item-cards"
+    data-content-type="Slider"
+    data-content-variation="slideCenter"
+    data-content-location=""
+    data-content-category="Card"
+    data-content-download=""
+    >
+    
+      <a href="/us/pokemon-tcg/pokemon-cards/ss-series/swshp/SWSH013/">
+    
+  <div class="card-img">
+    <img data-preload-src="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSHP/SWSHP_EN_SWSH013.png"
+         alt="Galarian Ponyta"
+         class="preload">
+  </div>
+  <div class="card-name">
+    <h5>Galarian Ponyta</h5>
+    <span class="card-number">SWSH013</span>
+
+    <br style="clear:both;">
+    <img class="card-expansion-symbol" width="25" height="25" src="https://assets.pokemon.com/assets/cms2/img/trading-card-game/_symbols/expansion_symbol_25x25/swshp-expansion-symbol.png">
+    <span class="expansion-name">Sword &amp; Shield Promo</span>
+    <span class="notch-bottom-center-small"></span>
+  </div>
+  </a>
+</li>
+
+    
+      
+
+
+<li data-analytics-label="Galarian Ponyta | Sword &amp; Shield | /us/pokedex/ponyta"
+    data-content-id="item-cards"
+    data-content-type="Slider"
+    data-content-variation="slideCenter"
+    data-content-location=""
+    data-content-category="Card"
+    data-content-download=""
+    >
+    
+      <a href="/us/pokemon-tcg/pokemon-cards/ss-series/swsh1/81/">
+    
+  <div class="card-img">
+    <img data-preload-src="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH1/SWSH1_EN_81.png"
+         alt="Galarian Ponyta"
+         class="preload">
+  </div>
+  <div class="card-name">
+    <h5>Galarian Ponyta</h5>
+    <span class="card-number">81</span>
+
+    <br style="clear:both;">
+    <img class="card-expansion-symbol" width="25" height="25" src="https://assets.pokemon.com/assets/cms2/img/trading-card-game/_symbols/expansion_symbol_25x25/swsh1-expansion-symbol.png">
+    <span class="expansion-name">Sword &amp; Shield</span>
+    <span class="notch-bottom-center-small"></span>
+  </div>
+  </a>
+</li>
+
+    
+      
+
+
+<li data-analytics-label="Ponyta | Cosmic Eclipse | /us/pokedex/ponyta"
+    data-content-id="item-cards"
+    data-content-type="Slider"
+    data-content-variation="slideCenter"
+    data-content-location=""
+    data-content-category="Card"
+    data-content-download=""
+    >
+    
+      <a href="/us/pokemon-tcg/pokemon-cards/sm-series/sm12/23/">
+    
+  <div class="card-img">
+    <img data-preload-src="https://assets.pokemon.com/assets/cms2/img/cards/web/SM12/SM12_EN_23.png"
+         alt="Ponyta"
+         class="preload">
+  </div>
+  <div class="card-name">
+    <h5>Ponyta</h5>
+    <span class="card-number">23</span>
+
+    <br style="clear:both;">
+    <img class="card-expansion-symbol" width="25" height="25" src="https://assets.pokemon.com/assets/cms2/img/trading-card-game/_symbols/expansion_symbol_25x25/sm12-expansion-symbol.png">
+    <span class="expansion-name">Cosmic Eclipse</span>
+    <span class="notch-bottom-center-small"></span>
+  </div>
+  </a>
+</li>
+
+    
+      
+
+
+<li data-analytics-label="Ponyta | Team Up | /us/pokedex/ponyta"
+    data-content-id="item-cards"
+    data-content-type="Slider"
+    data-content-variation="slideCenter"
+    data-content-location=""
+    data-content-category="Card"
+    data-content-download=""
+    >
+    
+      <a href="/us/pokemon-tcg/pokemon-cards/sm-series/sm9/17/">
+    
+  <div class="card-img">
+    <img data-preload-src="https://assets.pokemon.com/assets/cms2/img/cards/web/SM9/SM9_EN_17.png"
+         alt="Ponyta"
+         class="preload">
+  </div>
+  <div class="card-name">
+    <h5>Ponyta</h5>
+    <span class="card-number">17</span>
+
+    <br style="clear:both;">
+    <img class="card-expansion-symbol" width="25" height="25" src="https://assets.pokemon.com/assets/cms2/img/trading-card-game/_symbols/expansion_symbol_25x25/sm9-expansion-symbol.png">
+    <span class="expansion-name">Team Up</span>
+    <span class="notch-bottom-center-small"></span>
+  </div>
+  </a>
+</li>
+
+    
+      
+
+
+<li data-analytics-label="Ponyta | XY—Evolutions | /us/pokedex/ponyta"
+    data-content-id="item-cards"
+    data-content-type="Slider"
+    data-content-variation="slideCenter"
+    data-content-location=""
+    data-content-category="Card"
+    data-content-download=""
+    >
+    
+      <a href="/us/pokemon-tcg/pokemon-cards/xy-series/xy12/19/">
+    
+  <div class="card-img">
+    <img data-preload-src="https://assets.pokemon.com/assets/cms2/img/cards/web/XY12/XY12_EN_19.png"
+         alt="Ponyta"
+         class="preload">
+  </div>
+  <div class="card-name">
+    <h5>Ponyta</h5>
+    <span class="card-number">19</span>
+
+    <br style="clear:both;">
+    <img class="card-expansion-symbol" width="25" height="25" src="https://assets.pokemon.com/assets/cms2/img/trading-card-game/_symbols/expansion_symbol_25x25/xy12-expansion-symbol.png">
+    <span class="expansion-name">XY—Evolutions</span>
+    <span class="notch-bottom-center-small"></span>
+  </div>
+  </a>
+</li>
+
+    
+      
+
+
+<li data-analytics-label="Ponyta | XY—Steam Siege | /us/pokedex/ponyta"
+    data-content-id="item-cards"
+    data-content-type="Slider"
+    data-content-variation="slideCenter"
+    data-content-location=""
+    data-content-category="Card"
+    data-content-download=""
+    >
+    
+      <a href="/us/pokemon-tcg/pokemon-cards/xy-series/xy11/16/">
+    
+  <div class="card-img">
+    <img data-preload-src="https://assets.pokemon.com/assets/cms2/img/cards/web/XY11/XY11_EN_16.png"
+         alt="Ponyta"
+         class="preload">
+  </div>
+  <div class="card-name">
+    <h5>Ponyta</h5>
+    <span class="card-number">16</span>
+
+    <br style="clear:both;">
+    <img class="card-expansion-symbol" width="25" height="25" src="https://assets.pokemon.com/assets/cms2/img/trading-card-game/_symbols/expansion_symbol_25x25/xy11-expansion-symbol.png">
+    <span class="expansion-name">XY—Steam Siege</span>
+    <span class="notch-bottom-center-small"></span>
+  </div>
+  </a>
+</li>
+
+    
+      
+
+
+<li data-analytics-label="Ponyta | Generations | /us/pokedex/ponyta"
+    data-content-id="item-cards"
+    data-content-type="Slider"
+    data-content-variation="slideCenter"
+    data-content-location=""
+    data-content-category="Card"
+    data-content-download=""
+    >
+    
+      <a href="/us/pokemon-tcg/pokemon-cards/xy-series/g1/14/">
+    
+  <div class="card-img">
+    <img data-preload-src="https://assets.pokemon.com/assets/cms2/img/cards/web/G1/G1_EN_14.png"
+         alt="Ponyta"
+         class="preload">
+  </div>
+  <div class="card-name">
+    <h5>Ponyta</h5>
+    <span class="card-number">14</span>
+
+    <br style="clear:both;">
+    <img class="card-expansion-symbol" width="25" height="25" src="https://assets.pokemon.com/assets/cms2/img/trading-card-game/_symbols/expansion_symbol_25x25/g1-expansion-symbol.png">
+    <span class="expansion-name">Generations</span>
+    <span class="notch-bottom-center-small"></span>
+  </div>
+  </a>
+</li>
+
+    
+      
+
+
+<li data-analytics-label="Ponyta | XY—Flashfire | /us/pokedex/ponyta"
+    data-content-id="item-cards"
+    data-content-type="Slider"
+    data-content-variation="slideCenter"
+    data-content-location=""
+    data-content-category="Card"
+    data-content-download=""
+    >
+    
+      <a href="/us/pokemon-tcg/pokemon-cards/xy-series/xy2/14/">
+    
+  <div class="card-img">
+    <img data-preload-src="https://assets.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_14.png"
+         alt="Ponyta"
+         class="preload">
+  </div>
+  <div class="card-name">
+    <h5>Ponyta</h5>
+    <span class="card-number">14</span>
+
+    <br style="clear:both;">
+    <img class="card-expansion-symbol" width="25" height="25" src="https://assets.pokemon.com/assets/cms2/img/trading-card-game/_symbols/expansion_symbol_25x25/xy2-expansion-symbol.png">
+    <span class="expansion-name">XY—Flashfire</span>
+    <span class="notch-bottom-center-small"></span>
+  </div>
+  </a>
+</li>
+
+    
+      
+
+
+<li data-analytics-label="Ponyta | HS—Triumphant | /us/pokedex/ponyta"
+    data-content-id="item-cards"
+    data-content-type="Slider"
+    data-content-variation="slideCenter"
+    data-content-location=""
+    data-content-category="Card"
+    data-content-download=""
+    >
+    
+      <a href="/us/pokemon-tcg/pokemon-cards/hgss-series/hgss4/72/">
+    
+  <div class="card-img">
+    <img data-preload-src="https://assets.pokemon.com/assets/cms2/img/cards/web/HGSS4/HGSS4_EN_72.png"
+         alt="Ponyta"
+         class="preload">
+  </div>
+  <div class="card-name">
+    <h5>Ponyta</h5>
+    <span class="card-number">72</span>
+
+    <br style="clear:both;">
+    <img class="card-expansion-symbol" width="25" height="25" src="https://assets.pokemon.com/assets/cms2/img/trading-card-game/_symbols/expansion_symbol_25x25/hgss4-expansion-symbol.png">
+    <span class="expansion-name">HS—Triumphant</span>
+    <span class="notch-bottom-center-small"></span>
+  </div>
+  </a>
+</li>
+
+    
+    </ul>
+  </div><!-- class="slider-wrapper" -->
+
+
+
+  <div class="slider-more-button">
+    <div class="column-12 push-1">
+      <div class="content-block content-block-full">
+        <a class="button button-black right "
+           
+           
+           href="/us/pokemon-tcg/pokemon-cards/">Explore More Cards</a>
+      </div>
+    </div>
+  </div>
+
+
+
+<noscript>
+
+  
+
+
+<div>
+    <a href="/us/pokemon-tcg/pokemon-cards/ss-series/swsh45sv/SV047/">
+        <h5>Galarian Ponyta</h5>
+        <span class="subtitle">Shining Fates: Shiny Vault</span>
+        <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH45/SWSH45_EN_SV047.png" alt="Galarian Ponyta" />
+    </a>
+</div>
+
+
+
+  
+
+
+<div>
+    <a href="/us/pokemon-tcg/pokemon-cards/ss-series/swshp/SWSH013/">
+        <h5>Galarian Ponyta</h5>
+        <span class="subtitle">Sword &amp; Shield Promo</span>
+        <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSHP/SWSHP_EN_SWSH013.png" alt="Galarian Ponyta" />
+    </a>
+</div>
+
+
+
+  
+
+
+<div>
+    <a href="/us/pokemon-tcg/pokemon-cards/ss-series/swsh1/81/">
+        <h5>Galarian Ponyta</h5>
+        <span class="subtitle">Sword &amp; Shield</span>
+        <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/SWSH1/SWSH1_EN_81.png" alt="Galarian Ponyta" />
+    </a>
+</div>
+
+
+
+  
+
+
+<div>
+    <a href="/us/pokemon-tcg/pokemon-cards/sm-series/sm12/23/">
+        <h5>Ponyta</h5>
+        <span class="subtitle">Cosmic Eclipse</span>
+        <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/SM12/SM12_EN_23.png" alt="Ponyta" />
+    </a>
+</div>
+
+
+
+  
+
+
+<div>
+    <a href="/us/pokemon-tcg/pokemon-cards/sm-series/sm9/17/">
+        <h5>Ponyta</h5>
+        <span class="subtitle">Team Up</span>
+        <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/SM9/SM9_EN_17.png" alt="Ponyta" />
+    </a>
+</div>
+
+
+
+  
+
+
+<div>
+    <a href="/us/pokemon-tcg/pokemon-cards/xy-series/xy12/19/">
+        <h5>Ponyta</h5>
+        <span class="subtitle">XY—Evolutions</span>
+        <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/XY12/XY12_EN_19.png" alt="Ponyta" />
+    </a>
+</div>
+
+
+
+  
+
+
+<div>
+    <a href="/us/pokemon-tcg/pokemon-cards/xy-series/xy11/16/">
+        <h5>Ponyta</h5>
+        <span class="subtitle">XY—Steam Siege</span>
+        <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/XY11/XY11_EN_16.png" alt="Ponyta" />
+    </a>
+</div>
+
+
+
+  
+
+
+<div>
+    <a href="/us/pokemon-tcg/pokemon-cards/xy-series/g1/14/">
+        <h5>Ponyta</h5>
+        <span class="subtitle">Generations</span>
+        <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/G1/G1_EN_14.png" alt="Ponyta" />
+    </a>
+</div>
+
+
+
+  
+
+
+<div>
+    <a href="/us/pokemon-tcg/pokemon-cards/xy-series/xy2/14/">
+        <h5>Ponyta</h5>
+        <span class="subtitle">XY—Flashfire</span>
+        <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/XY2/XY2_EN_14.png" alt="Ponyta" />
+    </a>
+</div>
+
+
+
+  
+
+
+<div>
+    <a href="/us/pokemon-tcg/pokemon-cards/hgss-series/hgss4/72/">
+        <h5>Ponyta</h5>
+        <span class="subtitle">HS—Triumphant</span>
+        <img src="https://assets.pokemon.com/assets/cms2/img/cards/web/HGSS4/HGSS4_EN_72.png" alt="Ponyta" />
+    </a>
+</div>
+
+
+
+</noscript>
+
+</section>
+
+  
+  
+
+<div id="pokedex-auth-error-modal" class="popup user-alert">
+  <div class="content">
+    <h3>Login Required</h3>
+    <p>You need to have a Pokémon Trainer Club account to save your Favorite Pokémon!</p>
+    <a href="/us/pokemon-trainer-club/login?_rd=/us/pokedex/ponyta" class="button arrow-left button-green sign-in">Log In</a>
+    <a href="/us/pokemon-trainer-club/sign-up/" class="button button-blue signup">Sign Up</a>
+    <a href="#" class="button no-arrow button-grey closeBtn">No Thanks</a>
+  </div>
+</div>
+
+<div id="pokedex-collectible-auth-error-modal" class="popup user-alert">
+  <div class="content">
+    <h3>Login Required</h3>
+    <p>Log in to your Pokémon Trainer Club account to add Pokémon to your collection!</p>
+    <a href="/us/pokemon-trainer-club/login?_rd=/us/pokedex/ponyta" class="button arrow-left button-green sign-in">Log In</a>
+    <a href="/us/pokemon-trainer-club/sign-up/" class="button button-blue signup">Sign Up</a>
+    <a href="#" class="button no-arrow button-grey closeBtn">No Thanks</a>
+  </div>
+</div>
+
+
+
+    
+    
+    <!-- end of container -->
+  </div>
+
+  
+
+  
+
+  <div id="back-to-top" class="visible-mobile">
+    <span class="offscreen">Back to Top</span>
+  </div>
+
+  <div class="footer-divider">
+    <span class="footer-notch"></span>
+  </div>
+
+  <footer class="global-footer">
+    <div class="content-wrapper match-height-tablet">
+      
+
+
+<div class="global-footer-links match">
+  <h2><span class="offscreen">The Pok&eacute;mon Company</span></h2>
+  <ul>
+    
+      
+      <li>
+        <a href="/us/pokemon-news/" rel="" title="">
+          What's New
+        </a>
+      </li>
+      
+      <li>
+        <a href="/us/parents-guide/"
+          rel=""
+          title="">
+          Pokémon Parents Guide
+        </a>
+      </li>
+      <li>
+        <a href="/us/customer-service/" rel="" title="">
+          Customer Service
+        </a>
+      </li>
+      <li>
+        <a href="/us/about-pokemon/" rel="" title="">
+          About Our Company
+        </a>
+      </li>
+      
+      <li>
+        <a id="careers-link" href="https://boards.greenhouse.io/pokemoncareers" class="exit-link"
+          target="_blank"
+          rel="https://boards.greenhouse.io/pokemoncareers"
+          title="External: https://boards.greenhouse.io/pokemoncareers">
+          Pokémon Careers
+        </a>
+      </li>
+      
+    
+    <li>
+      <a href="/us/country-region/" rel="" title="">
+        Select a Country/Region
+        <i class="icon-us"></i>
+      </a>
+    </li>
+    <li>
+      <a id="press-link" href="https://press.pokemon.com/" class="exit-link"
+        target="_blank"
+        rel="https://press.pokemon.com/"
+        title="External: https://press.pokemon.com/">
+        Pokémon Press Site
+      </a>
+    </li>
+    
+    
+    
+  </ul>
+</div>
+
+      
+      
+<div class="global-footer-social match">
+
+    <div class="footer-social-wrapper">
+        <div class="find-us">
+            <div class="find-us-box">
+
+
+                <a href="https://www.facebook.com/pokemon" class="facebook exit-link" target="_blank"
+                   title="External: https://www.facebook.com/pokemon">
+                    <span class="offscreen">Facebook</span>
+                </a>
+
+                <a href="https://www.youtube.com/user/Pokemon" class="youtube exit-link" target="_blank"
+                   title="External: https://www.youtube.com/user/Pokemon">
+                    <span class="offscreen">Youtube</span>
+                </a>
+
+                <a href="https://www.twitter.com/pokemon" class="twitter exit-link" target="_blank"
+                   title="External: https://www.twitter.com/pokemon">
+                    <span class="offscreen">Twitter</span>
+                </a>
+ 
+                <a href="https://www.instagram.com/pokemon" class="instagram exit-link" target="_blank"
+                   title="External: https://www.instagram.com/pokemon">
+                    <span class="offscreen">Instagram</span>
+                </a>
+
+
+                <a href="https://www.pinterest.com/pokemon" class="pinterest exit-link" target="_blank"
+                   title="External: https://www.pinterest.com/pokemon">
+                    <span class="offscreen">Pinterest</span>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+      
+      
+      
+
+<div class="global-footer-legal match">
+
+  <div class="footer-legal-wrapper">
+
+    <div id="footer--privacy">
+        <a
+            title="External: https://caru.bbbprograms.org/seal/Confirmation/1596150491"
+            
+            class="exit-link" target="_blank"
+            href="https://caru.bbbprograms.org/seal/Confirmation/1596150491"
+            
+            >
+        </a>
+      <ul>
+
+          <li>
+            <a href="/us/terms-of-use/">Terms of Use</a>
+          </li>
+
+          <li>
+            <a href="/us/privacy-notice/">Privacy Notice</a>
+          </li>
+
+          <li>
+            <a id="cookieLink" href="/us/cookie-page/">Cookie Page</a>
+          </li>
+
+          <li>
+            <a href="/us/legal/">Legal Info</a>
+          </li>
+
+          
+            <li>
+              <a id="securityLink" href="/us/vulnerability-disclosure-program/">Security</a>
+            </li>
+          
+          
+        </ul>
+    </div>
+
+    <span>©2022 Pokémon. ©1995 - 2022 Nintendo/Creatures Inc./GAME FREAK inc. TM, ®Nintendo.</span>
+
+  </div>
+
+</div>
+
+      
+    </div>
+    
+  </footer>
+
+
+  
+
+
+<div id="modal" class="popup">
+	<div class="externalLink">
+    <h6>
+
+      You are about to leave a site operated by The Pokémon Company International, Inc.
+
+    </h6>
+		<p>
+
+The Pokémon Company International is not responsible for the content of any linked website that is not operated by The Pokémon Company International. Please note that these websites' privacy policies and security practices may differ from The Pokémon Company International's standards.
+
+    </p>
+		<div class="buttons-wrapper">
+			<a href="#" class="button button-green arrow-right continueBtn">
+
+        Continue
+
+      </a>
+			<a href="#" class="button button-darkgray arrow-left closeBtn">
+
+        Cancel
+
+      </a>
+		</div>
+	</div>
+</div>
+
+<div id="pokemon-center-modal" class="popup">
+	<div class="externalLink centerLink">
+    <h6>
+      Click Continue to visit PokemonCenter.com, our official online shop.
+    </h6>
+    <h6>
+      The privacy and security policies differ.
+    </h6>
+		<div class="buttons-wrapper">
+			<a href="#" class="button button-green arrow-right continueBtn">
+
+        Continue
+
+      </a>
+			<a href="#" class="button button-darkgray arrow-left closeBtn" target="_blank">
+
+        Cancel
+
+      </a>
+		</div>
+	</div>
+</div>
+
+<div id="site-search-modal" class="popup">
+
+	<form id="site-search-widget" class="form-analytics" name="site-search-modal">
+		<span class="search"><input type="search" placeholder="Search" name="search" id="site-search-widget-term" autocomplete="off" /></span>
+		<span class="submit icon icon_search"><input type="submit" value="" id="site-search-widget-submit"/></span>
+        <div id="modal-search-results"></div>
+	</form>
+</div>
+
+<div id='report-screen-name-success-modal' class='popup'>
+  <h6>Report Inappropriate Screen Name</h6>
+
+  <div class='modalBox'>
+    <img src="https://assets.pokemon.com/static2/_ui/img/chrome/external_link_bumper.png" alt="" class="hidden-mobile" />
+
+    <p>
+    Pokemon.com administrators have been notified and will review the screen name for compliance with the Terms of Use.
+    </p>
+
+    <div class='buttons-wrapper'>
+      <a href='#' class='button button-orange closeBtn'>
+        Close
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id='report-screen-name-failure-modal' class='popup'>
+  <h6>Report Inappropriate Screen Name</h6>
+
+  <div class='modalBox'>
+    <img src="https://assets.pokemon.com/static2/_ui/img/chrome/external_link_bumper.png" alt="" class="hidden-mobile" />
+
+    <p>
+    Your request could not be completed. Please try again. If the problem persists, please contact Customer Support.
+    </p>
+
+    <div class='buttons-wrapper'>
+      <a href='#' class='button button-orange closeBtn'>
+        Close
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id='popupScreen' class="popupScreen"></div>
+
+
+  
+
+
+ 
+
+
+</body>
+</html>
