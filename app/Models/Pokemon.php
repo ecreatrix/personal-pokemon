@@ -26,6 +26,22 @@ class Pokemon extends Model {
 		//return $this->belongsToMany( Ability::class, 'pokemons_abilities' );
 	}
 
+	public static function all_cached() {
+		$cache_key = 'all_pokemons';
+		$cache     = Cache::get( $cache_key );
+		clock( $cache );
+		Cache::forget( $cache_key );
+
+		if ( $cache ) {
+			return $cache;
+		} else {
+			clock( $cache_key );
+			return Cache::rememberForever( $cache_key, function () {
+				return Pokemon::all()->get()->select( self::$main_pokemon_columns );
+			} );
+		}
+	}
+
 	public function cards() {
 		//return $this->belongsToMany( Card::class, 'pokemons_cards', 'pokemon_id', 'card_id' );
 	}
@@ -63,12 +79,12 @@ class Pokemon extends Model {
 		$cache     = Cache::get( $cache_key );
 		Cache::forget( $cache_key );
 
-		if ( false && $cache ) {
+		if ( $cache ) {
 			return $cache;
 		} else {
-			//return Cache::rememberForever( $cache_key, function () use ( $start, $end ) {
-			return self::ranged( $start, $end )->get()->toArray();
-			//} );
+			return Cache::rememberForever( $cache_key, function () use ( $start, $end ) {
+				return self::ranged( $start, $end )->get()->toArray();
+			} );
 		}
 	}
 

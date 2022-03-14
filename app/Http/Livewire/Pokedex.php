@@ -152,36 +152,52 @@ class Pokedex extends Component {
             'pokemons' => [],
         ]];
 
-        foreach ( $this->filter['regions'] as $region_id => $value ) {
-            if ( $value ) {
-                $chosen['regions'][] = $region_id;
+        $main_pokemon_columns = ['pokemons.id', 'pokedex_no', 'name', 'slug', 'colour', 'image_slug', 'text_y', 'text_x', 'api_text'];
+        $pokemons             = Pokemon::all_cached();
+
+        if ( array_key_exists( 'regions', $this->filter ) ) {
+            foreach ( $this->filter['regions'] as $region_id => $value ) {
+                if ( $value ) {
+                    $chosen['regions'][] = $region_id;
+                }
             }
         }
 
-        foreach ( $this->filter['numbers'] as $start => $value ) {
-            if ( $value ) {
-                $end                 = $start + 199;
-                $chosen['numbers'][] = [
-                    'start' => $start,
-                    'end'   => $end,
-                ];
+        if ( array_key_exists( 'numbers', $this->filter ) ) {
+            foreach ( $this->filter['numbers'] as $start => $value ) {
+                if ( $value ) {
+                    $end                 = $start + 199;
+                    $chosen['numbers'][] = [
+                        'start' => $start,
+                        'end'   => $end,
+                    ];
+                }
             }
         }
 
-        foreach ( $this->filter['varieties'] as $variety_id ) {
-            if ( $variety_id ) {
-                $chosen['varieties'][] = $variety_id;
-                //$this->by_varieties( $varieties )
+        if ( array_key_exists( 'varieties', $this->filter ) ) {
+            foreach ( $this->filter['varieties'] as $variety_id ) {
+                if ( $variety_id ) {
+                    $chosen['varieties'][] = $variety_id;
+                    //$this->by_varieties( $varieties )
+                }
             }
         }
 
-        foreach ( $this->filter['types'] as $type_id ) {
-            if ( $type_id ) {
-                $chosen['types'][] = $type_id;
-                //$this->by_varieties( $varieties )
+        if ( array_key_exists( 'types', $this->filter ) ) {
+            foreach ( $this->filter['types'] as $type_id ) {
+                if ( $type_id ) {
+                    $chosen['types'][] = $type_id;
+                    //$this->by_varieties( $varieties )
+                }
             }
         }
         clock( $chosen );
+        clock( $pokemons );
+
+        $selected = [];
+
+        clock( $selected );
 
         $selected = [];
         //if ( count( $chosen_regions ) > 0 ) {
