@@ -13,10 +13,13 @@ class API {
         $cache_key = 'pokeapi-' . $query;
         $cache     = Cache::get( $cache_key );
         //clock( 'https://pokeapi.co/api/v2/' . $query );
-
-        if ( $cache && null != $cache ) {
+        // && isset( $cache ) && ! is_null( $cache )
+        if ( $cache && isset( $cache ) && ! is_null( $cache ) && ! str_contains( $cache, '503 Service Temporarily Unavailable' ) ) {
             //\Debugbar::info( 'poke: ' . $cache_key . ' used' );
             $cache = json_decode( $cache );
+            if ( '30' === $name ) {
+                clock( $cache );
+            }
 
             return $cache;
         } else {
@@ -30,7 +33,10 @@ class API {
                 return false;
             }
 
-            Cache::put( $cache_key, $response, 500000 ); //500000 minutes
+            //Cache::put( $cache_key, $response, 500000 ); //500000 minutes
+            Cache::rememberForever( $cache_key, function () use ( $response ) {
+                return $response;
+            } );
 
             $response = json_decode( $response );
             return $response;

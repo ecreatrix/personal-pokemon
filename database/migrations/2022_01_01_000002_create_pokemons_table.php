@@ -38,9 +38,13 @@ class CreatePokemonsTable extends Migration {
             $table->string( 'next_stage' )->nullable();
 
             $table->string( 'genus' )->nullable();
-            $table->string( 'text' )->nullable();
+
+            $table->string( 'text_y' )->nullable();
+            $table->string( 'text_x' )->nullable();
+            $table->string( 'api_text' )->nullable();
 
             $table->boolean( 'genderable' )->nullable();
+            //$table->boolean( 'has_varieties' )->nullable();
 
             $table->integer( 'height' )->nullable();
             $table->integer( 'weight' )->nullable();
@@ -63,8 +67,6 @@ class CreatePokemonsTable extends Migration {
             $table->string( 'source' );
 
             $table->json( 'sprites' )->nullable();
-
-            $table->json( 'description' )->nullable();
 
             // Entire API call
             $table->json( 'api' );

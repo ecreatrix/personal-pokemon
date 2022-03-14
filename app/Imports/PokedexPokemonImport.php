@@ -21,44 +21,32 @@ class PokedexPokemonImport implements ToModel {
     public function model( array $row ) {
         clock( $row );
         $pokedex_no = $row[0];
-        unset( $row[0] );
 
-        $name = $row[1];
-        unset( $row[1] );
-
-        unset( $row[2] );
-
-        $text = $row[3];
-        unset( $row[3] );
-
-        unset( $row[4] );
-        unset( $row[5] );
-
-        $pokemon = Pokemon::firstWhere( ['pokedex_no' => $pokedex_no, 'name' => $name] );
-        if ( $pokemon ) {
-            $pokemon->text = $text;
-            clock( $pokemon->name . ', text: ' . $pokemon->text );
-            //$pokemon->save();
-        }
-
-        $i = 6;
+        $i = 1;
         foreach ( $row as $part ) {
-            if ( array_key_exists( $i, $row ) && null != $row[$i] ) {
-                $name = str_replace( '_y', '', $row[$i] );
-                $text = $row[$i + 3];
-                clock( $i . ' - name: ' . $name . ', text: ' . $text );
+            if ( array_key_exists( $i + 4, $row ) && ! is_null( $row[$i + 4] ) && '' != $row[$i + 4] ) {
+                $name = $row[$i];
+                $name = str_replace( '’', "'", $name );
+                $name = str_replace( '“', '"', $name );
+                $name = str_replace( '”', '"', $name );
+
+                $text_y = $row[$i + 2];
+                $text_x = $row[$i + 4];
 
                 $pokemon = Pokemon::firstWhere( ['pokedex_no' => $pokedex_no, 'name' => $name] );
                 if ( $pokemon ) {
-                    $pokemon->text = $text;
-                    clock( $pokemon->name );
-                    clock( $pokemon->text );
-                    //$pokemon->save();
+                    $pokemon->text_y = $text_y;
+                    $pokemon->text_x = $text_x;
+                    //clock( $pokemon->toArray() );
+                    //clock( $pokemon->text );
+                    $pokemon->save();
+                } else {
+                    clock( 'Not found: ' . $i . ' - name: ' . $name . ', text_y: ' . $text_y );
                 }
                 //$pokemon->save();
             }
 
-            $i += 4;
+            $i = $i + 5;
         }
 
         //clock( $pokemon->toArray() );
