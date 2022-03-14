@@ -1,1 +1,0 @@
-132,"Ditto","y","When it encounters another Ditto, it will move faster than normal to duplicate that opponent exactly.","x","It can reconstitute its entire cellular structure to change into what it sees, but it returns to normal when it relaxes.",
