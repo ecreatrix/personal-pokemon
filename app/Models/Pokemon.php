@@ -20,7 +20,7 @@ class Pokemon extends Model {
 
 	protected $fillable = ['slug', 'pokedex_no'];
 
-	private static $main_pokemon_columns = ['pokemons.id', 'pokedex_no', 'name', 'slug', 'colour', 'image_slug', 'text'];
+	private static $main_pokemon_columns = ['pokemons.id', 'pokedex_no', 'name', 'slug', 'colour', 'image_slug', 'text_y', 'text_x', 'api_text'];
 
 	public function abilities() {
 		//return $this->belongsToMany( Ability::class, 'pokemons_abilities' );
@@ -55,7 +55,7 @@ class Pokemon extends Model {
 	}
 
 	public static function ranged( $start, $end ) {
-		return Pokemon::where( 'pokedex_no', '>=', $start )->select( $this->main_pokemon_columns )->where( 'pokedex_no', '<=', $end )->select( self::$main_pokemon_columns )->with( 'types' )->with( 'varieties' );
+		return Pokemon::where( 'pokedex_no', '>=', $start )->select( self::$main_pokemon_columns )->where( 'pokedex_no', '<=', $end )->select( self::$main_pokemon_columns )->with( 'types' );
 	}
 
 	public static function rangedCached( $start, $end ) {

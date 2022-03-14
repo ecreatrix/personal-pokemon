@@ -15,7 +15,7 @@ class Region extends Model {
 
 	protected $fillable = ['name', 'slug', 'number'];
 
-	private $main_pokemon_columns = ['pokemons.id', 'pokedex_no', 'name', 'slug', 'colour', 'image_slug', 'text'];
+	private $main_pokemon_columns = ['pokemons.id', 'variety_id', 'pokedex_no', 'name', 'slug', 'colour', 'image_slug', 'text_y', 'text_x', 'api_text'];
 
 	public function pokemons() {
 		return $this->belongsToMany( Pokemon::class, 'pokemons_regions' )->select( $this->main_pokemon_columns )->with( 'types' );
@@ -44,7 +44,7 @@ class Region extends Model {
 	}
 
 	public function primaryPokemons() {
-		return $this->belongsToMany( Pokemon::class, 'pokemons_regions' )->select( $this->main_pokemon_columns )->where( 'primary', true )->with( 'types' );
+		return $this->belongsToMany( Pokemon::class, 'pokemons_regions' )->select( $this->main_pokemon_columns )->where( 'variety_id', 1 )->with( 'types' );
 	}
 
 	public function primaryPokemonsCached() {
@@ -57,7 +57,7 @@ class Region extends Model {
 	}
 
 	public function primaryPokemonsRanged( $start, $end ) {
-		return $this->belongsToMany( Pokemon::class, 'pokemons_regions' )->where( 'primary', true )->where( 'pokedex_no', '>=', $start )->where( 'pokedex_no', '<=', $end )->select( $this->main_pokemon_columns )->with( 'types' );
+		return $this->belongsToMany( Pokemon::class, 'pokemons_regions' )->where( 'variety_id', 1 )->where( 'pokedex_no', '>=', $start )->where( 'pokedex_no', '<=', $end )->select( $this->main_pokemon_columns )->with( 'types' );
 	}
 
 	public function primaryPokemonsRangedCached( $start, $end ) {

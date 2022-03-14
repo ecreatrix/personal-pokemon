@@ -16,7 +16,7 @@ use App\Models\Variety;
 use Illuminate\Support\Str;
 
 class Pokedex {
-    private static $main_pokemon_columns = ['pokemons.id', 'pokedex_no', 'name', 'slug', 'colour', 'image_slug', 'text'];
+    private static $main_pokemon_columns = ['pokemons.id', 'pokedex_no', 'name', 'slug', 'colour', 'image_slug', 'text_y', 'text_x', 'api_text'];
 
     public function aacreate_pokemon_custom( $species, $variety_info, $pokedex_no_original, $search_id = false ) {
         $pokedex_no_original = $species->pokedex_numbers[0]->entry_number;

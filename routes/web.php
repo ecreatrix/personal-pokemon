@@ -43,6 +43,9 @@ Route::group( [], function () {
                         'slug'       => "bulbasaur",
                         'colour'     => "green",
                         'image_slug' => "001Bulbasaur",
+                        'text_y'     => "While it is young, it uses the nutrients that are stored in the seed on its back in order to grow.",
+                        'text_x'     => "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.",
+                        'api_text'   => "A strange seed was planted on its back at birth.The plant sprouts and grows with this Pokémon.",
                         'types'      => [
                             '0' => [
                                 'id'     => 19,
@@ -65,6 +68,9 @@ Route::group( [], function () {
                         'slug'       => "ivysaur",
                         'colour'     => "green",
                         'image_slug' => "002Ivysaur",
+                        "text_y"     => "Exposure to sunlight adds to its strength. Sunlight also makes the bud on its back grow larger.",
+                        "text_x"     => "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.",
+                        "api_text"   => "When the bulb on its back grows large, it appearsto lose the ability to stand on its hind legs.",
                         'types'      => [
                             '0' => [
                                 'id'     => 19,
@@ -87,6 +93,9 @@ Route::group( [], function () {
                         'slug'       => "venusaur",
                         'colour'     => "green",
                         'image_slug' => "003Venusaur",
+                        "text_y"     => "From the time it is born, a flame burns at the tip of its tail. Its life would end if the flame were to go out.",
+                        "text_x"     => "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
+                        "api_text"   => "Obviously prefers hot places. When it rains, steamis said to spout from the tip of its tail.",
                         'types'      => [
                             '0' => [
                                 'id'     => 19,
@@ -109,6 +118,9 @@ Route::group( [], function () {
                         'slug'       => "venusaur-mega",
                         'colour'     => "green",
                         'image_slug' => "003Venusaur_Mega",
+                        "text_y"     => "From the time it is born, a flame burns at the tip of its tail. Its life would end if the flame were to go out.",
+                        "text_x"     => "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
+                        "api_text"   => "Obviously prefers hot places. When it rains, steamis said to spout from the tip of its tail.",
                         'types'      => [
                             '0' => [
                                 'id'     => 19,
@@ -131,6 +143,9 @@ Route::group( [], function () {
                         'slug'       => "venusaur-gmax",
                         'colour'     => "green",
                         'image_slug' => "003Venusaur_Gmax",
+                        "text_y"     => "From the time it is born, a flame burns at the tip of its tail. Its life would end if the flame were to go out.",
+                        "text_x"     => "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
+                        "api_text"   => "Obviously prefers hot places. When it rains, steamis said to spout from the tip of its tail.",
                         'types'      => [
                             '0' => [
                                 'id'     => 19,
@@ -154,6 +169,9 @@ Route::group( [], function () {
                         'slug'       => "charmander",
                         'colour'     => "red",
                         'image_slug' => "004Charmander",
+                        "text_y"     => "From the time it is born, a flame burns at the tip of its tail. Its life would end if the flame were to go out.",
+                        "text_x"     => "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
+                        "api_text"   => "Obviously prefers hot places. When it rains, steamis said to spout from the tip of its tail.",
                         'types'      => [
                             '0' => [
                                 'id'     => 21,
@@ -171,6 +189,9 @@ Route::group( [], function () {
                         'slug'       => "charmeleon",
                         'colour'     => "red",
                         'image_slug' => "005Charmeleon",
+                        "text_y"     => "From the time it is born, a flame burns at the tip of its tail. Its life would end if the flame were to go out.",
+                        "text_x"     => "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
+                        "api_text"   => "Obviously prefers hot places. When it rains, steamis said to spout from the tip of its tail.",
                         'types'      => [
                             '0' => [
                                 'id'     => 21,

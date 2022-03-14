@@ -1,6 +1,7 @@
 @import "modules/variables-all";
 @import "modules/animations";
 @import "modules/mixins";
+@import "wa-sass.1/basic/mixins/misc";
 
 @page { margin: 1rem; }
 
@@ -59,7 +60,8 @@ body.pdf, .printable {
 	}
 
 	table.breakable {
-		tbody tr:nth-child(2), tbody tr:nth-child(3n+5) { 
+		//, tbody tr:nth-child(3n+5)
+		tbody tr:nth-child(2n) { 
 			//background: red;
 			page-break-after: always; 
 		}
@@ -94,7 +96,14 @@ body.pdf, .printable {
 			//height: 180px;
 
 			.title {
-				//margin-bottom: 1rem;
+				line-height: 1;
+				margin-top: -0.5rem;
+			}
+
+			.text {
+				font-size: 90%;
+				line-height: 0.8;
+				padding: 0.25rem 0.15rem 0.75rem;
 			}
 
 			.types {

@@ -22,7 +22,23 @@
 
 								<div class="body">
 									<div class="title">
-										No. {{ $pokemon['pokedex_no'] }} - {{ $pokemon['name'] }}
+										No. {{ $pokemon['pokedex_no'] }} - 
+										@if($pokemon['name'] === 'Nidoran ♀') 
+											Nidoran - Female
+										@elseif($pokemon['name'] === 'Nidoran ♂') 
+											Nidoran - Male
+										@else 
+											{{ $pokemon['name'] }}
+										@endif
+									</div>
+									<div class="text my-2">
+										@if($pokemon['text_y']) 
+											{{ $pokemon['text_y'] }}
+										@elseif($pokemon['text_x']) 
+											{{ $pokemon['text_x'] }}
+										@else
+											{{ $pokemon['api_text'] }}
+										@endif
 									</div>
 									<div class="types count-{{ count($pokemon['types']) }}">
 										@foreach($pokemon['types'] as $type)

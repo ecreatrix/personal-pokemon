@@ -31,18 +31,20 @@ class Pokedex extends Component {
     ];
 
     protected $rules = [
-        'update.colour'           => 'required|boolean',
-        'filter.selected_regions' => 'required|array',
-        'filter.selected_numbers' => 'required|array',
+        'update.colour'             => 'required|boolean',
+        'filter.selected_regions'   => 'required|array',
+        'filter.selected_numbers'   => 'required|array',
+        'filter.selected_types'     => 'required|array',
+        'filter.selected_varieties' => 'required|array',
     ];
 
     public function by_pokedex_no( $chosen_numbers ) {
         $selected = [];
 
         foreach ( $chosen_numbers as $range ) {
-            $start = $range['start'];
-            $end   = $range['end'];
-            //$end        = $range['start'] + 3;
+            $start      = $range['start'];
+            $end        = $range['end'];
+            $end        = $range['start'] + 3;
             $clock_name = $start . ' - ';
 
             $pokemons = Pokemon::rangedCached( $start, $end );
@@ -120,6 +122,23 @@ class Pokedex extends Component {
         return $selected;
     }
 
+    public function by_varieties( $varieties ) {
+        $selected = [];
+
+        foreach ( $varieties as $variety ) {
+            $title            = 'Variety: ' . $variety;
+            $selected[$start] = [
+                'title' => $title,
+                'slug'  => Str::slug( $title ),
+                //'pokemons' => $pokemons,
+            ];
+        }
+
+        asort( $selected );
+
+        return $selected;
+    }
+
     public function clear() {
         $this->filter['regions'] = [];
         $this->filter['numbers'] = [];
@@ -133,30 +152,45 @@ class Pokedex extends Component {
             'pokemons' => [],
         ]];
 
-        $chosen_regions = [];
         foreach ( $this->filter['regions'] as $region_id => $value ) {
             if ( $value ) {
-                $chosen_regions[] = $region_id;
+                $chosen['regions'][] = $region_id;
             }
         }
 
-        $chosen_numbers = [];
         foreach ( $this->filter['numbers'] as $start => $value ) {
             if ( $value ) {
-                $end              = $start + 199;
-                $chosen_numbers[] = [
+                $end                 = $start + 199;
+                $chosen['numbers'][] = [
                     'start' => $start,
                     'end'   => $end,
                 ];
             }
         }
 
-        $selected = [];
-        if ( count( $chosen_regions ) > 0 ) {
-            $selected = $this->by_region( $chosen_regions, $chosen_numbers );
-        } else if ( count( $chosen_numbers ) > 0 ) {
-            $selected = $this->by_pokedex_no( $chosen_numbers );
+        foreach ( $this->filter['varieties'] as $variety_id ) {
+            if ( $variety_id ) {
+                $chosen['varieties'][] = $variety_id;
+                //$this->by_varieties( $varieties )
+            }
         }
+
+        foreach ( $this->filter['types'] as $type_id ) {
+            if ( $type_id ) {
+                $chosen['types'][] = $type_id;
+                //$this->by_varieties( $varieties )
+            }
+        }
+        clock( $chosen );
+
+        $selected = [];
+        //if ( count( $chosen_regions ) > 0 ) {
+        //$selected = $this->by_region( $chosen_regions, $chosen_numbers );
+        //} else if ( count( $chosen_numbers ) > 0 ) {
+        //$selected = $this->by_pokedex_no( $chosen_numbers );
+        //}
+
+        //clock( $selected['1']['pokemons'] );
 
         $this->selected = $selected;
     }

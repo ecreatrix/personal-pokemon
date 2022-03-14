@@ -41,9 +41,25 @@
 
 				<div class="block dashed by-type accordion-item" wire:model="filter.method.type" key="filter-type">
 					<div class="category accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse-filter-type" aria-expanded="true" aria-controls="collapse-filter-type">
+						By Variety
+					</div>
+					<div id="collapse-filter-type" class="form-check form-switch accordion-collapse collapse show" aria-labelledby="heading-filter-type">
+						<input class="form-check-input" type="checkbox" role="switch" id="pokedex-basic" value="1" wire:model.defer="filter.varieties.1" key="filter-type-1">
+						<label class="form-check-label" for="pokedex-basic">Basic</label>
+
+						<input class="form-check-input" type="checkbox" role="switch" id="pokedex-mega" value="2" wire:model.defer="filter.varieties.2" key="filter-type-2">
+						<label class="form-check-label" for="pokedex-mega">Mega</label>
+
+						<input class="form-check-input" type="checkbox" role="switch" id="pokedex-gmax" value="3" wire:model.defer="filter.varieties.3" key="filter-type-3">
+						<label class="form-check-label" for="pokedex-gmax">GMAX</label>
+					</div> 
+				</div>
+
+				<div class="block dashed by-type accordion-item" wire:model="filter.method.type" key="filter-type">
+					<div class="category accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse-filter-type" aria-expanded="true" aria-controls="collapse-filter-type">
 						By Type
 					</div>
-					<div id="collapse-filter-type" class="form-check form-switch accordion-collapse collapse" aria-labelledby="heading-filter-type">
+					<div id="collapse-filter-type" class="form-check form-switch accordion-collapse collapse show" aria-labelledby="heading-filter-type">
 						@foreach($types as $type)
 							<input class="form-check-input" type="checkbox" role="switch" id="pokedex-{{ $type->slug }}" value="{{ $type->id }}" wire:model.defer="filter.types.{{ $type->id }}" key="filter-type-{{ $type->id }}">
 							<label class="form-check-label" for="pokedex-{{ $type->slug }}">{{ $type->name }}</label>
@@ -78,7 +94,15 @@
 											<div class="card-body"><div class="moving-border"></div>
 												<div class="card-title">
 													No. {{ $pokemon['pokedex_no'] }} - {{ $pokemon['name'] }}
-													<div class="text my-2">{{ $pokemon['text'] }}</div>
+													<div class="text my-2">
+														@if($pokemon['text_y']) 
+															{{ $pokemon['text_y'] }}
+														@elseif($pokemon['text_x']) 
+															{{ $pokemon['text_x'] }}
+														@else
+															{{ $pokemon['api_text'] }}
+														@endif
+													</div>
 												</div>
 												<div class="types">
 													@foreach($pokemon['types'] as $type)
