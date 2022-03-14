@@ -1,1 +1,0 @@
-324,"Torkoal","Basic_y","You find abandoned coal mines full of them. They dig tirelessly in search of coal.","Basic_x","It burns coal inside its shell for energy. It blows out black soot if it is endangered.",

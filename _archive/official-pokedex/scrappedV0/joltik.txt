@@ -1,1 +1,0 @@
-595,"Joltik","Basic_y","Joltik latch on to other Pokémon and suck out static electricity. They’re often found sticking to Yamper’s hindquarters.","Basic_x","Joltik can be found clinging to other Pokémon. It’s soaking up static electricity because it can’t produce a charge on its own.",

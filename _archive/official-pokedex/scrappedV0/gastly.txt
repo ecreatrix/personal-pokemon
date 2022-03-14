@@ -1,1 +1,0 @@
-092,"Gastly","Basic_y","With its gas-like body, it can sneak into any place it desires. However, it can be blown away by wind.","Basic_x","Born from gases, anyone would faint if engulfed by its gaseous body, which contains poison.",

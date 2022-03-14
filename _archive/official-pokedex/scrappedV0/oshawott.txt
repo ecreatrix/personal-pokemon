@@ -1,1 +1,0 @@
-501,"Oshawott","Basic_y","It fights using the scalchop on its stomach. In response to an attack, it retaliates immediately by slashing.","Basic_x","The scalchop on its stomach isn’t just used for battle—it can be used to break open hard berries as well.",

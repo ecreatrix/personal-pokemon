@@ -1,1 +1,0 @@
-529,"Drilbur","Basic_y","It’s a digger, using its claws to burrow through the ground. It causes damage to vegetable crops, so many farmers have little love for it.","Basic_x","It brings its claws together and whirls around at high speed before rushing toward its prey.",

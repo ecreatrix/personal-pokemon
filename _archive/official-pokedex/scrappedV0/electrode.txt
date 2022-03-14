@@ -1,1 +1,0 @@
-101,"Electrode","Basic_y","Stores electrical energy inside its body. Even the slightest shock could trigger a huge explosion.","Basic_x","Stores electrical energy inside its body. Even the slightest shock could trigger a huge explosion.",

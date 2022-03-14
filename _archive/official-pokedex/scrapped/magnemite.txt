@@ -1,1 +1,0 @@
-081,"Magnemite","y","It subsists on electricity. As Magnemite flies, it emits electromagnetic waves from the units on each side of its body.","x","At times, Magnemite runs out of electricity and ends up on the ground. If you give batteries to a grounded Magnemite, it’ll start moving again.",

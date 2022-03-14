@@ -1,1 +1,0 @@
-005,"Charmeleon","Basic_y","If it becomes agitated during battle, it spouts intense flames, incinerating its surroundings.","Basic_x","It has a barbaric nature. In battle, it whips its fiery tail around and slashes away with sharp claws.",

@@ -1,1 +1,0 @@
-496,"Servine","Basic_y","When it gets dirty, its leaves can’t be used in photosynthesis, so it always keeps itself clean.","Basic_x","It moves along the ground as if sliding. Its swift movements befuddle its foes, and it then attacks with a vine whip.",
