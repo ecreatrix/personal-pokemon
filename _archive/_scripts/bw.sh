@@ -20,9 +20,11 @@ echo "• BW"
 cd ../
 cp colour/*.png bw
 cd bw
-find *.png \! -name ".DS_Store" -type f -maxdepth 0 | while read f; do
+rm *-bw.png
+find *-colour.png \! -name ".DS_Store" -type f -maxdepth 0 | while read f; do
 	NAME=$(basename "$f")
 	NAME="${NAME%.*}"
+	NAME="${NAME%-colour}"
 
 	#echo NAME: "$NAME"
 	###echo ""
@@ -31,7 +33,70 @@ find *.png \! -name ".DS_Store" -type f -maxdepth 0 | while read f; do
 	  echo "$NAME"
 	fi
 
-	convert "$f" -colorspace gray \
-        \( +clone -blur 0x2 \) +swap -compose divide -composite \
-        -linear-stretch 5%x0% "$NAME.png"
+	convert "$f" \
+		-fuzz 20% -fill transparent -opaque white \
+		\( +clone -blur 0x2 \) +swap -compose divide -composite \
+    	-linear-stretch 6%x0%  \
+		-colorspace gray -level 0%,100%,0.1 \
+		-fuzz 10% -fill transparent -opaque "#BEBEBE" \
+		-fuzz 16% -fill transparent -opaque white "$NAME-2.png"
+done
+
+find *-colour.png \! -name ".DS_Store" -type f -maxdepth 0 | while read f; do
+	NAME=$(basename "$f")
+	NAME="${NAME%.*}"
+	NAME="${NAME%-colour}"
+
+	#echo NAME: "$NAME"
+	###echo ""
+
+	if [[ "$NAME" == *"00"* && "$NAME" != "00"* ]]; then
+	  echo "$NAME"
+	fi
+
+	convert "$f" \
+		\( +clone -blur 0x2 \) +swap -compose divide -composite \
+    	-linear-stretch 6%x0%  \
+		-fuzz 8% -fill transparent -opaque white \
+		-colorspace gray -level 0%,100%,0.3  "$NAME-grey8-3.png"
+
+	convert "$f" \
+		\( +clone -blur 0x2 \) +swap -compose divide -composite \
+    	-linear-stretch 6%x0%  \
+		-fuzz 8% -fill transparent -opaque white \
+		-colorspace gray -level 0%,100%,0.1  "$NAME-grey8-1.png"
+	
+	convert "$f" \
+		\( +clone -blur 0x2 \) +swap -compose divide -composite \
+    	-linear-stretch 6%x0%  \
+		-fuzz 10% -fill transparent -opaque white \
+		-colorspace gray -level 0%,100%,0.3  "$NAME-grey10-3.png"
+	
+	convert "$f" \
+		\( +clone -blur 0x2 \) +swap -compose divide -composite \
+    	-linear-stretch 6%x0%  \
+		-fuzz 10% -fill transparent -opaque white \
+		-colorspace gray -level 0%,100%,0.1  "$NAME-grey10-1.png"
+done
+
+rm -rf * && cp ../colour/*Gmax.png ../gmax
+find *.png \! -name ".DS_Store" -type f -maxdepth 0 | while read f; do
+	NAME=$(basename "$f")
+	NAME="${NAME%.*}"
+	NAME="${NAME%-colour}"
+
+	#echo NAME: "$NAME"
+	###echo ""
+
+	if [[ "$NAME" == *"00"* && "$NAME" != "00"* ]]; then
+	  echo "$NAME"
+	fi
+	
+	convert "$f" \
+		-fuzz 20% -fill transparent -opaque white \
+		\( +clone -blur 0x2 \) +swap -compose divide -composite \
+    	-linear-stretch 6%x0%  \
+		-colorspace gray -level 0%,100%,0.1 \
+		-fuzz 10% -fill transparent -opaque "#BEBEBE" \
+		-fuzz 16% -fill transparent -opaque white "$NAME-2.png"
 done
