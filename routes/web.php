@@ -5,6 +5,7 @@
 use App\Http\Controllers\Cards;
 use App\Http\Controllers\PokedexAPIUpdate;
 use App\Http\Controllers\PokedexCSVImport;
+use App\Http\Controllers\PokedexManualUpdate;
 use App\Http\Livewire\Pokedex as PokedexLivewire;
 use App\Services\DownloadFile;
 use Illuminate\Support\Facades\Route;
@@ -213,6 +214,8 @@ Route::group( [], function () {
     } );
 
     Route::match( ['post', 'get', 'put'], '/pokedex', PokedexLivewire::class )->name( 'Pokedex' );
+
+    Route::match( ['post', 'get', 'put'], '/pokedex/manual-update', [PokedexManualUpdate::class, 'update'] )->name( 'Pokedex Manual Update' );
 
     Route::match( ['post', 'get', 'put'], '/pokedex/api-update', [PokedexAPIUpdate::class, 'update'] )->name( 'Pokedex API Update' );
 

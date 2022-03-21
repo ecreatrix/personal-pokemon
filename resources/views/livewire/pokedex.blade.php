@@ -39,11 +39,11 @@
 					</div> 
 				</div>
 
-				<div class="block dashed by-type accordion-item" wire:model="filter.method.type" key="filter-type">
-					<div class="category accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse-filter-type" aria-expanded="true" aria-controls="collapse-filter-type">
+				<div class="block dashed by-variety accordion-item" wire:model="filter.method.variety" key="filter-variety">
+					<div class="category accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse-filter-variety" aria-expanded="true" aria-controls="collapse-filter-variety">
 						By Variety
 					</div>
-					<div id="collapse-filter-type" class="form-check form-switch accordion-collapse collapse show" aria-labelledby="heading-filter-type">
+					<div id="collapse-filter-variety" class="form-check form-switch accordion-collapse collapse show" aria-labelledby="heading-filter-variety">
 						<input class="form-check-input" type="checkbox" role="switch" id="pokedex-basic" value="1" wire:model.defer="filter.varieties.1" key="filter-type-1">
 						<label class="form-check-label" for="pokedex-basic">Basic</label>
 
@@ -59,7 +59,7 @@
 					<div class="category accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse-filter-type" aria-expanded="true" aria-controls="collapse-filter-type">
 						By Type
 					</div>
-					<div id="collapse-filter-type" class="form-check form-switch accordion-collapse collapse show" aria-labelledby="heading-filter-type">
+					<div id="collapse-filter-type" class="form-check form-switch accordion-collapse collapse shows" aria-labelledby="heading-filter-type">
 						@foreach($types as $type)
 							<input class="form-check-input" type="checkbox" role="switch" id="pokedex-{{ $type->slug }}" value="{{ $type->id }}" wire:model.defer="filter.types.{{ $type->id }}" key="filter-type-{{ $type->id }}">
 							<label class="form-check-label" for="pokedex-{{ $type->slug }}">{{ $type->name }}</label>

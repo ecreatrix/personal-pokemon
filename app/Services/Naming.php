@@ -56,7 +56,7 @@ class Naming {
             $filename = $pokemon['image_slug'];
         }
 
-        $dir    = 'images/pokemon';
+        $dir    = '/images/pokemon';
         $images = [
             'front'  => [
                 'colour' => $dir . '/colour/' . $filename . '.png',

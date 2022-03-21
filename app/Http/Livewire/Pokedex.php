@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Pokemon;
 use App\Models\Region;
 use App\Models\Type;
+use App\Models\Variety;
 use App\Services\Download;
 use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Support\Facades\Cache;
@@ -13,11 +14,10 @@ use Illuminate\Support\Str;
 use Livewire\Component;
 
 class Pokedex extends Component {
-    public $count = 0;
-
     public $filter = [
-        'regions' => [],
-        'numbers' => [],
+        'varieties' => [
+            1 => 1,
+        ],
     ];
 
     public $regions;
@@ -38,22 +38,34 @@ class Pokedex extends Component {
         'filter.selected_varieties' => 'required|array',
     ];
 
-    public function by_pokedex_no( $chosen_numbers ) {
+    public function by_pokedex_no( $chosen_numbers, $array_key = false, $title = [], $filtered_pokemons = false ) {
         $selected = [];
 
-        foreach ( $chosen_numbers as $range ) {
-            $start      = $range['start'];
-            $end        = $range['end'];
-            $end        = $range['start'] + 3;
-            $clock_name = $start . ' - ';
+        //clock( $chosen_numbers );
+        foreach ( $chosen_numbers as $start => $value ) {
+            $end = $start + 199;
+            $end = $start + 3;
 
-            $pokemons = Pokemon::rangedCached( $start, $end );
+            if ( ! $filtered_pokemons ) {
+                $pokemons = Pokemon::rangedCached( $start, $end );
+            } else {
+                // clock( $filtered_pokemons->get() );
+                $pokemons = $filtered_pokemons->where( 'pokedex_no', '>=', $start )->where( 'pokedex_no', '<=', $end );
+                // clock( $pokemons->get() );
+            }
 
-            $title            = 'Range: ' . $start . ' to ' . $end;
-            $selected[$start] = [
+            $title[] = 'Range: ' . $start . ' to ' . $end;
+            $title   = Str::title( implode( ', ', $title ) );
+
+            $new_array_key = $start;
+            if ( $array_key ) {
+                $new_array_key = $array_key . '_' . $start;
+            }
+
+            $selected[$new_array_key] = [
                 'title'    => $title,
                 'slug'     => Str::slug( $title ),
-                'pokemons' => $pokemons,
+                'pokemons' => $pokemons->get(),
             ];
         }
 
@@ -62,79 +74,81 @@ class Pokedex extends Component {
         return $selected;
     }
 
-    public function by_region( $chosen_regions, $chosen_numbers ) {
-        foreach ( $chosen_regions as $region_id ) {
-            $region     = Region::firstWhere( 'id', $region_id );
-            $clock_name = $region->name . ' - ';
-
-            $primary_only = true;
-            if ( 'alola' === $region->slug || 'galar' === $region->slug ) {
-                $primary_only = false;
-            }
-
-            if ( count( $chosen_numbers ) > 0 ) {
-                foreach ( $chosen_numbers as $range ) {
-                    $start = $range['start'];
-                    $end   = $range['end'];
-
-                    $pokemons = [];
-
-                    if ( $primary_only ) {
-                        $pokemons = $region->primaryPokemonsRangedCached( $start, $end );
-                    } else {
-                        $pokemons = $region->pokemonsRangedCached( $start, $end );
-                    }
-
-                    if ( count( $pokemons ) > 0 ) {
-                        $title = $region->name . ' Region - From ' . reset( $pokemons )['pokedex_no'] . ' To ' . end( $pokemons )['pokedex_no'];
-                    } else {
-                        $title = $region->name . ' Region - From ' . $start . ' To ' . $end;
-                    }
-
-                    $key = $region_id . '1' . str_pad( $start, 3, '0', STR_PAD_LEFT );
-
-                    $selected[$key] = [
-                        'title'    => $title,
-                        'slug'     => Str::slug( $title ),
-                        'pokemons' => $pokemons,
-                    ];
-                }
-            } else {
-                $pokemons = [];
-                if ( $primary_only ) {
-                    $pokemons = $region->primaryPokemonsCached();
-                } else {
-                    $pokemons = $region->pokemonsCached();
-                }
-
-                $title = $region->name . ' Region';
-
-                $selected[$region_id] = [
-                    'title'    => $title,
-                    'slug'     => Str::slug( $title ),
-                    'pokemons' => $pokemons,
-                ];
-            }
-        }
-
-        arsort( $selected );
-
-        return $selected;
-    }
-
-    public function by_varieties( $varieties ) {
+    public function by_region( $filtered, $cache_key = false ) {
         $selected = [];
 
-        foreach ( $varieties as $variety ) {
-            $title            = 'Variety: ' . $variety;
-            $selected[$start] = [
-                'title' => $title,
-                'slug'  => Str::slug( $title ),
-                //'pokemons' => $pokemons,
-            ];
-        }
+        if ( false && cache::has( $cache_key ) ) {
+            $selected = Cache::get( $cache_key );
+            //clock( $selected );
+        } else {
+            foreach ( $filtered['regions'] as $region_id ) {
+                if ( ! $region_id ) {
+                    continue;
+                }
+                //clock( $region_id );
 
-        asort( $selected );
+                $region     = Region::firstWhere( 'id', $region_id );
+                $clock_name = $region->name . ' - ';
+
+                $primary_only = true;
+                if ( 'alola' === $region->slug || 'galar' === $region->slug ) {
+                    $primary_only = false;
+                }
+
+                $pokemons = [];
+                $title    = [$region->name . ' Region'];
+
+                $varieties = $filtered['varieties'];
+                if ( 'alola' === $region->slug ) {
+                    //$pokemons = $region->pokemonsCached();
+
+                    $varieties = array_merge( $varieties, [1, 4] );
+                } else if ( 'galar' === $region->slug ) {
+                    //$pokemons = $region->pokemonsCached();
+
+                    $varieties = array_merge( $varieties, [1, 21] );
+                } else if ( 'hisui' === $region->slug ) {
+                    //$pokemons = $region->pokemonsCached();
+
+                    //$varieties = array_merge($varieties,  [ 1, 'hisui'] );
+                } else if ( empty( $varieties ) ) {
+                    $varieties = false;
+                }
+
+                if ( ! empty( $varieties ) && [1 => 1] !== $varieties ) {
+                    $variety_titles = [];
+
+                    foreach ( $varieties as $variety_id => $value ) {
+                        $variety = Variety::firstWhere( 'id', $variety_id );
+
+                        $variety_titles[] = $variety->name;
+                    }
+
+                    $title[0] = $title[0] . ' - ' . implode( ', ', $variety_titles );
+                }
+
+                $pokemons = $region->pokemonsByVariety( $varieties );
+
+                if ( array_key_exists( 'numbers', $filtered ) ) {
+                    $selected[$region_id] = array_merge( $selected, $this->by_pokedex_no( $filtered['numbers'], $region_id, $title, $pokemons ) );
+                } else {
+                    $title                = Str::title( implode( ', ', $title ) );
+                    $selected[$region_id] = [
+                        'title'    => $title,
+                        'slug'     => Str::slug( $title ),
+                        'pokemons' => $pokemons->get(),
+                    ];
+                }
+
+                if ( $cache_key ) {
+                    Cache::rememberForever( $cache_key, function () use ( $selected ) {
+                        return $selected;
+                    } );
+                }
+            }
+
+            arsort( $selected );
+        }
 
         return $selected;
     }
@@ -152,54 +166,87 @@ class Pokedex extends Component {
             'pokemons' => [],
         ]];
 
+        $filtered = array_map( 'array_filter', $this->filter );
+        $filtered = array_filter( $filtered );
+        unset( $filtered['method'] );
+
+        $title = '';
+
         $main_pokemon_columns = ['pokemons.id', 'pokedex_no', 'name', 'slug', 'colour', 'image_slug', 'text_y', 'text_x', 'api_text'];
-        $pokemons             = Pokemon::all_cached();
 
-        if ( array_key_exists( 'regions', $this->filter ) ) {
-            foreach ( $this->filter['regions'] as $region_id => $value ) {
-                if ( $value ) {
-                    $chosen['regions'][] = $region_id;
-                }
-            }
+        $pokemons = [];
+        $chosen   = [];
+        //clock( $filtered );
+        //Pokemon::where( 'pokedex_no', '>=', $start )->select( self::$main_pokemon_columns )->where( 'pokedex_no', '<=', $end )->select( self::$main_pokemon_columns )->with( 'types' );
+
+        $cache_key = [];
+
+        $cache_key['colour'] = 'images>bw';
+        if ( $this->update['colour'] ) {
+            $cache_key['colour'] = 'images>colour';
         }
 
-        if ( array_key_exists( 'numbers', $this->filter ) ) {
-            foreach ( $this->filter['numbers'] as $start => $value ) {
-                if ( $value ) {
-                    $end                 = $start + 199;
-                    $chosen['numbers'][] = [
-                        'start' => $start,
-                        'end'   => $end,
-                    ];
-                }
-            }
+        $cache_key['regions'] = array_key_exists( 'regions', $filtered ) ? 'regions>' . implode( '.', array_keys( $filtered['regions'] ) ) : '';
+        $cache_key['numbers'] = array_key_exists( 'numbers', $filtered ) ? 'numbers>' . implode( '.', array_keys( $filtered['numbers'] ) ) : '';
+        $cache_key['types']   = array_key_exists( 'types', $filtered ) ? 'types>' . implode( '.', array_keys( $filtered['types'] ) ) : '';
+
+        if ( array_key_exists( 'varieties', $filtered ) ) {
+            $cache_key['varieties'] = 'varieties>' . implode( '.', array_keys( $filtered['varieties'] ) );
+            $filtered['varieties']  = array_map( 'intval', $filtered['varieties'] );
+
+            //if(in_array(2, $filtered['varieties'])) {
+            //    $filtered['varieties'][]
+            //}
+        } else {
+            $filtered['varieties'] = [];
         }
 
-        if ( array_key_exists( 'varieties', $this->filter ) ) {
-            foreach ( $this->filter['varieties'] as $variety_id ) {
+        $cache_key = array_filter( $cache_key );
+        $cache_key = implode( '_', $cache_key );
+
+        $selected = [];
+        if ( array_key_exists( 'regions', $filtered ) ) {
+            /*foreach ( $filtered['regions'] as $region_id => $value ) {
+            if ( $value ) {
+            $chosen['regions'][] = $region_id;
+            }
+            }*/
+
+            $selected = $this->by_region( $filtered, $cache_key );
+            //clock( $regions );
+        } else if ( array_key_exists( 'numbers', $filtered ) ) {
+            /*foreach ( $filtered['numbers'] as $start => $value ) {
+            if ( $value ) {
+            $end                 = $start + 199;
+            $chosen['numbers'][] = [
+            'start' => $start,
+            'end'   => $end,
+            ];
+            }
+            }*/
+
+            $chosen['numbers'] = $this->by_pokedex_no( $filtered['numbers'] );
+            //clock( $numbers );
+        } else if ( array_key_exists( 'varieties', $filtered ) ) {
+            foreach ( $filtered['varieties'] as $variety_id ) {
                 if ( $variety_id ) {
                     $chosen['varieties'][] = $variety_id;
                     //$this->by_varieties( $varieties )
                 }
             }
-        }
-
-        if ( array_key_exists( 'types', $this->filter ) ) {
-            foreach ( $this->filter['types'] as $type_id ) {
+        } else if ( array_key_exists( 'types', $filtered ) ) {
+            foreach ( $filtered['types'] as $type_id ) {
                 if ( $type_id ) {
                     $chosen['types'][] = $type_id;
                     //$this->by_varieties( $varieties )
                 }
             }
         }
-        clock( $chosen );
-        clock( $pokemons );
+        //clock( $chosen );
+        //clock( $pokemons );
 
-        $selected = [];
+        //clock( $selected );
 
-        clock( $selected );
-
-        $selected = [];
         //if ( count( $chosen_regions ) > 0 ) {
         //$selected = $this->by_region( $chosen_regions, $chosen_numbers );
         //} else if ( count( $chosen_numbers ) > 0 ) {

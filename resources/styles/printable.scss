@@ -61,7 +61,7 @@ body.pdf, .printable {
 
 	table.breakable {
 		//, tbody tr:nth-child(3n+5)
-		tbody tr:nth-child(2n) { 
+		tbody tr:first-child, tbody tr:nth-child(2n - 1) { 
 			//background: red;
 			page-break-after: always; 
 		}
@@ -75,7 +75,7 @@ body.pdf, .printable {
 		width: 200px;
 
 		.image {
-			height: 120px;
+			height: 110px;
 
 			img {
 				height: 100%;
@@ -96,14 +96,14 @@ body.pdf, .printable {
 			//height: 180px;
 
 			.title {
-				line-height: 1;
+				line-height: 0.85;
 				margin-top: -0.5rem;
 			}
 
 			.text {
 				font-size: 90%;
 				line-height: 0.8;
-				padding: 0.25rem 0.15rem 0.75rem;
+				padding: 0.15rem 0.15rem 0.55rem;
 			}
 
 			.types {
@@ -113,7 +113,7 @@ body.pdf, .printable {
 
 				margin-top: -0.75rem;
 				margin-bottom: -0.75rem;
-				padding-top: 1rem;
+				padding-top: 0.5rem;
 				
 				&.count-1 {
 					margin-top: -0.5rem;

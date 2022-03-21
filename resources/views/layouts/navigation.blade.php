@@ -13,6 +13,9 @@
 			<a class="nav-link {{ Request::is('/pokedex') ? 'active' : '' }}" aria-current="page" href="{{ URL::to('/pokedex') }}">Pokedex</a>
 			<ul class="dropdown-menu">
 				<li class="nav-item">
+					<a class="nav-link {{ Request::is('/pokedex/manual-update') ? 'active' : '' }}" aria-current="page" href="{{ URL::to('/pokedex/manual-update') }}">Manual Update</a>
+				</li>
+				<li class="nav-item">
 					<a class="nav-link {{ Request::is('/pokedex/api-update') ? 'active' : '' }}" aria-current="page" href="{{ URL::to('/pokedex/api-update') }}">API Update</a>
 				</li>
 				<li class="nav-item">
